@@ -1,0 +1,2486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="abortrendercommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="abstractroidataprinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ambientvoxelshader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="anatomicalplane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="anatomicalplanesynccriterion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="anatomicalregionsynccriterion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="anglebetweenplanessynccriterion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="angletool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="applicationstylehelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="applicationupdatechecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="applicationversionchecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="applicationversiontest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="applyhangingprotocolqviewercommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="areameasurecomputer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="automaticsynchronizationtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="automaticsynchronizationtooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="blendfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bodysurfaceareaformula.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bodysurfaceareaformulacalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="changesliceqviewercommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="circletool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clippingplanestool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="colortransferfunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="computezspacingpostprocessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="contourvoxelshader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coresettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="createinformationmodelobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cursor3dtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cursor3dtooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="customwindowlevelsloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="customwindowlevelsreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="customwindowlevelsrepository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="customwindowlevelswriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="decaycorrectionfactorformula.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="decaycorrectionfactorformulacalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="defaultmeasurementtypeselector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="defaultsettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="defaulttransferfunctionselector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diagnosistestproblem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diagnosistestresult.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diagnosistestresultwriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomdumpdefaulttags.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomdumpdefaulttagsloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomdumpdefaulttagsreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomdumpdefaulttagsrepository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomdumpdefaulttagsrestriction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomfileclassifierfillerstep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomfilegenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomformattedvaluesconverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomimagefilegenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomsequenceattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomsequenceitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomserviceresponsestatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomsource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomtag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomtagreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomvalueattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomvaluerepresentationconverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomwriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomwriterdcmtk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="directilluminationvoxelshader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="directoryutilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="displayableid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="displayshutter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="displayshutterfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="distancemeasurecomputer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="distancetool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fmjpeg2k\djcodecd.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fmjpeg2k\djcodece.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fmjpeg2k\djcparam.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fmjpeg2k\djdecode.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fmjpeg2k\djencode.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fmjpeg2k\djrparam.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fmjpeg2k\djutils.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawerbitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawercrosshair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawerline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawerpoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawerpolygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawerpolyline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawerprimitive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawertext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamicmatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editortool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editortooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ellipticalroitool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="erasertool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="extensioncontext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="extensionmediator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="externalapplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="externalapplicationsmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filteroutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="firewallaccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="firewallaccesstest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="formula.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="formulacalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frameofreferencesynccriterion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genericdistancetool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genericvolumedisplayunithandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glutessellator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gridicon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="griditerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocoldisplayset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocolfiller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocolimageset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocolimagesetrestriction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocolimagesetrestrictionexpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocollayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocolmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocolmask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocolsloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocolsrepository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangingprotocolxmlreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="harddiskinformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hoverpoints.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="identifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imagefillerstep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageorientation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageorientationoperationsmapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageorientationsignaltosyncactionmapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageorientationsyncaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageoverlay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageoverlayreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageoverlayregionfinder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imagepipeline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageplane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inputsynccriterion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itemmenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itkDCMTKFileReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itkDCMTKImageIO.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itkDCMTKImageIOFactory.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itkDCMTKSeriesFileNames.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itkgdcmbydefaultvolumepixeldatareaderselector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="keyimagenotefillerstep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="leanbodymassformula.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="leanbodymassformulacalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="line3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loggingoutputwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="machineidentifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="machineinformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="magicroitool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="magnifyingglasstool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mammographyimagehelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mathtools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="measurecomputer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="measurementmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="measurementtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fmjpeg2k\memory_file.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mhdfileclassifierstep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modalitysynccriterion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nmctfusionroidataprinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nmctvolumedisplayunithandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nmroidataprinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nmvolumedisplayunithandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nonclosedangletool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="obscurance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="obscurancemainthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="obscurancethread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="obscurancevoxelshader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opacitytransferfunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="optimalviewersgridestimator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="orderimagesfillerstep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="orthogonalplane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pacsdevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pairedvolumedisplayunithandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pansignaltosyncactionmapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pansyncaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientbrowsermenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientbrowsermenubasicitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientbrowsermenuextendedinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientbrowsermenuextendeditem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientbrowsermenufusionitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientbrowsermenugroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientbrowsermenulist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientcomparer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientfiller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientfillerinput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientfillerstep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patientorientation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="perpendiculardistancetool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="petctfusionroidataprinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="petctvolumedisplayunithandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="petroidataprinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="petvolumedisplayunithandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="phasesignaltosyncactionmapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="phasesyncaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="photometricinterpretation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pixelspacing2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pixelspacingamenderpostprocessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pixelspacingschemepropertyselector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="point3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polylineroitool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polylinetemporalroitool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polylinetemporalroitooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="postprocessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="preferredpixelspacingselector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="presentationstatefillerstep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q2dviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q2dviewerannotationhandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q2dviewerconfigurationscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q2dviewerlayoutconfigurationscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q2dviewerwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q3dorientationmarker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q3dviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcinecontroller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcolorspinbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcolortransferfunctiongraphicalview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcolortransferfunctiongraphicalviewnode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcustomwindowleveldialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcustomwindowleveleditwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qdiagnosistest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qdicomdumpbrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qenhancedmenutoolbutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qexternalapplicationconfigurationscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qfusionbalancewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qfusionlayoutwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlayoutoptionswidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlogviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qmessageboxautoclose.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qmodalitiesselectorgroupbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qnotificationpopup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qopacitytransferfunctiongraphicalview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qopacitytransferfunctiongraphicalviewline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qopacitytransferfunctiongraphicalviewnode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qreleasenotes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qscreendistribution.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qthickslabwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtransferfunctioneditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtransferfunctioneditor2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtransferfunctioneditorbygradient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtransferfunctioneditorbyvalues.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtransferfunctiongraphicalview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtransferfunctionintervaleditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtransferfunctionview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtreewidgetwithseparatorline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qviewercinecontroller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qviewercommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qviewerworkinprogresswidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qvoilutcombobox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="referencelinestool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="referencelinestooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="relativegeometrylayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="renderqviewercommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="repositorybase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="representationslayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="roidata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="roidataprinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="roitool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rotate3dtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rundiagnosistest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="screenlayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="screenmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="screenshottool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="secondaryvolumedisplayunit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seedtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seedtooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="series.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settingsaccesslevelfilereader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settingsparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settingsregistry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shadewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shortcutmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shortcuts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="signaltosyncactionmapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="singlesliceorvolumetricsynccriterion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="singlevolumedisplayunithandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slicehandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slicelocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slicingkeyboardtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slicingtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slicingwheeltool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sphereuniformpointcloudgenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="standardizeduptakevaluebodysurfaceareaformulacalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="standardizeduptakevaluebodyweightformulacalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="standardizeduptakevalueformula.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="standardizeduptakevalueformulacalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="standardizeduptakevalueleanbodymassformulacalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="standarduptakevaluemeasurehandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statswatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strokesegmentationmethod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="study.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="studylayoutconfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="studylayoutconfigsettingsconverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="studylayoutconfigsettingsmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="studylayoutconfigsloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="studylayoutmapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="syncaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="syncactionmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="syncactionmetadata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="syncactionsconfiguration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="syncactionsconfigurationhandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="syncactionsconfigurationmenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synccriterion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synchronizetool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synchronizetooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="systeminformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="systemrequeriments.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="systemrequerimentstest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="temporaldimensionfillerstep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thickslabfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thickslabsignaltosyncactionmapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thickslabsyncaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thumbnailcreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="toolconfiguration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="toolmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="toolproxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="toolregistry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="toolrepresentation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transdifferencetool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transdifferencetooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transferfunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transferfunctioneditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transferfunctioneditorcommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transferfunctionio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transferfunctionmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transferfunctionmodelfiller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="translatetool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="trilinearinterpolator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="viewerslayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="viewerslayouttosyncactionmanageradapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="viewpointgenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voilut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voiluthelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voilutpresetstool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voilutpresetstooldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voilutsignaltosyncactionmapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voilutsyncaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumebuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumebuilderfromcaptures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumedisplayunit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumedisplayunithandlerfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumehelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumepixeldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumepixeldataiterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumepixeldatareader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumepixeldatareaderfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumepixeldatareaderitkdcmtk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumepixeldatareaderitkgdcm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumepixeldatareadervtkdcmtk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumepixeldatareadervtkgdcm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumereader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumereaderjob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumereaderjobfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumereadermanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="volumerepository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voxel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voxelinformationtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voxelshader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtk4dlinearregressiongradientestimator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkImageMapToWindowLevelColors3.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkProjectionImageFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkRunThroughFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkVolumeRayCastVoxelShaderCompositeFunction.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkcorrectimageblend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkdcmtkbydefaultvolumepixeldatareaderselector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkdcmtkimagereader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkimagedatacreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtktextactorwithbackground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowlevel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowlevelfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowleveltool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowsfirewallaccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowssysteminformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zoomfactorsignaltosyncactionmapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zoomfactorsyncaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zoomtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="abortrendercommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abstractroidataprinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="accumulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ambientvoxelshader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="anatomicalplane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="anatomicalplanesynccriterion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="anatomicalregionsynccriterion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="anglebetweenplanessynccriterion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="angletool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="annotationflags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="applicationstylehelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="applicationupdatechecker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="applicationversionchecker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="applicationversiontest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="applyhangingprotocolqviewercommand.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="areameasurecomputer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="automaticsynchronizationtool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="automaticsynchronizationtooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="averageaccumulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="blendfilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bodysurfaceareaformula.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bodysurfaceareaformulacalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="changesliceqviewercommand.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="circletool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="clippingplanestool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="colortransferfunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="combiningvoxelshader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="computezspacingpostprocessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="contourvoxelshader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="coresettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="createinformationmodelobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="cursor3dtool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="cursor3dtooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="customwindowlevelsloader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="customwindowlevelsreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="customwindowlevelsrepository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="customwindowlevelswriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="decaycorrectionfactorformula.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="decaycorrectionfactorformulacalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="defaultmeasurementtypeselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="defaultsettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="defaulttransferfunctionselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diagnosistest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diagnosistestfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diagnosistestfactoryregister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diagnosistestproblem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diagnosistestresult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diagnosistestresultwriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomattribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomdictionary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomdumpdefaulttags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomdumpdefaulttagsloader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomdumpdefaulttagsreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomdumpdefaulttagsrepository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomdumpdefaulttagsrestriction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomfileclassifierfillerstep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomfilegenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomformattedvaluesconverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomimagefilegenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomsequenceattribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomsequenceitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomserviceresponsestatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomsource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomtag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomtagreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomvalueattribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomvaluerepresentationconverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomwriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomwriterdcmtk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="directilluminationvoxelshader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="directoryutilities.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="displayableid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="displayshutter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="displayshutterfilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="distancemeasurecomputer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="distancetool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drawer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drawerbitmap.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drawercrosshair.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drawerline.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drawerpoint.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drawerpolygon.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drawerpolyline.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drawerprimitive.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drawertext.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="dynamicmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="editortool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="editortooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ellipticalroitool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="erasertool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="extensioncontext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extensionfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extensionfactoryregister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="extensionmediator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="extensionmediatorfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extensionmediatorfactoryregister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="externalapplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="externalapplicationsmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filteroutput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="firewallaccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="firewallaccesstest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="formula.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="formulacalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frameofreferencesynccriterion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="genericdistancetool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="genericfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="genericsingletonfactoryregister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="genericvolumedisplayunithandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glutessellator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="gridicon.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="griditerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangingprotocol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangingprotocoldisplayset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangingprotocolfiller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangingprotocolimageset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangingprotocolimagesetrestriction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangingprotocolimagesetrestrictionexpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangingprotocollayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="hangingprotocolmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="hangingprotocolmask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="hangingprotocolsloader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="hangingprotocolsrepository.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="hangingprotocolxmlreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="harddiskinformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hdrcolor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="hoverpoints.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="identifier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="image.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="imagefillerstep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imageorientation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imageorientationoperationsmapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="imageorientationsignaltosyncactionmapper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="imageorientationsyncaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imageoverlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imageoverlayreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imageoverlayregionfinder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imagepipeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imageplane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inputsynccriterion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="installextension.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="itemmenu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="itkDCMTKFileReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itkDCMTKImageIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itkDCMTKImageIOFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itkDCMTKSeriesFileNames.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itkErfcLevelSetFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itkErfcLevelSetImageFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itkImageToVTKImageFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="itkQtAdaptor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="itkVTKImageToImageFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itkVolumeCalculatorImageFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itkgdcmbydefaultvolumepixeldatareaderselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keyimagenotefillerstep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="leanbodymassformula.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="leanbodymassformulacalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="line3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="loggingoutputwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="machineidentifier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="machineinformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="magicroitool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="magnifyingglasstool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="mammographyimagehelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathtools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="maximumaccumulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="measurecomputer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="measurementmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="measurementtool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="mhdfileclassifierstep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minimumaccumulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modalitysynccriterion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nmctfusionroidataprinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nmctvolumedisplayunithandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nmroidataprinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nmvolumedisplayunithandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="nonclosedangletool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="obscurance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="obscurancemainthread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="obscurancethread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="obscurancevoxelshader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opacitytransferfunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="optimalviewersgridestimator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="orderimagesfillerstep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="orthogonalplane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pacsdevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pairedvolumedisplayunithandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="pansignaltosyncactionmapper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="pansyncaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="patient.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenubasicitem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenuextendedinfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenuextendeditem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="patientbrowsermenufusionitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="patientbrowsermenugroup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenulist.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="patientcomparer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="patientfiller.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="patientfillerinput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="patientfillerstep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="patientorientation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="perpendiculardistancetool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="petctfusionroidataprinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="petctvolumedisplayunithandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="petroidataprinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="petvolumedisplayunithandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="phasesignaltosyncactionmapper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="phasesyncaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="photometricinterpretation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pixelspacing2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pixelspacingamenderpostprocessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pixelspacingschemepropertyselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="point3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="polylineroitool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="polylinetemporalroitool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="polylinetemporalroitooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="postprocessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="preferredpixelspacingselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="presentationstatefillerstep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="q2dviewer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="q2dviewerannotationhandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="q2dviewerconfigurationscreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="q2dviewerlayoutconfigurationscreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="q2dviewerwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="q3dorientationmarker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="q3dviewer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qcinecontroller.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qcolorspinbox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qcolortransferfunctiongraphicalview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="qcolortransferfunctiongraphicalviewnode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="qcustomwindowleveldialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qcustomwindowleveleditwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qdiagnosistest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qdicomdumpbrowser.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qenhancedmenutoolbutton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qexternalapplicationconfigurationscreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qfusionbalancewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qfusionlayoutwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qlayoutoptionswidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qlogviewer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qmessageboxautoclose.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qmodalitiesselectorgroupbox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qnotificationpopup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qopacitytransferfunctiongraphicalview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="qopacitytransferfunctiongraphicalviewline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qopacitytransferfunctiongraphicalviewnode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="qreleasenotes.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qscreendistribution.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qthickslabwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qtransferfunctioneditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qtransferfunctioneditor2.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qtransferfunctioneditorbygradient.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qtransferfunctioneditorbyvalues.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qtransferfunctiongraphicalview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qtransferfunctionintervaleditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qtransferfunctionview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qtreewidgetwithseparatorline.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qviewer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qviewercinecontroller.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qviewercommand.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qviewerworkinprogresswidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qvoilutcombobox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="referencelinestool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="referencelinestooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="relativegeometrylayout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="renderqviewercommand.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="repository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="repositorybase.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="representationslayer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="roidata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="roidataprinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="roitool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="rotate3dtool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="rundiagnosistest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="screenlayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="screenmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="screenshottool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="secondaryvolumedisplayunit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="seedtool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="seedtooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="series.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settingsaccesslevelfilereader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settingsinterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settingsparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settingsregistry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="shadewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="shortcutmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shortcuts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="signaltosyncactionmapper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="signaltosyncactionmapperfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="signaltosyncactionmapperfactoryregister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="singlesliceorvolumetricsynccriterion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="singlevolumedisplayunithandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="slicehandler.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="slicelocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="slicingkeyboardtool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="slicingtool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="slicingwheeltool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="sphereuniformpointcloudgenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="standardizeduptakevaluebodysurfaceareaformulacalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="standardizeduptakevaluebodyweightformulacalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="standardizeduptakevalueformula.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="standardizeduptakevalueformulacalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="standardizeduptakevalueleanbodymassformulacalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="standarduptakevaluemeasurehandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="starviewerapplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="statswatcher.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="strokesegmentationmethod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="study.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="studylayoutconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="studylayoutconfigsettingsconverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="studylayoutconfigsettingsmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="studylayoutconfigsloader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="studylayoutmapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="syncaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="syncactionmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="syncactionmetadata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="syncactionsconfiguration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="syncactionsconfigurationhandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="syncactionsconfigurationmenu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="synccriterion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="synchronizetool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="synchronizetooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="systeminformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="systemrequeriments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="systemrequerimentstest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="temporaldimensionfillerstep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thickslabfilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="thickslabsignaltosyncactionmapper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="thickslabsyncaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thumbnailcreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="tool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="toolconfiguration.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="toolmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="toolproxy.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="toolregistry.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="toolrepresentation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="transdifferencetool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="transdifferencetooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="transferfunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="transferfunctioneditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="transferfunctioneditorcommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transferfunctionio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="transferfunctionmodel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="transferfunctionmodelfiller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transferfunctiontemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="translatetool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="trilinearinterpolator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="viewerslayout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="viewerslayouttosyncactionmanageradapter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="viewpointgenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="voilut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="voiluthelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="voilutpresetstool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="voilutpresetstooldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="voilutsignaltosyncactionmapper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="voilutsyncaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="volume.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="volumebuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="volumebuilderfromcaptures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="volumedisplayunit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="volumedisplayunithandlerfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="volumehelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="volumepixeldata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="volumepixeldataiterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="volumepixeldatareader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="volumepixeldatareaderfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="volumepixeldatareaderitkdcmtk.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="volumepixeldatareaderitkgdcm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="volumepixeldatareaderselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="volumepixeldatareadervtkdcmtk.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="volumepixeldatareadervtkgdcm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="volumereader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="volumereaderjob.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="volumereaderjobfactory.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="volumereadermanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="volumerepository.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="voxel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="voxelinformationtool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="voxelshader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtk4dlinearregressiongradientestimator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkImageMapToWindowLevelColors3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkProjectionImageFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkRunThroughFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkVolumeRayCastSingleVoxelShaderCompositeFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkVolumeRayCastVoxelShaderCompositeFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkcorrectimageblend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkdcmtkbydefaultvolumepixeldatareaderselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkdcmtkimagereader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkimagedatacreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtktextactorwithbackground.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windowlevel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windowlevelfilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="windowleveltool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="windowsfirewallaccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windowssysteminformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="zoomfactorsignaltosyncactionmapper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="zoomfactorsyncaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="zoomtool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\tmp\moc\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="core_ca_ES.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="core_en_GB.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="core_es_ES.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="q2dviewerconfigurationscreenbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="q2dviewerlayoutconfigurationscreenbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="q2dviewerwidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qcinecontrollerbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qcustomwindowleveldialogbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qcustomwindowleveleditwidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qdiagnosistestbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qdicomdumpbrowserbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qexternalapplicationconfigurationscreenbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qfusionlayoutwidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qlayoutoptionswidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qlogviewerbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qmodalitiesselectorgroupboxbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qnotificationpopupbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qreleasenotesbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qthickslabwidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qtransferfunctioneditor2base.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qtransferfunctioneditorbyvaluesbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qtransferfunctiongraphicalviewbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qtransferfunctionintervaleditorbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qviewerworkinprogresswidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

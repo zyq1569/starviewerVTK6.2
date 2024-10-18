@@ -1,0 +1,1187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2AAB4E04-3FA5-34F0-A60A-44DD87FE0147}</ProjectGuid>
+    <RootNamespace>core</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <OutputDirectory>..\..\bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\tmp\obj\</IntermediateDirectory>
+    <PrimaryOutput>core</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <OutputDirectory>..\..\bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\tmp\obj\</IntermediateDirectory>
+    <PrimaryOutput>core</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\bin\</OutDir>
+    <IntDir>..\..\tmp\obj\</IntDir>
+    <TargetName>core</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\bin\</OutDir>
+    <IntDir>..\..\tmp\coreobj\</IntDir>
+    <TargetName>core</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;opengl;network;gui;xmlpatterns;widgets;qml;positioning;printsupport;webchannel;quickwidgets;quick;concurrent;webengine;webenginewidgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;opengl;network;gui;xmlpatterns;widgets;qml;positioning;printsupport;webchannel;quickwidgets;quick;concurrent;webengine;webenginewidgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;D:\SDK\ITK-5.3.0_vc17_include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Common\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\FiniteDifference\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\GPUCommon\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\GPUFiniteDifference\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\ImageAdaptors\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\ImageFunction\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Mesh\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\QuadEdgeMesh\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\SpatialObjects\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\TestKernel\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Transform\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\ImageBase\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\NumPy\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\VTK\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\VtkGlue\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Compatibility\Deprecated\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\AnisotropicSmoothing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\AntiAlias\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\BiasCorrection\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\BinaryMathematicalMorphology\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Colormap\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Convolution\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\CurvatureFlow\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Deconvolution\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DiffusionTensorImage\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DisplacementField\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DistanceMap\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\FFT\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUAnisotropicSmoothing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUImageFilterBase\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUSmoothing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUThresholding\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\FastMarching\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageCompare\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageCompose\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFeature\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFilterBase\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFrequency\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFusion\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageGradient\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageGrid\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageIntensity\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageLabel\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageNoise\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageSources\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageStatistics\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\LabelMap\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\MathematicalMorphology\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Path\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Smoothing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\SpatialFunction\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Thresholding\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\BioRad\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\BMP\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Bruker\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\CSV\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\DCMTK\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GDCM\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GE\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GIPL\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\HDF5\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\IPL\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\JPEG\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\JPEG2000\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\LSM\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Mesh\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshBYU\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshFreeSurfer\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshGifti\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshOBJ\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshOFF\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshVTK\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Meta\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MINC\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MRC\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\NIFTI\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\NRRD\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\PhilipsREC\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\PNG\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\RAW\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Siemens\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\SpatialObjects\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TIFF\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformBase\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformFactory\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformHDF5\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformInsightLegacy\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformMatlab\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformMINC\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\VTK\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\XML\include;D:\SDK/ITK-5.3.0_vc17_include/Modules/Nonunit/IntegratedTest/include/;D:\SDK\ITK-5.3.0_vc17_include\Modules\Nonunit\Review\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Eigen\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\FEM\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\NarrowBand\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Optimizers\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Optimizersv4\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Polynomials\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Statistics\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\Common\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\FEM\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\GPUCommon\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\GPUPDEDeformable\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\Metricsv4\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\PDEDeformable\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\RegistrationMethodsv4\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Classifiers\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\ConnectedComponents\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\DeformableMesh\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\KLMRegionGrowing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LabelVoting\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LevelSets\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LevelSetsv4\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\MarkovRandomFieldsClassifiers\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\RegionGrowing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\SignedDistanceFunction\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\SuperPixel\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Voronoi\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Watersheds\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\GoogleTest\src\itkgoogletest\googletest\include;D:\SDK/ITK-5.3.0_vc17_include/Modules/ThirdParty/KWIML/src/itkkwiml/include/;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\MINC\src\libminc\volume_io\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\libLBFGS\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\VNL\src\vxl\core;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\MetaIO\src\MetaIO\src;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\VNL\src\vxl\vcl;D:\SDK/ITK-5.3.0_vc17_include/Modules/ThirdParty/ZLIB/src/itkzlib/;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\Eigen3\src;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\Eigen3\src\itkeigen\Eigen;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\KWSys\src\KWSys;D:\SDK/ITK-5.3.0_vc17_include/Modules/ThirdParty/GDCM/src/gdcm/Utilities/VTK/;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\BridgeOpenCV\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\BridgeVXL\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\Core\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\Filtering\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\IO\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Common;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\FiniteDifference;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\GPUCommon;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\GPUFiniteDifference;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\ImageAdaptors;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\ImageFunction;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Mesh;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\QuadEdgeMesh;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\SpatialObjects;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\TestKernel;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Transform;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\ImageBase;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\NumPy;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\VTK;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\VtkGlue;D:\SDK\ITK-5.3.0_vc17_include\Modules\Compatibility\Deprecated;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\AnisotropicSmoothing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\AntiAlias;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\BiasCorrection;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\BinaryMathematicalMorphology;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Colormap;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Convolution;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\CurvatureFlow;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Deconvolution;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DiffusionTensorImage;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DisplacementField;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DistanceMap;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\FFT;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUAnisotropicSmoothing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUImageFilterBase;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUSmoothing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUThresholding;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\FastMarching;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageCompare;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageCompose;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFeature;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFilterBase;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFrequency;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFusion;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageGradient;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageGrid;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageIntensity;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageLabel;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageNoise;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageSources;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageStatistics;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\LabelMap;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\MathematicalMorphology;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Path;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Smoothing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\SpatialFunction;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Thresholding;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\BioRad;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\BMP;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Bruker;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\CSV;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\DCMTK;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GDCM;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GE;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GIPL;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\HDF5;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\IPL;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\JPEG;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\JPEG2000;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\LSM;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Mesh;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshBYU;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshFreeSurfer;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshGifti;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshOBJ;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshOFF;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshVTK;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Meta;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MINC;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MRC;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\NIFTI;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\NRRD;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\PhilipsREC;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\PNG;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\RAW;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Siemens;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\SpatialObjects;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TIFF;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformBase;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformFactory;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformHDF5;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformInsightLegacy;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformMatlab;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformMINC;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\VTK;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\XML;D:\SDK/ITK-5.3.0_vc17_include/Modules/Nonunit/IntegratedTest/;D:\SDK\ITK-5.3.0_vc17_include\Modules\Nonunit\Review;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Eigen;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\FEM;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\NarrowBand;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Optimizers;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Optimizersv4;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Polynomials;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Statistics;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\Common;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\FEM;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\GPUCommon;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\GPUPDEDeformable;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\Metricsv4;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\PDEDeformable;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\RegistrationMethodsv4;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Classifiers;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\ConnectedComponents;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\DeformableMesh;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\KLMRegionGrowing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LabelVoting;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LevelSets;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LevelSetsv4;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\MarkovRandomFieldsClassifiers;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\RegionGrowing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\SignedDistanceFunction;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\SuperPixel;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Voronoi;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Watersheds;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\GoogleTest\src\itkgoogletest\googletest;D:\SDK/ITK-5.3.0_vc17_include/Modules/ThirdParty/KWIML/src/itkkwiml/;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\MINC\src\libminc\volume_io;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\libLBFGS;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\BridgeOpenCV;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\BridgeVXL;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\Core;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\Filtering;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\IO;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\KWSys\src;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\ZLIB\src;D:\SDK/ITK-5.3.0_vc17_include/more/;D:\SDK\GDCM-2.8.9;D:\SDK\GDCM-2.8.9\Source\Common;D:\SDK\GDCM-2.8.9\Source\MediaStorageAndFileFormat;D:\SDK\GDCM-2.8.9\Source\DataStructureAndEncodingDefinition;D:\SDK\GDCM-2.8.9\Source\DataDictionary;D:\SDK\GDCM-2.8.9\Source\InformationObjectDefinition;D:\SDK\GDCM-2.8.9\Source\Attribute;D:\SDK\GDCM-2.8.9\Source\MessageExchangeDefinition;D:\SDK/GDCM-2.8.9/more/;D:\SDK\GDCM-2.8.9\Utilities;D:\SDK\GDCM-2.8.9\Utilities\gdcmcharls;D:\SDK\GDCM-2.8.9\Utilities\gdcmexpat;D:\SDK\GDCM-2.8.9\Utilities\gdcmjpeg;D:\SDK\GDCM-2.8.9\Utilities\gdcmmd5;D:\SDK\GDCM-2.8.9\Utilities\gdcmopenjpeg;D:\SDK\GDCM-2.8.9\Utilities\gdcmopenjpeg\src\lib\openjp2;D:\SDK\GDCM-2.8.9\Utilities\gdcmrle;D:\SDK\GDCM-2.8.9\Utilities\gdcmutfcpp;D:\SDK\GDCM-2.8.9\Utilities\gdcmuuid;D:\SDK\GDCM-2.8.9\Utilities\gdcmzlib;D:\SDK\GDCM-2.8.9\Utilities\getopt;D:\SDK\GDCM-2.8.9\Utilities\KWStyle;D:\SDK\GDCM-2.8.9\Utilities\pvrg;D:\SDK\GDCM-2.8.9\Utilities\VTK;D:\SDK\GDCM-2.8.9\Utilities\socketxx;D:\SDK\vtk-v6.2.0;D:\SDK/vtk-v6.2.0/more/;D:\SDK\vtk-v6.2.0\Common\Core;D:\SDK\vtk-v6.2.0\Common\DataModel;D:\SDK\vtk-v6.2.0\Common\Math;D:\SDK\vtk-v6.2.0\Common\ComputationalGeometry;D:\SDK\vtk-v6.2.0\Common\ExecutionModel;D:\SDK\vtk-v6.2.0\Common\Misc;D:\SDK\vtk-v6.2.0\Common\System;D:\SDK\vtk-v6.2.0\Common\Transforms;D:\SDK\vtk-v6.2.0\Common\Color;D:\SDK\vtk-v6.2.0\Imaging\Core;D:\SDK\vtk-v6.2.0\Imaging\Color;D:\SDK\vtk-v6.2.0\Imaging\Fourier;D:\SDK\vtk-v6.2.0\Imaging\General;D:\SDK\vtk-v6.2.0\Imaging\Hybrid;D:\SDK\vtk-v6.2.0\Imaging\Math;D:\SDK\vtk-v6.2.0\Imaging\Morphological;D:\SDK/vtk-v6.2.0/Imaging/OpenGL2/;D:\SDK\vtk-v6.2.0\Imaging\Sources;D:\SDK\vtk-v6.2.0\Imaging\Statistics;D:\SDK\vtk-v6.2.0\Imaging\Stencil;D:\SDK\vtk-v6.2.0\IO\ADIOS;D:\SDK\vtk-v6.2.0\IO\Core;D:\SDK\vtk-v6.2.0\IO\EnSight;D:\SDK\vtk-v6.2.0\IO\Exodus;D:\SDK\vtk-v6.2.0\IO\Export;D:\SDK/vtk-v6.2.0/IO/ExportOpenGL/;D:\SDK/vtk-v6.2.0/IO/ExportOpenGL2/;D:\SDK\vtk-v6.2.0\IO\FFMPEG;D:\SDK\vtk-v6.2.0\IO\GDAL;D:\SDK\vtk-v6.2.0\IO\GeoJSON;D:\SDK\vtk-v6.2.0\IO\Geometry;D:\SDK\vtk-v6.2.0\IO\Image;D:\SDK\vtk-v6.2.0\IO\Import;D:\SDK\vtk-v6.2.0\IO\Infovis;D:\SDK/vtk-v6.2.0/IO/LAS/;D:\SDK\vtk-v6.2.0\IO\Legacy;D:\SDK\vtk-v6.2.0\IO\LSDyna;D:\SDK\vtk-v6.2.0\IO\MINC;D:\SDK\vtk-v6.2.0\IO\Movie;D:\SDK\vtk-v6.2.0\IO\MPIImage;D:\SDK\vtk-v6.2.0\IO\MPIParallel;D:\SDK\vtk-v6.2.0\IO\MySQL;D:\SDK\vtk-v6.2.0\IO\NetCDF;D:\SDK\vtk-v6.2.0\IO\ODBC;D:\SDK\vtk-v6.2.0\IO\Parallel;D:\SDK\vtk-v6.2.0\IO\ParallelExodus;D:\SDK\vtk-v6.2.0\IO\ParallelLSDyna;D:\SDK\vtk-v6.2.0\IO\ParallelNetCDF;D:\SDK/vtk-v6.2.0/IO/ParallelXdmf3/;D:\SDK\vtk-v6.2.0\IO\ParallelXML;D:\SDK/vtk-v6.2.0/IO/PDAL/;D:\SDK\vtk-v6.2.0\IO\PLY;D:\SDK\vtk-v6.2.0\IO\PostgreSQL;D:\SDK/vtk-v6.2.0/IO/SegY/;D:\SDK/vtk-v6.2.0/IO/TecplotTable/;D:\SDK\vtk-v6.2.0\IO\Video;D:\SDK\vtk-v6.2.0\IO\VPIC;D:\SDK\vtk-v6.2.0\IO\Xdmf2;D:\SDK\vtk-v6.2.0\IO\Xdmf3;D:\SDK\vtk-v6.2.0\IO\XML;D:\SDK\vtk-v6.2.0\IO\XMLParser;D:\SDK\vtk-v6.2.0\GUISupport\MFC;D:\SDK\vtk-v6.2.0\GUISupport\Qt;D:\SDK\vtk-v6.2.0\GUISupport\QtOpenGL;D:\SDK\vtk-v6.2.0\GUISupport\QtSQL;D:\SDK\vtk-v6.2.0\GUISupport\QtWebkit;D:\SDK\vtk-v6.2.0\Rendering\Annotation;D:\SDK\vtk-v6.2.0\Rendering\Context2D;D:\SDK\vtk-v6.2.0\Rendering\ContextOpenGL;D:\SDK\vtk-v6.2.0\Rendering\ContextOpenGL2;D:\SDK\vtk-v6.2.0\Rendering\Core;D:\SDK\vtk-v6.2.0\Rendering\External;D:\SDK\vtk-v6.2.0\Rendering\FreeType;D:\SDK\vtk-v6.2.0\Rendering\FreeTypeFontConfig;D:\SDK\vtk-v6.2.0\Rendering\GL2PS;D:\SDK/vtk-v6.2.0/Rendering/GL2PSOpenGL2/;D:\SDK\vtk-v6.2.0\Rendering\Label;D:\SDK\vtk-v6.2.0\Rendering\Image;D:\SDK\vtk-v6.2.0\Rendering\LIC;D:\SDK/vtk-v6.2.0/Rendering/LICOpenGL2/;D:\SDK\vtk-v6.2.0\Rendering\LOD;D:\SDK\vtk-v6.2.0\Rendering\Matplotlib;D:\SDK/vtk-v6.2.0/Rendering/Oculus/;D:\SDK\vtk-v6.2.0\Rendering\OpenGL;D:\SDK\vtk-v6.2.0\Rendering\OpenGL2;D:\SDK/vtk-v6.2.0/Rendering/OpenVR/;D:\SDK/vtk-v6.2.0/Rendering/OptiX/;D:\SDK/vtk-v6.2.0/Rendering/OSPRay/;D:\SDK\vtk-v6.2.0\Rendering\Parallel;D:\SDK\vtk-v6.2.0\Rendering\ParallelLIC;D:\SDK\vtk-v6.2.0\Rendering\Qt;D:\SDK/vtk-v6.2.0/Rendering/SceneGraph/;D:\SDK\vtk-v6.2.0\Rendering\Tk;D:\SDK\vtk-v6.2.0\Rendering\Volume;D:\SDK\vtk-v6.2.0\Rendering\VolumeAMR;D:\SDK\vtk-v6.2.0\Rendering\VolumeOpenGL;D:\SDK\vtk-v6.2.0\Rendering\VolumeOpenGL2;D:\SDK\vtk-v6.2.0\Filters\Core;D:\SDK\vtk-v6.2.0\Filters\Extraction;D:\SDK\vtk-v6.2.0\Filters\FlowPaths;D:\SDK\vtk-v6.2.0\Filters\General;D:\SDK\vtk-v6.2.0\Filters\Generic;D:\SDK\vtk-v6.2.0\Filters\Geometry;D:\SDK\vtk-v6.2.0\Filters\Hybrid;D:\SDK\vtk-v6.2.0\Filters\HyperTree;D:\SDK\vtk-v6.2.0\Filters\Imaging;D:\SDK\vtk-v6.2.0\Filters\Modeling;D:\SDK/vtk-v6.2.0/Filters/OpenTurns/;D:\SDK\vtk-v6.2.0\Filters\Parallel;D:\SDK/vtk-v6.2.0/Filters/ParallelDIY2/;D:\SDK\vtk-v6.2.0\Filters\ParallelFlowPaths;D:\SDK\vtk-v6.2.0\Filters\ParallelGeometry;D:\SDK\vtk-v6.2.0\Filters\ParallelImaging;D:\SDK\vtk-v6.2.0\Filters\ParallelMPI;D:\SDK\vtk-v6.2.0\Filters\ParallelStatistics;D:\SDK/vtk-v6.2.0/Filters/ParallelVerdict/;D:\SDK/vtk-v6.2.0/Filters/Points/;D:\SDK\vtk-v6.2.0\Filters\Programmable;D:\SDK\vtk-v6.2.0\Filters\Python;D:\SDK\vtk-v6.2.0\Filters\ReebGraph;D:\SDK\vtk-v6.2.0\Filters\Selection;D:\SDK\vtk-v6.2.0\Filters\SMP;D:\SDK\vtk-v6.2.0\Filters\Sources;D:\SDK\vtk-v6.2.0\Filters\Statistics;D:\SDK/vtk-v6.2.0/Filters/Qt/;D:\SDK/vtk-v6.2.0/Filters/SceneGraph/;D:\SDK\vtk-v6.2.0\Filters\Texture;D:\SDK/vtk-v6.2.0/Utilities/KWIML/;D:\SDK/vtk-v6.2.0/Utilities/KWIML/vtkkwiml/;D:\SDK\vtk-v6.2.0\Interaction\Widgets;D:\SDK\vtk-v6.2.0\Interaction\Style;D:\SDK\vtk-v6.2.0\Interaction\Image;D:\SDK\vtk-v6.2.0\Filters\Verdict;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmdata;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmimgle;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmnet;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmsign;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\ofstd;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\oflog;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmimage;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\config;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmpstat;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmsr;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmjpeg;C:/sqlite3-64;C:/log4cxx-64/include;D:\SDK\threadweaver-5.46.0_vc17_include;D:\SDK\threadweaver-5.46.0_vc17_include\src;..\thirdparty\easylogging++;..\..\tmp\moc;..\..\tmp\ui;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus  -w34100 -w34189 -w44996 -w44456 -w44457 -w44458  /Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\tmp\obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>..\..\tmp\obj\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;GLEW_STATIC;NOMINMAX;QT_NO_DEBUG;NDEBUG;QT_OPENGL_LIB;QT_QUICKWIDGETS_LIB;QT_WEBENGINEWIDGETS_LIB;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_GUI_LIB;QT_XML_LIB;QT_XMLPATTERNS_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_NETWORK_LIB;QT_CONCURRENT_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(TargetDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ConformanceMode>false</ConformanceMode>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\core.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;GLEW_STATIC;NOMINMAX;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>D:/code/C++/starviewer-1.0.1/starviewer/tmp/moc/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>..\..\tmp\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>..\..\tmp\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;D:\SDK\ITK-5.3.0_vc17_include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Common\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\FiniteDifference\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\GPUCommon\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\GPUFiniteDifference\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\ImageAdaptors\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\ImageFunction\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Mesh\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\QuadEdgeMesh\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\SpatialObjects\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\TestKernel\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Transform\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\ImageBase\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\NumPy\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\VTK\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\VtkGlue\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Compatibility\Deprecated\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\AnisotropicSmoothing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\AntiAlias\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\BiasCorrection\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\BinaryMathematicalMorphology\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Colormap\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Convolution\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\CurvatureFlow\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Deconvolution\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DiffusionTensorImage\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DisplacementField\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DistanceMap\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\FFT\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUAnisotropicSmoothing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUImageFilterBase\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUSmoothing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUThresholding\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\FastMarching\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageCompare\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageCompose\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFeature\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFilterBase\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFrequency\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFusion\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageGradient\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageGrid\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageIntensity\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageLabel\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageNoise\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageSources\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageStatistics\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\LabelMap\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\MathematicalMorphology\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Path\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Smoothing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\SpatialFunction\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Thresholding\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\BioRad\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\BMP\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Bruker\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\CSV\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\DCMTK\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GDCM\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GE\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GIPL\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\HDF5\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\IPL\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\JPEG\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\JPEG2000\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\LSM\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Mesh\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshBYU\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshFreeSurfer\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshGifti\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshOBJ\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshOFF\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshVTK\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Meta\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MINC\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MRC\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\NIFTI\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\NRRD\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\PhilipsREC\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\PNG\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\RAW\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Siemens\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\SpatialObjects\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TIFF\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformBase\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformFactory\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformHDF5\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformInsightLegacy\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformMatlab\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformMINC\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\VTK\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\XML\include;D:\SDK/ITK-5.3.0_vc17_include/Modules/Nonunit/IntegratedTest/include/;D:\SDK\ITK-5.3.0_vc17_include\Modules\Nonunit\Review\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Eigen\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\FEM\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\NarrowBand\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Optimizers\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Optimizersv4\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Polynomials\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Statistics\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\Common\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\FEM\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\GPUCommon\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\GPUPDEDeformable\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\Metricsv4\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\PDEDeformable\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\RegistrationMethodsv4\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Classifiers\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\ConnectedComponents\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\DeformableMesh\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\KLMRegionGrowing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LabelVoting\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LevelSets\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LevelSetsv4\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\MarkovRandomFieldsClassifiers\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\RegionGrowing\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\SignedDistanceFunction\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\SuperPixel\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Voronoi\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Watersheds\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\GoogleTest\src\itkgoogletest\googletest\include;D:\SDK/ITK-5.3.0_vc17_include/Modules/ThirdParty/KWIML/src/itkkwiml/include/;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\MINC\src\libminc\volume_io\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\libLBFGS\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\VNL\src\vxl\core;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\MetaIO\src\MetaIO\src;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\VNL\src\vxl\vcl;D:\SDK/ITK-5.3.0_vc17_include/Modules/ThirdParty/ZLIB/src/itkzlib/;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\Eigen3\src;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\Eigen3\src\itkeigen\Eigen;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\KWSys\src\KWSys;D:\SDK/ITK-5.3.0_vc17_include/Modules/ThirdParty/GDCM/src/gdcm/Utilities/VTK/;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\BridgeOpenCV\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\BridgeVXL\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\Core\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\Filtering\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\IO\include;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Common;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\FiniteDifference;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\GPUCommon;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\GPUFiniteDifference;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\ImageAdaptors;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\ImageFunction;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Mesh;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\QuadEdgeMesh;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\SpatialObjects;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\TestKernel;D:\SDK\ITK-5.3.0_vc17_include\Modules\Core\Transform;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\ImageBase;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\NumPy;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\VTK;D:\SDK\ITK-5.3.0_vc17_include\Modules\Bridge\VtkGlue;D:\SDK\ITK-5.3.0_vc17_include\Modules\Compatibility\Deprecated;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\AnisotropicSmoothing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\AntiAlias;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\BiasCorrection;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\BinaryMathematicalMorphology;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Colormap;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Convolution;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\CurvatureFlow;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Deconvolution;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DiffusionTensorImage;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DisplacementField;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\DistanceMap;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\FFT;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUAnisotropicSmoothing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUImageFilterBase;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUSmoothing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\GPUThresholding;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\FastMarching;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageCompare;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageCompose;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFeature;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFilterBase;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFrequency;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageFusion;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageGradient;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageGrid;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageIntensity;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageLabel;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageNoise;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageSources;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\ImageStatistics;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\LabelMap;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\MathematicalMorphology;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Path;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Smoothing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\SpatialFunction;D:\SDK\ITK-5.3.0_vc17_include\Modules\Filtering\Thresholding;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\BioRad;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\BMP;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Bruker;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\CSV;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\DCMTK;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GDCM;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GE;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\GIPL;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\HDF5;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\IPL;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\JPEG;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\JPEG2000;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\LSM;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Mesh;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshBYU;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshFreeSurfer;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshGifti;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshOBJ;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshOFF;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MeshVTK;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Meta;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MINC;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\MRC;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\NIFTI;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\NRRD;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\PhilipsREC;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\PNG;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\RAW;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\Siemens;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\SpatialObjects;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TIFF;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformBase;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformFactory;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformHDF5;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformInsightLegacy;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformMatlab;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\TransformMINC;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\VTK;D:\SDK\ITK-5.3.0_vc17_include\Modules\IO\XML;D:\SDK/ITK-5.3.0_vc17_include/Modules/Nonunit/IntegratedTest/;D:\SDK\ITK-5.3.0_vc17_include\Modules\Nonunit\Review;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Eigen;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\FEM;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\NarrowBand;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Optimizers;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Optimizersv4;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Polynomials;D:\SDK\ITK-5.3.0_vc17_include\Modules\Numerics\Statistics;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\Common;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\FEM;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\GPUCommon;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\GPUPDEDeformable;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\Metricsv4;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\PDEDeformable;D:\SDK\ITK-5.3.0_vc17_include\Modules\Registration\RegistrationMethodsv4;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Classifiers;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\ConnectedComponents;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\DeformableMesh;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\KLMRegionGrowing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LabelVoting;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LevelSets;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\LevelSetsv4;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\MarkovRandomFieldsClassifiers;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\RegionGrowing;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\SignedDistanceFunction;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\SuperPixel;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Voronoi;D:\SDK\ITK-5.3.0_vc17_include\Modules\Segmentation\Watersheds;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\GoogleTest\src\itkgoogletest\googletest;D:\SDK/ITK-5.3.0_vc17_include/Modules/ThirdParty/KWIML/src/itkkwiml/;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\MINC\src\libminc\volume_io;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\libLBFGS;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\BridgeOpenCV;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\BridgeVXL;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\Core;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\Filtering;D:\SDK\ITK-5.3.0_vc17_include\Modules\Video\IO;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\KWSys\src;D:\SDK\ITK-5.3.0_vc17_include\Modules\ThirdParty\ZLIB\src;D:\SDK/ITK-5.3.0_vc17_include/more/;D:\SDK\GDCM-2.8.9;D:\SDK\GDCM-2.8.9\Source\Common;D:\SDK\GDCM-2.8.9\Source\MediaStorageAndFileFormat;D:\SDK\GDCM-2.8.9\Source\DataStructureAndEncodingDefinition;D:\SDK\GDCM-2.8.9\Source\DataDictionary;D:\SDK\GDCM-2.8.9\Source\InformationObjectDefinition;D:\SDK\GDCM-2.8.9\Source\Attribute;D:\SDK\GDCM-2.8.9\Source\MessageExchangeDefinition;D:\SDK/GDCM-2.8.9/more/;D:\SDK\GDCM-2.8.9\Utilities;D:\SDK\GDCM-2.8.9\Utilities\gdcmcharls;D:\SDK\GDCM-2.8.9\Utilities\gdcmexpat;D:\SDK\GDCM-2.8.9\Utilities\gdcmjpeg;D:\SDK\GDCM-2.8.9\Utilities\gdcmmd5;D:\SDK\GDCM-2.8.9\Utilities\gdcmopenjpeg;D:\SDK\GDCM-2.8.9\Utilities\gdcmopenjpeg\src\lib\openjp2;D:\SDK\GDCM-2.8.9\Utilities\gdcmrle;D:\SDK\GDCM-2.8.9\Utilities\gdcmutfcpp;D:\SDK\GDCM-2.8.9\Utilities\gdcmuuid;D:\SDK\GDCM-2.8.9\Utilities\gdcmzlib;D:\SDK\GDCM-2.8.9\Utilities\getopt;D:\SDK\GDCM-2.8.9\Utilities\KWStyle;D:\SDK\GDCM-2.8.9\Utilities\pvrg;D:\SDK\GDCM-2.8.9\Utilities\VTK;D:\SDK\GDCM-2.8.9\Utilities\socketxx;D:\SDK\vtk-v6.2.0;D:\SDK/vtk-v6.2.0/more/;D:\SDK\vtk-v6.2.0\Common\Core;D:\SDK\vtk-v6.2.0\Common\DataModel;D:\SDK\vtk-v6.2.0\Common\Math;D:\SDK\vtk-v6.2.0\Common\ComputationalGeometry;D:\SDK\vtk-v6.2.0\Common\ExecutionModel;D:\SDK\vtk-v6.2.0\Common\Misc;D:\SDK\vtk-v6.2.0\Common\System;D:\SDK\vtk-v6.2.0\Common\Transforms;D:\SDK\vtk-v6.2.0\Common\Color;D:\SDK\vtk-v6.2.0\Imaging\Core;D:\SDK\vtk-v6.2.0\Imaging\Color;D:\SDK\vtk-v6.2.0\Imaging\Fourier;D:\SDK\vtk-v6.2.0\Imaging\General;D:\SDK\vtk-v6.2.0\Imaging\Hybrid;D:\SDK\vtk-v6.2.0\Imaging\Math;D:\SDK\vtk-v6.2.0\Imaging\Morphological;D:\SDK/vtk-v6.2.0/Imaging/OpenGL2/;D:\SDK\vtk-v6.2.0\Imaging\Sources;D:\SDK\vtk-v6.2.0\Imaging\Statistics;D:\SDK\vtk-v6.2.0\Imaging\Stencil;D:\SDK\vtk-v6.2.0\IO\ADIOS;D:\SDK\vtk-v6.2.0\IO\Core;D:\SDK\vtk-v6.2.0\IO\EnSight;D:\SDK\vtk-v6.2.0\IO\Exodus;D:\SDK\vtk-v6.2.0\IO\Export;D:\SDK/vtk-v6.2.0/IO/ExportOpenGL/;D:\SDK/vtk-v6.2.0/IO/ExportOpenGL2/;D:\SDK\vtk-v6.2.0\IO\FFMPEG;D:\SDK\vtk-v6.2.0\IO\GDAL;D:\SDK\vtk-v6.2.0\IO\GeoJSON;D:\SDK\vtk-v6.2.0\IO\Geometry;D:\SDK\vtk-v6.2.0\IO\Image;D:\SDK\vtk-v6.2.0\IO\Import;D:\SDK\vtk-v6.2.0\IO\Infovis;D:\SDK/vtk-v6.2.0/IO/LAS/;D:\SDK\vtk-v6.2.0\IO\Legacy;D:\SDK\vtk-v6.2.0\IO\LSDyna;D:\SDK\vtk-v6.2.0\IO\MINC;D:\SDK\vtk-v6.2.0\IO\Movie;D:\SDK\vtk-v6.2.0\IO\MPIImage;D:\SDK\vtk-v6.2.0\IO\MPIParallel;D:\SDK\vtk-v6.2.0\IO\MySQL;D:\SDK\vtk-v6.2.0\IO\NetCDF;D:\SDK\vtk-v6.2.0\IO\ODBC;D:\SDK\vtk-v6.2.0\IO\Parallel;D:\SDK\vtk-v6.2.0\IO\ParallelExodus;D:\SDK\vtk-v6.2.0\IO\ParallelLSDyna;D:\SDK\vtk-v6.2.0\IO\ParallelNetCDF;D:\SDK/vtk-v6.2.0/IO/ParallelXdmf3/;D:\SDK\vtk-v6.2.0\IO\ParallelXML;D:\SDK/vtk-v6.2.0/IO/PDAL/;D:\SDK\vtk-v6.2.0\IO\PLY;D:\SDK\vtk-v6.2.0\IO\PostgreSQL;D:\SDK/vtk-v6.2.0/IO/SegY/;D:\SDK/vtk-v6.2.0/IO/TecplotTable/;D:\SDK\vtk-v6.2.0\IO\Video;D:\SDK\vtk-v6.2.0\IO\VPIC;D:\SDK\vtk-v6.2.0\IO\Xdmf2;D:\SDK\vtk-v6.2.0\IO\Xdmf3;D:\SDK\vtk-v6.2.0\IO\XML;D:\SDK\vtk-v6.2.0\IO\XMLParser;D:\SDK\vtk-v6.2.0\GUISupport\MFC;D:\SDK\vtk-v6.2.0\GUISupport\Qt;D:\SDK\vtk-v6.2.0\GUISupport\QtOpenGL;D:\SDK\vtk-v6.2.0\GUISupport\QtSQL;D:\SDK\vtk-v6.2.0\GUISupport\QtWebkit;D:\SDK\vtk-v6.2.0\Rendering\Annotation;D:\SDK\vtk-v6.2.0\Rendering\Context2D;D:\SDK\vtk-v6.2.0\Rendering\ContextOpenGL;D:\SDK\vtk-v6.2.0\Rendering\ContextOpenGL2;D:\SDK\vtk-v6.2.0\Rendering\Core;D:\SDK\vtk-v6.2.0\Rendering\External;D:\SDK\vtk-v6.2.0\Rendering\FreeType;D:\SDK\vtk-v6.2.0\Rendering\FreeTypeFontConfig;D:\SDK\vtk-v6.2.0\Rendering\GL2PS;D:\SDK/vtk-v6.2.0/Rendering/GL2PSOpenGL2/;D:\SDK\vtk-v6.2.0\Rendering\Label;D:\SDK\vtk-v6.2.0\Rendering\Image;D:\SDK\vtk-v6.2.0\Rendering\LIC;D:\SDK/vtk-v6.2.0/Rendering/LICOpenGL2/;D:\SDK\vtk-v6.2.0\Rendering\LOD;D:\SDK\vtk-v6.2.0\Rendering\Matplotlib;D:\SDK/vtk-v6.2.0/Rendering/Oculus/;D:\SDK\vtk-v6.2.0\Rendering\OpenGL;D:\SDK\vtk-v6.2.0\Rendering\OpenGL2;D:\SDK/vtk-v6.2.0/Rendering/OpenVR/;D:\SDK/vtk-v6.2.0/Rendering/OptiX/;D:\SDK/vtk-v6.2.0/Rendering/OSPRay/;D:\SDK\vtk-v6.2.0\Rendering\Parallel;D:\SDK\vtk-v6.2.0\Rendering\ParallelLIC;D:\SDK\vtk-v6.2.0\Rendering\Qt;D:\SDK/vtk-v6.2.0/Rendering/SceneGraph/;D:\SDK\vtk-v6.2.0\Rendering\Tk;D:\SDK\vtk-v6.2.0\Rendering\Volume;D:\SDK\vtk-v6.2.0\Rendering\VolumeAMR;D:\SDK\vtk-v6.2.0\Rendering\VolumeOpenGL;D:\SDK\vtk-v6.2.0\Rendering\VolumeOpenGL2;D:\SDK\vtk-v6.2.0\Filters\Core;D:\SDK\vtk-v6.2.0\Filters\Extraction;D:\SDK\vtk-v6.2.0\Filters\FlowPaths;D:\SDK\vtk-v6.2.0\Filters\General;D:\SDK\vtk-v6.2.0\Filters\Generic;D:\SDK\vtk-v6.2.0\Filters\Geometry;D:\SDK\vtk-v6.2.0\Filters\Hybrid;D:\SDK\vtk-v6.2.0\Filters\HyperTree;D:\SDK\vtk-v6.2.0\Filters\Imaging;D:\SDK\vtk-v6.2.0\Filters\Modeling;D:\SDK/vtk-v6.2.0/Filters/OpenTurns/;D:\SDK\vtk-v6.2.0\Filters\Parallel;D:\SDK/vtk-v6.2.0/Filters/ParallelDIY2/;D:\SDK\vtk-v6.2.0\Filters\ParallelFlowPaths;D:\SDK\vtk-v6.2.0\Filters\ParallelGeometry;D:\SDK\vtk-v6.2.0\Filters\ParallelImaging;D:\SDK\vtk-v6.2.0\Filters\ParallelMPI;D:\SDK\vtk-v6.2.0\Filters\ParallelStatistics;D:\SDK/vtk-v6.2.0/Filters/ParallelVerdict/;D:\SDK/vtk-v6.2.0/Filters/Points/;D:\SDK\vtk-v6.2.0\Filters\Programmable;D:\SDK\vtk-v6.2.0\Filters\Python;D:\SDK\vtk-v6.2.0\Filters\ReebGraph;D:\SDK\vtk-v6.2.0\Filters\Selection;D:\SDK\vtk-v6.2.0\Filters\SMP;D:\SDK\vtk-v6.2.0\Filters\Sources;D:\SDK\vtk-v6.2.0\Filters\Statistics;D:\SDK/vtk-v6.2.0/Filters/Qt/;D:\SDK/vtk-v6.2.0/Filters/SceneGraph/;D:\SDK\vtk-v6.2.0\Filters\Texture;D:\SDK/vtk-v6.2.0/Utilities/KWIML/;D:\SDK/vtk-v6.2.0/Utilities/KWIML/vtkkwiml/;D:\SDK\vtk-v6.2.0\Interaction\Widgets;D:\SDK\vtk-v6.2.0\Interaction\Style;D:\SDK\vtk-v6.2.0\Interaction\Image;D:\SDK\vtk-v6.2.0\Filters\Verdict;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmdata;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmimgle;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmnet;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmsign;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\ofstd;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\oflog;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmimage;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\config;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmpstat;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmsr;D:\SDK\starviewer-win64-5.0.1-8.2.0-3.0.0\dcmtk\3.6.5\include\dcmtk\dcmjpeg;C:/sqlite3-64;C:/log4cxx-64/include;D:\SDK\threadweaver-5.46.0_vc17_include;D:\SDK\threadweaver-5.46.0_vc17_include\src;..\thirdparty\easylogging++;..\..\tmp\moc;..\..\tmp\ui;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\tmp\obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>..\..\tmp\obj\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;GLEW_STATIC;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\core.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;GLEW_STATIC;NOMINMAX;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>..\..\tmp\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>D:/code/C++/starviewer-1.0.1/starviewer/tmp/moc/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>..\..\tmp\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="abortrendercommand.cpp" />
+    <ClCompile Include="abstractroidataprinter.cpp" />
+    <ClCompile Include="ambientvoxelshader.cpp" />
+    <ClCompile Include="anatomicalplane.cpp" />
+    <ClCompile Include="anatomicalplanesynccriterion.cpp" />
+    <ClCompile Include="anatomicalregionsynccriterion.cpp" />
+    <ClCompile Include="anglebetweenplanessynccriterion.cpp" />
+    <ClCompile Include="angletool.cpp" />
+    <ClCompile Include="applicationstylehelper.cpp" />
+    <ClCompile Include="applicationupdatechecker.cpp" />
+    <ClCompile Include="applicationversionchecker.cpp" />
+    <ClCompile Include="applicationversiontest.cpp" />
+    <ClCompile Include="applyhangingprotocolqviewercommand.cpp" />
+    <ClCompile Include="areameasurecomputer.cpp" />
+    <ClCompile Include="automaticsynchronizationtool.cpp" />
+    <ClCompile Include="automaticsynchronizationtooldata.cpp" />
+    <ClCompile Include="blendfilter.cpp" />
+    <ClCompile Include="bodysurfaceareaformula.cpp" />
+    <ClCompile Include="bodysurfaceareaformulacalculator.cpp" />
+    <ClCompile Include="changesliceqviewercommand.cpp" />
+    <ClCompile Include="circletool.cpp" />
+    <ClCompile Include="clippingplanestool.cpp" />
+    <ClCompile Include="colortransferfunction.cpp" />
+    <ClCompile Include="computezspacingpostprocessor.cpp" />
+    <ClCompile Include="contourvoxelshader.cpp" />
+    <ClCompile Include="coresettings.cpp" />
+    <ClCompile Include="createinformationmodelobject.cpp" />
+    <ClCompile Include="cursor3dtool.cpp" />
+    <ClCompile Include="cursor3dtooldata.cpp" />
+    <ClCompile Include="customwindowlevelsloader.cpp" />
+    <ClCompile Include="customwindowlevelsreader.cpp" />
+    <ClCompile Include="customwindowlevelsrepository.cpp" />
+    <ClCompile Include="customwindowlevelswriter.cpp" />
+    <ClCompile Include="decaycorrectionfactorformula.cpp" />
+    <ClCompile Include="decaycorrectionfactorformulacalculator.cpp" />
+    <ClCompile Include="defaultmeasurementtypeselector.cpp" />
+    <ClCompile Include="defaultsettings.cpp" />
+    <ClCompile Include="defaulttransferfunctionselector.cpp" />
+    <ClCompile Include="diagnosistestproblem.cpp" />
+    <ClCompile Include="diagnosistestresult.cpp" />
+    <ClCompile Include="diagnosistestresultwriter.cpp" />
+    <ClCompile Include="dicomattribute.cpp" />
+    <ClCompile Include="dicomdumpdefaulttags.cpp" />
+    <ClCompile Include="dicomdumpdefaulttagsloader.cpp" />
+    <ClCompile Include="dicomdumpdefaulttagsreader.cpp" />
+    <ClCompile Include="dicomdumpdefaulttagsrepository.cpp" />
+    <ClCompile Include="dicomdumpdefaulttagsrestriction.cpp" />
+    <ClCompile Include="dicomfileclassifierfillerstep.cpp" />
+    <ClCompile Include="dicomfilegenerator.cpp" />
+    <ClCompile Include="dicomformattedvaluesconverter.cpp" />
+    <ClCompile Include="dicomimagefilegenerator.cpp" />
+    <ClCompile Include="dicomsequenceattribute.cpp" />
+    <ClCompile Include="dicomsequenceitem.cpp" />
+    <ClCompile Include="dicomserviceresponsestatus.cpp" />
+    <ClCompile Include="dicomsource.cpp" />
+    <ClCompile Include="dicomtag.cpp" />
+    <ClCompile Include="dicomtagreader.cpp" />
+    <ClCompile Include="dicomvalueattribute.cpp" />
+    <ClCompile Include="dicomvaluerepresentationconverter.cpp" />
+    <ClCompile Include="dicomwriter.cpp" />
+    <ClCompile Include="dicomwriterdcmtk.cpp" />
+    <ClCompile Include="directilluminationvoxelshader.cpp" />
+    <ClCompile Include="directoryutilities.cpp" />
+    <ClCompile Include="displayableid.cpp" />
+    <ClCompile Include="displayshutter.cpp" />
+    <ClCompile Include="displayshutterfilter.cpp" />
+    <ClCompile Include="distancemeasurecomputer.cpp" />
+    <ClCompile Include="distancetool.cpp" />
+    <ClCompile Include="..\fmjpeg2k\djcodecd.cc" />
+    <ClCompile Include="..\fmjpeg2k\djcodece.cc" />
+    <ClCompile Include="..\fmjpeg2k\djcparam.cc" />
+    <ClCompile Include="..\fmjpeg2k\djdecode.cc" />
+    <ClCompile Include="..\fmjpeg2k\djencode.cc" />
+    <ClCompile Include="..\fmjpeg2k\djrparam.cc" />
+    <ClCompile Include="..\fmjpeg2k\djutils.cc" />
+    <ClCompile Include="drawer.cpp" />
+    <ClCompile Include="drawerbitmap.cpp" />
+    <ClCompile Include="drawercrosshair.cpp" />
+    <ClCompile Include="drawerline.cpp" />
+    <ClCompile Include="drawerpoint.cpp" />
+    <ClCompile Include="drawerpolygon.cpp" />
+    <ClCompile Include="drawerpolyline.cpp" />
+    <ClCompile Include="drawerprimitive.cpp" />
+    <ClCompile Include="drawertext.cpp" />
+    <ClCompile Include="dynamicmatrix.cpp" />
+    <ClCompile Include="editortool.cpp" />
+    <ClCompile Include="editortooldata.cpp" />
+    <ClCompile Include="ellipticalroitool.cpp" />
+    <ClCompile Include="erasertool.cpp" />
+    <ClCompile Include="extensioncontext.cpp" />
+    <ClCompile Include="extensionmediator.cpp" />
+    <ClCompile Include="externalapplication.cpp" />
+    <ClCompile Include="externalapplicationsmanager.cpp" />
+    <ClCompile Include="filter.cpp" />
+    <ClCompile Include="filteroutput.cpp" />
+    <ClCompile Include="firewallaccess.cpp" />
+    <ClCompile Include="firewallaccesstest.cpp" />
+    <ClCompile Include="formula.cpp" />
+    <ClCompile Include="formulacalculator.cpp" />
+    <ClCompile Include="frameofreferencesynccriterion.cpp" />
+    <ClCompile Include="genericdistancetool.cpp" />
+    <ClCompile Include="genericvolumedisplayunithandler.cpp" />
+    <ClCompile Include="glutessellator.cpp" />
+    <ClCompile Include="gridicon.cpp" />
+    <ClCompile Include="griditerator.cpp" />
+    <ClCompile Include="hangingprotocol.cpp" />
+    <ClCompile Include="hangingprotocoldisplayset.cpp" />
+    <ClCompile Include="hangingprotocolfiller.cpp" />
+    <ClCompile Include="hangingprotocolimageset.cpp" />
+    <ClCompile Include="hangingprotocolimagesetrestriction.cpp" />
+    <ClCompile Include="hangingprotocolimagesetrestrictionexpression.cpp" />
+    <ClCompile Include="hangingprotocollayout.cpp" />
+    <ClCompile Include="hangingprotocolmanager.cpp" />
+    <ClCompile Include="hangingprotocolmask.cpp" />
+    <ClCompile Include="hangingprotocolsloader.cpp" />
+    <ClCompile Include="hangingprotocolsrepository.cpp" />
+    <ClCompile Include="hangingprotocolxmlreader.cpp" />
+    <ClCompile Include="harddiskinformation.cpp" />
+    <ClCompile Include="hoverpoints.cpp" />
+    <ClCompile Include="identifier.cpp" />
+    <ClCompile Include="image.cpp" />
+    <ClCompile Include="imagefillerstep.cpp" />
+    <ClCompile Include="imageorientation.cpp" />
+    <ClCompile Include="imageorientationoperationsmapper.cpp" />
+    <ClCompile Include="imageorientationsignaltosyncactionmapper.cpp" />
+    <ClCompile Include="imageorientationsyncaction.cpp" />
+    <ClCompile Include="imageoverlay.cpp" />
+    <ClCompile Include="imageoverlayreader.cpp" />
+    <ClCompile Include="imageoverlayregionfinder.cpp" />
+    <ClCompile Include="imagepipeline.cpp" />
+    <ClCompile Include="imageplane.cpp" />
+    <ClCompile Include="inputsynccriterion.cpp" />
+    <ClCompile Include="itemmenu.cpp" />
+    <ClCompile Include="itkDCMTKFileReader.cxx" />
+    <ClCompile Include="itkDCMTKImageIO.cxx" />
+    <ClCompile Include="itkDCMTKImageIOFactory.cxx" />
+    <ClCompile Include="itkDCMTKSeriesFileNames.cxx" />
+    <ClCompile Include="itkgdcmbydefaultvolumepixeldatareaderselector.cpp" />
+    <ClCompile Include="keyimagenotefillerstep.cpp" />
+    <ClCompile Include="leanbodymassformula.cpp" />
+    <ClCompile Include="leanbodymassformulacalculator.cpp" />
+    <ClCompile Include="line3d.cpp" />
+    <ClCompile Include="logging.cpp" />
+    <ClCompile Include="loggingoutputwindow.cpp" />
+    <ClCompile Include="machineidentifier.cpp" />
+    <ClCompile Include="machineinformation.cpp" />
+    <ClCompile Include="magicroitool.cpp" />
+    <ClCompile Include="magnifyingglasstool.cpp" />
+    <ClCompile Include="mammographyimagehelper.cpp" />
+    <ClCompile Include="mathtools.cpp" />
+    <ClCompile Include="measurecomputer.cpp" />
+    <ClCompile Include="measurementmanager.cpp" />
+    <ClCompile Include="measurementtool.cpp" />
+    <ClCompile Include="..\fmjpeg2k\memory_file.cpp" />
+    <ClCompile Include="mhdfileclassifierstep.cpp" />
+    <ClCompile Include="modalitysynccriterion.cpp" />
+    <ClCompile Include="nmctfusionroidataprinter.cpp" />
+    <ClCompile Include="nmctvolumedisplayunithandler.cpp" />
+    <ClCompile Include="nmroidataprinter.cpp" />
+    <ClCompile Include="nmvolumedisplayunithandler.cpp" />
+    <ClCompile Include="nonclosedangletool.cpp" />
+    <ClCompile Include="obscurance.cpp" />
+    <ClCompile Include="obscurancemainthread.cpp" />
+    <ClCompile Include="obscurancethread.cpp" />
+    <ClCompile Include="obscurancevoxelshader.cpp" />
+    <ClCompile Include="opacitytransferfunction.cpp" />
+    <ClCompile Include="optimalviewersgridestimator.cpp" />
+    <ClCompile Include="orderimagesfillerstep.cpp" />
+    <ClCompile Include="orthogonalplane.cpp" />
+    <ClCompile Include="pacsdevice.cpp" />
+    <ClCompile Include="pairedvolumedisplayunithandler.cpp" />
+    <ClCompile Include="pansignaltosyncactionmapper.cpp" />
+    <ClCompile Include="pansyncaction.cpp" />
+    <ClCompile Include="patient.cpp" />
+    <ClCompile Include="patientbrowsermenu.cpp" />
+    <ClCompile Include="patientbrowsermenubasicitem.cpp" />
+    <ClCompile Include="patientbrowsermenuextendedinfo.cpp" />
+    <ClCompile Include="patientbrowsermenuextendeditem.cpp" />
+    <ClCompile Include="patientbrowsermenufusionitem.cpp" />
+    <ClCompile Include="patientbrowsermenugroup.cpp" />
+    <ClCompile Include="patientbrowsermenulist.cpp" />
+    <ClCompile Include="patientcomparer.cpp" />
+    <ClCompile Include="patientfiller.cpp" />
+    <ClCompile Include="patientfillerinput.cpp" />
+    <ClCompile Include="patientfillerstep.cpp" />
+    <ClCompile Include="patientorientation.cpp" />
+    <ClCompile Include="perpendiculardistancetool.cpp" />
+    <ClCompile Include="petctfusionroidataprinter.cpp" />
+    <ClCompile Include="petctvolumedisplayunithandler.cpp" />
+    <ClCompile Include="petroidataprinter.cpp" />
+    <ClCompile Include="petvolumedisplayunithandler.cpp" />
+    <ClCompile Include="phasesignaltosyncactionmapper.cpp" />
+    <ClCompile Include="phasesyncaction.cpp" />
+    <ClCompile Include="photometricinterpretation.cpp" />
+    <ClCompile Include="pixelspacing2d.cpp" />
+    <ClCompile Include="pixelspacingamenderpostprocessor.cpp" />
+    <ClCompile Include="pixelspacingschemepropertyselector.cpp" />
+    <ClCompile Include="point3d.cpp" />
+    <ClCompile Include="polylineroitool.cpp" />
+    <ClCompile Include="polylinetemporalroitool.cpp" />
+    <ClCompile Include="polylinetemporalroitooldata.cpp" />
+    <ClCompile Include="postprocessor.cpp" />
+    <ClCompile Include="preferredpixelspacingselector.cpp" />
+    <ClCompile Include="presentationstatefillerstep.cpp" />
+    <ClCompile Include="q2dviewer.cpp" />
+    <ClCompile Include="q2dviewerannotationhandler.cpp" />
+    <ClCompile Include="q2dviewerconfigurationscreen.cpp" />
+    <ClCompile Include="q2dviewerlayoutconfigurationscreen.cpp" />
+    <ClCompile Include="q2dviewerwidget.cpp" />
+    <ClCompile Include="q3dorientationmarker.cpp" />
+    <ClCompile Include="q3dviewer.cpp" />
+    <ClCompile Include="qcinecontroller.cpp" />
+    <ClCompile Include="qcolorspinbox.cpp" />
+    <ClCompile Include="qcolortransferfunctiongraphicalview.cpp" />
+    <ClCompile Include="qcolortransferfunctiongraphicalviewnode.cpp" />
+    <ClCompile Include="qcustomwindowleveldialog.cpp" />
+    <ClCompile Include="qcustomwindowleveleditwidget.cpp" />
+    <ClCompile Include="qdiagnosistest.cpp" />
+    <ClCompile Include="qdicomdumpbrowser.cpp" />
+    <ClCompile Include="qenhancedmenutoolbutton.cpp" />
+    <ClCompile Include="qexternalapplicationconfigurationscreen.cpp" />
+    <ClCompile Include="qfusionbalancewidget.cpp" />
+    <ClCompile Include="qfusionlayoutwidget.cpp" />
+    <ClCompile Include="qlayoutoptionswidget.cpp" />
+    <ClCompile Include="qlogviewer.cpp" />
+    <ClCompile Include="qmessageboxautoclose.cpp" />
+    <ClCompile Include="qmodalitiesselectorgroupbox.cpp" />
+    <ClCompile Include="qnotificationpopup.cpp" />
+    <ClCompile Include="qopacitytransferfunctiongraphicalview.cpp" />
+    <ClCompile Include="qopacitytransferfunctiongraphicalviewline.cpp" />
+    <ClCompile Include="qopacitytransferfunctiongraphicalviewnode.cpp" />
+    <ClCompile Include="qreleasenotes.cpp" />
+    <ClCompile Include="qscreendistribution.cpp" />
+    <ClCompile Include="qthickslabwidget.cpp" />
+    <ClCompile Include="qtransferfunctioneditor.cpp" />
+    <ClCompile Include="qtransferfunctioneditor2.cpp" />
+    <ClCompile Include="qtransferfunctioneditorbygradient.cpp" />
+    <ClCompile Include="qtransferfunctioneditorbyvalues.cpp" />
+    <ClCompile Include="qtransferfunctiongraphicalview.cpp" />
+    <ClCompile Include="qtransferfunctionintervaleditor.cpp" />
+    <ClCompile Include="qtransferfunctionview.cpp" />
+    <ClCompile Include="qtreewidgetwithseparatorline.cpp" />
+    <ClCompile Include="qviewer.cpp" />
+    <ClCompile Include="qviewercinecontroller.cpp" />
+    <ClCompile Include="qviewercommand.cpp" />
+    <ClCompile Include="qviewerworkinprogresswidget.cpp" />
+    <ClCompile Include="qvoilutcombobox.cpp" />
+    <ClCompile Include="referencelinestool.cpp" />
+    <ClCompile Include="referencelinestooldata.cpp" />
+    <ClCompile Include="relativegeometrylayout.cpp" />
+    <ClCompile Include="renderqviewercommand.cpp" />
+    <ClCompile Include="repositorybase.cpp" />
+    <ClCompile Include="representationslayer.cpp" />
+    <ClCompile Include="roidata.cpp" />
+    <ClCompile Include="roidataprinter.cpp" />
+    <ClCompile Include="roitool.cpp" />
+    <ClCompile Include="rotate3dtool.cpp" />
+    <ClCompile Include="rundiagnosistest.cpp" />
+    <ClCompile Include="screen.cpp" />
+    <ClCompile Include="screenlayout.cpp" />
+    <ClCompile Include="screenmanager.cpp" />
+    <ClCompile Include="screenshottool.cpp" />
+    <ClCompile Include="secondaryvolumedisplayunit.cpp" />
+    <ClCompile Include="seedtool.cpp" />
+    <ClCompile Include="seedtooldata.cpp" />
+    <ClCompile Include="series.cpp" />
+    <ClCompile Include="settings.cpp" />
+    <ClCompile Include="settingsaccesslevelfilereader.cpp" />
+    <ClCompile Include="settingsparser.cpp" />
+    <ClCompile Include="settingsregistry.cpp" />
+    <ClCompile Include="shadewidget.cpp" />
+    <ClCompile Include="shortcutmanager.cpp" />
+    <ClCompile Include="shortcuts.cpp" />
+    <ClCompile Include="signaltosyncactionmapper.cpp" />
+    <ClCompile Include="singlesliceorvolumetricsynccriterion.cpp" />
+    <ClCompile Include="singlevolumedisplayunithandler.cpp" />
+    <ClCompile Include="slicehandler.cpp" />
+    <ClCompile Include="slicelocator.cpp" />
+    <ClCompile Include="slicingkeyboardtool.cpp" />
+    <ClCompile Include="slicingtool.cpp" />
+    <ClCompile Include="slicingwheeltool.cpp" />
+    <ClCompile Include="sphereuniformpointcloudgenerator.cpp" />
+    <ClCompile Include="standardizeduptakevaluebodysurfaceareaformulacalculator.cpp" />
+    <ClCompile Include="standardizeduptakevaluebodyweightformulacalculator.cpp" />
+    <ClCompile Include="standardizeduptakevalueformula.cpp" />
+    <ClCompile Include="standardizeduptakevalueformulacalculator.cpp" />
+    <ClCompile Include="standardizeduptakevalueleanbodymassformulacalculator.cpp" />
+    <ClCompile Include="standarduptakevaluemeasurehandler.cpp" />
+    <ClCompile Include="statswatcher.cpp" />
+    <ClCompile Include="strokesegmentationmethod.cpp" />
+    <ClCompile Include="study.cpp" />
+    <ClCompile Include="studylayoutconfig.cpp" />
+    <ClCompile Include="studylayoutconfigsettingsconverter.cpp" />
+    <ClCompile Include="studylayoutconfigsettingsmanager.cpp" />
+    <ClCompile Include="studylayoutconfigsloader.cpp" />
+    <ClCompile Include="studylayoutmapper.cpp" />
+    <ClCompile Include="syncaction.cpp" />
+    <ClCompile Include="syncactionmanager.cpp" />
+    <ClCompile Include="syncactionmetadata.cpp" />
+    <ClCompile Include="syncactionsconfiguration.cpp" />
+    <ClCompile Include="syncactionsconfigurationhandler.cpp" />
+    <ClCompile Include="syncactionsconfigurationmenu.cpp" />
+    <ClCompile Include="synccriterion.cpp" />
+    <ClCompile Include="synchronizetool.cpp" />
+    <ClCompile Include="synchronizetooldata.cpp" />
+    <ClCompile Include="systeminformation.cpp" />
+    <ClCompile Include="systemrequeriments.cpp" />
+    <ClCompile Include="systemrequerimentstest.cpp" />
+    <ClCompile Include="temporaldimensionfillerstep.cpp" />
+    <ClCompile Include="thickslabfilter.cpp" />
+    <ClCompile Include="thickslabsignaltosyncactionmapper.cpp" />
+    <ClCompile Include="thickslabsyncaction.cpp" />
+    <ClCompile Include="thumbnailcreator.cpp" />
+    <ClCompile Include="tool.cpp" />
+    <ClCompile Include="toolconfiguration.cpp" />
+    <ClCompile Include="tooldata.cpp" />
+    <ClCompile Include="toolmanager.cpp" />
+    <ClCompile Include="toolproxy.cpp" />
+    <ClCompile Include="toolregistry.cpp" />
+    <ClCompile Include="toolrepresentation.cpp" />
+    <ClCompile Include="transdifferencetool.cpp" />
+    <ClCompile Include="transdifferencetooldata.cpp" />
+    <ClCompile Include="transferfunction.cpp" />
+    <ClCompile Include="transferfunctioneditor.cpp" />
+    <ClCompile Include="transferfunctioneditorcommands.cpp" />
+    <ClCompile Include="transferfunctionio.cpp" />
+    <ClCompile Include="transferfunctionmodel.cpp" />
+    <ClCompile Include="transferfunctionmodelfiller.cpp" />
+    <ClCompile Include="translatetool.cpp" />
+    <ClCompile Include="trilinearinterpolator.cpp" />
+    <ClCompile Include="viewerslayout.cpp" />
+    <ClCompile Include="viewerslayouttosyncactionmanageradapter.cpp" />
+    <ClCompile Include="viewpointgenerator.cpp" />
+    <ClCompile Include="voilut.cpp" />
+    <ClCompile Include="voiluthelper.cpp" />
+    <ClCompile Include="voilutpresetstool.cpp" />
+    <ClCompile Include="voilutpresetstooldata.cpp" />
+    <ClCompile Include="voilutsignaltosyncactionmapper.cpp" />
+    <ClCompile Include="voilutsyncaction.cpp" />
+    <ClCompile Include="volume.cpp" />
+    <ClCompile Include="volumebuilder.cpp" />
+    <ClCompile Include="volumebuilderfromcaptures.cpp" />
+    <ClCompile Include="volumedisplayunit.cpp" />
+    <ClCompile Include="volumedisplayunithandlerfactory.cpp" />
+    <ClCompile Include="volumehelper.cpp" />
+    <ClCompile Include="volumepixeldata.cpp" />
+    <ClCompile Include="volumepixeldataiterator.cpp" />
+    <ClCompile Include="volumepixeldatareader.cpp" />
+    <ClCompile Include="volumepixeldatareaderfactory.cpp" />
+    <ClCompile Include="volumepixeldatareaderitkdcmtk.cpp" />
+    <ClCompile Include="volumepixeldatareaderitkgdcm.cpp" />
+    <ClCompile Include="volumepixeldatareadervtkdcmtk.cpp" />
+    <ClCompile Include="volumepixeldatareadervtkgdcm.cpp" />
+    <ClCompile Include="volumereader.cpp" />
+    <ClCompile Include="volumereaderjob.cpp" />
+    <ClCompile Include="volumereaderjobfactory.cpp" />
+    <ClCompile Include="volumereadermanager.cpp" />
+    <ClCompile Include="volumerepository.cpp" />
+    <ClCompile Include="voxel.cpp" />
+    <ClCompile Include="voxelinformationtool.cpp" />
+    <ClCompile Include="voxelshader.cpp" />
+    <ClCompile Include="vtk4dlinearregressiongradientestimator.cpp" />
+    <ClCompile Include="vtkImageMapToWindowLevelColors3.cxx" />
+    <ClCompile Include="vtkProjectionImageFilter.cxx" />
+    <ClCompile Include="vtkRunThroughFilter.cxx" />
+    <ClCompile Include="vtkVolumeRayCastVoxelShaderCompositeFunction.cxx" />
+    <ClCompile Include="vtkcorrectimageblend.cpp" />
+    <ClCompile Include="vtkdcmtkbydefaultvolumepixeldatareaderselector.cpp" />
+    <ClCompile Include="vtkdcmtkimagereader.cpp" />
+    <ClCompile Include="vtkimagedatacreator.cpp" />
+    <ClCompile Include="vtktextactorwithbackground.cpp" />
+    <ClCompile Include="windowlevel.cpp" />
+    <ClCompile Include="windowlevelfilter.cpp" />
+    <ClCompile Include="windowleveltool.cpp" />
+    <ClCompile Include="windowsfirewallaccess.cpp" />
+    <ClCompile Include="windowssysteminformation.cpp" />
+    <ClCompile Include="zoomfactorsignaltosyncactionmapper.cpp" />
+    <ClCompile Include="zoomfactorsyncaction.cpp" />
+    <ClCompile Include="zoomtool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="abortrendercommand.h" />
+    <ClInclude Include="abstractroidataprinter.h" />
+    <ClInclude Include="accumulator.h" />
+    <ClInclude Include="ambientvoxelshader.h" />
+    <ClInclude Include="anatomicalplane.h" />
+    <ClInclude Include="anatomicalplanesynccriterion.h" />
+    <ClInclude Include="anatomicalregionsynccriterion.h" />
+    <ClInclude Include="anglebetweenplanessynccriterion.h" />
+    <QtMoc Include="angletool.h">
+    </QtMoc>
+    <ClInclude Include="annotationflags.h" />
+    <ClInclude Include="applicationstylehelper.h" />
+    <QtMoc Include="applicationupdatechecker.h">
+    </QtMoc>
+    <QtMoc Include="applicationversionchecker.h">
+    </QtMoc>
+    <QtMoc Include="applicationversiontest.h">
+    </QtMoc>
+    <QtMoc Include="applyhangingprotocolqviewercommand.h">
+    </QtMoc>
+    <ClInclude Include="areameasurecomputer.h" />
+    <QtMoc Include="automaticsynchronizationtool.h">
+    </QtMoc>
+    <QtMoc Include="automaticsynchronizationtooldata.h">
+    </QtMoc>
+    <ClInclude Include="averageaccumulator.h" />
+    <ClInclude Include="blendfilter.h" />
+    <ClInclude Include="bodysurfaceareaformula.h" />
+    <ClInclude Include="bodysurfaceareaformulacalculator.h" />
+    <QtMoc Include="changesliceqviewercommand.h">
+    </QtMoc>
+    <QtMoc Include="circletool.h">
+    </QtMoc>
+    <QtMoc Include="clippingplanestool.h">
+    </QtMoc>
+    <ClInclude Include="colortransferfunction.h" />
+    <ClInclude Include="combiningvoxelshader.h" />
+    <ClInclude Include="computezspacingpostprocessor.h" />
+    <ClInclude Include="contourvoxelshader.h" />
+    <ClInclude Include="coresettings.h" />
+    <ClInclude Include="createinformationmodelobject.h" />
+    <QtMoc Include="cursor3dtool.h">
+    </QtMoc>
+    <QtMoc Include="cursor3dtooldata.h">
+    </QtMoc>
+    <ClInclude Include="customwindowlevelsloader.h" />
+    <ClInclude Include="customwindowlevelsreader.h" />
+    <ClInclude Include="customwindowlevelsrepository.h" />
+    <ClInclude Include="customwindowlevelswriter.h" />
+    <ClInclude Include="decaycorrectionfactorformula.h" />
+    <ClInclude Include="decaycorrectionfactorformulacalculator.h" />
+    <ClInclude Include="defaultmeasurementtypeselector.h" />
+    <ClInclude Include="defaultsettings.h" />
+    <ClInclude Include="defaulttransferfunctionselector.h" />
+    <ClInclude Include="diagnosistest.h" />
+    <ClInclude Include="diagnosistestfactory.h" />
+    <ClInclude Include="diagnosistestfactoryregister.h" />
+    <ClInclude Include="diagnosistestproblem.h" />
+    <ClInclude Include="diagnosistestresult.h" />
+    <ClInclude Include="diagnosistestresultwriter.h" />
+    <ClInclude Include="dicomattribute.h" />
+    <ClInclude Include="dicomdictionary.h" />
+    <ClInclude Include="dicomdumpdefaulttags.h" />
+    <ClInclude Include="dicomdumpdefaulttagsloader.h" />
+    <ClInclude Include="dicomdumpdefaulttagsreader.h" />
+    <ClInclude Include="dicomdumpdefaulttagsrepository.h" />
+    <ClInclude Include="dicomdumpdefaulttagsrestriction.h" />
+    <ClInclude Include="dicomfileclassifierfillerstep.h" />
+    <ClInclude Include="dicomfilegenerator.h" />
+    <ClInclude Include="dicomformattedvaluesconverter.h" />
+    <ClInclude Include="dicomimagefilegenerator.h" />
+    <ClInclude Include="dicomsequenceattribute.h" />
+    <ClInclude Include="dicomsequenceitem.h" />
+    <ClInclude Include="dicomserviceresponsestatus.h" />
+    <ClInclude Include="dicomsource.h" />
+    <ClInclude Include="dicomtag.h" />
+    <ClInclude Include="dicomtagreader.h" />
+    <ClInclude Include="dicomvalueattribute.h" />
+    <ClInclude Include="dicomvaluerepresentationconverter.h" />
+    <ClInclude Include="dicomwriter.h" />
+    <ClInclude Include="dicomwriterdcmtk.h" />
+    <ClInclude Include="directilluminationvoxelshader.h" />
+    <QtMoc Include="directoryutilities.h">
+    </QtMoc>
+    <ClInclude Include="displayableid.h" />
+    <ClInclude Include="displayshutter.h" />
+    <ClInclude Include="displayshutterfilter.h" />
+    <ClInclude Include="distancemeasurecomputer.h" />
+    <QtMoc Include="distancetool.h">
+    </QtMoc>
+    <QtMoc Include="drawer.h">
+    </QtMoc>
+    <QtMoc Include="drawerbitmap.h">
+    </QtMoc>
+    <QtMoc Include="drawercrosshair.h">
+    </QtMoc>
+    <QtMoc Include="drawerline.h">
+    </QtMoc>
+    <QtMoc Include="drawerpoint.h">
+    </QtMoc>
+    <QtMoc Include="drawerpolygon.h">
+    </QtMoc>
+    <QtMoc Include="drawerpolyline.h">
+    </QtMoc>
+    <QtMoc Include="drawerprimitive.h">
+    </QtMoc>
+    <QtMoc Include="drawertext.h">
+    </QtMoc>
+    <ClInclude Include="dynamicmatrix.h" />
+    <QtMoc Include="editortool.h">
+    </QtMoc>
+    <QtMoc Include="editortooldata.h">
+    </QtMoc>
+    <QtMoc Include="ellipticalroitool.h">
+    </QtMoc>
+    <QtMoc Include="erasertool.h">
+    </QtMoc>
+    <ClInclude Include="extensioncontext.h" />
+    <ClInclude Include="extensionfactory.h" />
+    <ClInclude Include="extensionfactoryregister.h" />
+    <QtMoc Include="extensionmediator.h">
+    </QtMoc>
+    <ClInclude Include="extensionmediatorfactory.h" />
+    <ClInclude Include="extensionmediatorfactoryregister.h" />
+    <ClInclude Include="externalapplication.h" />
+    <QtMoc Include="externalapplicationsmanager.h">
+    </QtMoc>
+    <ClInclude Include="filter.h" />
+    <ClInclude Include="filteroutput.h" />
+    <ClInclude Include="firewallaccess.h" />
+    <QtMoc Include="firewallaccesstest.h">
+    </QtMoc>
+    <ClInclude Include="formula.h" />
+    <ClInclude Include="formulacalculator.h" />
+    <ClInclude Include="frameofreferencesynccriterion.h" />
+    <QtMoc Include="genericdistancetool.h">
+    </QtMoc>
+    <ClInclude Include="genericfactory.h" />
+    <ClInclude Include="genericsingletonfactoryregister.h" />
+    <ClInclude Include="genericvolumedisplayunithandler.h" />
+    <ClInclude Include="glutessellator.h" />
+    <QtMoc Include="gridicon.h">
+    </QtMoc>
+    <ClInclude Include="griditerator.h" />
+    <ClInclude Include="hangingprotocol.h" />
+    <ClInclude Include="hangingprotocoldisplayset.h" />
+    <ClInclude Include="hangingprotocolfiller.h" />
+    <ClInclude Include="hangingprotocolimageset.h" />
+    <ClInclude Include="hangingprotocolimagesetrestriction.h" />
+    <ClInclude Include="hangingprotocolimagesetrestrictionexpression.h" />
+    <ClInclude Include="hangingprotocollayout.h" />
+    <QtMoc Include="hangingprotocolmanager.h">
+    </QtMoc>
+    <ClInclude Include="hangingprotocolmask.h" />
+    <QtMoc Include="hangingprotocolsloader.h">
+    </QtMoc>
+    <QtMoc Include="hangingprotocolsrepository.h">
+    </QtMoc>
+    <ClInclude Include="hangingprotocolxmlreader.h" />
+    <ClInclude Include="harddiskinformation.h" />
+    <ClInclude Include="hdrcolor.h" />
+    <QtMoc Include="hoverpoints.h">
+    </QtMoc>
+    <ClInclude Include="identifier.h" />
+    <QtMoc Include="image.h">
+    </QtMoc>
+    <ClInclude Include="imagefillerstep.h" />
+    <ClInclude Include="imageorientation.h" />
+    <ClInclude Include="imageorientationoperationsmapper.h" />
+    <QtMoc Include="imageorientationsignaltosyncactionmapper.h">
+    </QtMoc>
+    <ClInclude Include="imageorientationsyncaction.h" />
+    <ClInclude Include="imageoverlay.h" />
+    <ClInclude Include="imageoverlayreader.h" />
+    <ClInclude Include="imageoverlayregionfinder.h" />
+    <ClInclude Include="imagepipeline.h" />
+    <ClInclude Include="imageplane.h" />
+    <ClInclude Include="inputsynccriterion.h" />
+    <ClInclude Include="installextension.h" />
+    <QtMoc Include="itemmenu.h">
+    </QtMoc>
+    <ClInclude Include="itkDCMTKFileReader.h" />
+    <ClInclude Include="itkDCMTKImageIO.h" />
+    <ClInclude Include="itkDCMTKImageIOFactory.h" />
+    <ClInclude Include="itkDCMTKSeriesFileNames.h" />
+    <ClInclude Include="itkErfcLevelSetFunction.h" />
+    <ClInclude Include="itkErfcLevelSetImageFilter.h" />
+    <ClInclude Include="itkImageToVTKImageFilter.h" />
+    <QtMoc Include="itkQtAdaptor.h">
+    </QtMoc>
+    <ClInclude Include="itkVTKImageToImageFilter.h" />
+    <ClInclude Include="itkVolumeCalculatorImageFilter.h" />
+    <ClInclude Include="itkgdcmbydefaultvolumepixeldatareaderselector.h" />
+    <ClInclude Include="keyimagenotefillerstep.h" />
+    <ClInclude Include="leanbodymassformula.h" />
+    <ClInclude Include="leanbodymassformulacalculator.h" />
+    <ClInclude Include="line3d.h" />
+    <ClInclude Include="logging.h" />
+    <ClInclude Include="loggingoutputwindow.h" />
+    <ClInclude Include="machineidentifier.h" />
+    <ClInclude Include="machineinformation.h" />
+    <QtMoc Include="magicroitool.h">
+    </QtMoc>
+    <QtMoc Include="magnifyingglasstool.h">
+    </QtMoc>
+    <ClInclude Include="mammographyimagehelper.h" />
+    <ClInclude Include="mathtools.h" />
+    <ClInclude Include="maximumaccumulator.h" />
+    <ClInclude Include="measurecomputer.h" />
+    <ClInclude Include="measurementmanager.h" />
+    <QtMoc Include="measurementtool.h">
+    </QtMoc>
+    <ClInclude Include="mhdfileclassifierstep.h" />
+    <ClInclude Include="minimumaccumulator.h" />
+    <ClInclude Include="modalitysynccriterion.h" />
+    <ClInclude Include="nmctfusionroidataprinter.h" />
+    <ClInclude Include="nmctvolumedisplayunithandler.h" />
+    <ClInclude Include="nmroidataprinter.h" />
+    <ClInclude Include="nmvolumedisplayunithandler.h" />
+    <QtMoc Include="nonclosedangletool.h">
+    </QtMoc>
+    <ClInclude Include="obscurance.h" />
+    <QtMoc Include="obscurancemainthread.h">
+    </QtMoc>
+    <QtMoc Include="obscurancethread.h">
+    </QtMoc>
+    <ClInclude Include="obscurancevoxelshader.h" />
+    <ClInclude Include="opacitytransferfunction.h" />
+    <ClInclude Include="optimalviewersgridestimator.h" />
+    <ClInclude Include="orderimagesfillerstep.h" />
+    <ClInclude Include="orthogonalplane.h" />
+    <ClInclude Include="pacsdevice.h" />
+    <ClInclude Include="pairedvolumedisplayunithandler.h" />
+    <QtMoc Include="pansignaltosyncactionmapper.h">
+    </QtMoc>
+    <ClInclude Include="pansyncaction.h" />
+    <QtMoc Include="patient.h">
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenu.h">
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenubasicitem.h">
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenuextendedinfo.h">
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenuextendeditem.h">
+    </QtMoc>
+    <ClInclude Include="patientbrowsermenufusionitem.h" />
+    <QtMoc Include="patientbrowsermenugroup.h">
+    </QtMoc>
+    <QtMoc Include="patientbrowsermenulist.h">
+    </QtMoc>
+    <ClInclude Include="patientcomparer.h" />
+    <QtMoc Include="patientfiller.h">
+    </QtMoc>
+    <ClInclude Include="patientfillerinput.h" />
+    <ClInclude Include="patientfillerstep.h" />
+    <ClInclude Include="patientorientation.h" />
+    <QtMoc Include="perpendiculardistancetool.h">
+    </QtMoc>
+    <ClInclude Include="petctfusionroidataprinter.h" />
+    <ClInclude Include="petctvolumedisplayunithandler.h" />
+    <ClInclude Include="petroidataprinter.h" />
+    <ClInclude Include="petvolumedisplayunithandler.h" />
+    <QtMoc Include="phasesignaltosyncactionmapper.h">
+    </QtMoc>
+    <ClInclude Include="phasesyncaction.h" />
+    <ClInclude Include="photometricinterpretation.h" />
+    <ClInclude Include="pixelspacing2d.h" />
+    <ClInclude Include="pixelspacingamenderpostprocessor.h" />
+    <ClInclude Include="pixelspacingschemepropertyselector.h" />
+    <ClInclude Include="point3d.h" />
+    <QtMoc Include="polylineroitool.h">
+    </QtMoc>
+    <QtMoc Include="polylinetemporalroitool.h">
+    </QtMoc>
+    <QtMoc Include="polylinetemporalroitooldata.h">
+    </QtMoc>
+    <ClInclude Include="postprocessor.h" />
+    <ClInclude Include="preferredpixelspacingselector.h" />
+    <ClInclude Include="presentationstatefillerstep.h" />
+    <QtMoc Include="q2dviewer.h">
+    </QtMoc>
+    <ClInclude Include="q2dviewerannotationhandler.h" />
+    <QtMoc Include="q2dviewerconfigurationscreen.h">
+    </QtMoc>
+    <QtMoc Include="q2dviewerlayoutconfigurationscreen.h">
+    </QtMoc>
+    <QtMoc Include="q2dviewerwidget.h">
+    </QtMoc>
+    <QtMoc Include="q3dorientationmarker.h">
+    </QtMoc>
+    <QtMoc Include="q3dviewer.h">
+    </QtMoc>
+    <QtMoc Include="qcinecontroller.h">
+    </QtMoc>
+    <QtMoc Include="qcolorspinbox.h">
+    </QtMoc>
+    <QtMoc Include="qcolortransferfunctiongraphicalview.h">
+    </QtMoc>
+    <ClInclude Include="qcolortransferfunctiongraphicalviewnode.h" />
+    <QtMoc Include="qcustomwindowleveldialog.h">
+    </QtMoc>
+    <QtMoc Include="qcustomwindowleveleditwidget.h">
+    </QtMoc>
+    <QtMoc Include="qdiagnosistest.h">
+    </QtMoc>
+    <QtMoc Include="qdicomdumpbrowser.h">
+    </QtMoc>
+    <QtMoc Include="qenhancedmenutoolbutton.h">
+    </QtMoc>
+    <QtMoc Include="qexternalapplicationconfigurationscreen.h">
+    </QtMoc>
+    <QtMoc Include="qfusionbalancewidget.h">
+    </QtMoc>
+    <QtMoc Include="qfusionlayoutwidget.h">
+    </QtMoc>
+    <QtMoc Include="qlayoutoptionswidget.h">
+    </QtMoc>
+    <QtMoc Include="qlogviewer.h">
+    </QtMoc>
+    <QtMoc Include="qmessageboxautoclose.h">
+    </QtMoc>
+    <QtMoc Include="qmodalitiesselectorgroupbox.h">
+    </QtMoc>
+    <QtMoc Include="qnotificationpopup.h">
+    </QtMoc>
+    <QtMoc Include="qopacitytransferfunctiongraphicalview.h">
+    </QtMoc>
+    <ClInclude Include="qopacitytransferfunctiongraphicalviewline.h" />
+    <ClInclude Include="qopacitytransferfunctiongraphicalviewnode.h" />
+    <QtMoc Include="qreleasenotes.h">
+    </QtMoc>
+    <QtMoc Include="qscreendistribution.h">
+    </QtMoc>
+    <QtMoc Include="qthickslabwidget.h">
+    </QtMoc>
+    <QtMoc Include="qtransferfunctioneditor.h">
+    </QtMoc>
+    <QtMoc Include="qtransferfunctioneditor2.h">
+    </QtMoc>
+    <QtMoc Include="qtransferfunctioneditorbygradient.h">
+    </QtMoc>
+    <QtMoc Include="qtransferfunctioneditorbyvalues.h">
+    </QtMoc>
+    <QtMoc Include="qtransferfunctiongraphicalview.h">
+    </QtMoc>
+    <QtMoc Include="qtransferfunctionintervaleditor.h">
+    </QtMoc>
+    <QtMoc Include="qtransferfunctionview.h">
+    </QtMoc>
+    <QtMoc Include="qtreewidgetwithseparatorline.h">
+    </QtMoc>
+    <QtMoc Include="qviewer.h">
+    </QtMoc>
+    <QtMoc Include="qviewercinecontroller.h">
+    </QtMoc>
+    <QtMoc Include="qviewercommand.h">
+    </QtMoc>
+    <QtMoc Include="qviewerworkinprogresswidget.h">
+    </QtMoc>
+    <QtMoc Include="qvoilutcombobox.h">
+    </QtMoc>
+    <QtMoc Include="referencelinestool.h">
+    </QtMoc>
+    <QtMoc Include="referencelinestooldata.h">
+    </QtMoc>
+    <QtMoc Include="relativegeometrylayout.h">
+    </QtMoc>
+    <QtMoc Include="renderqviewercommand.h">
+    </QtMoc>
+    <ClInclude Include="repository.h" />
+    <QtMoc Include="repositorybase.h">
+    </QtMoc>
+    <QtMoc Include="representationslayer.h">
+    </QtMoc>
+    <ClInclude Include="roidata.h" />
+    <ClInclude Include="roidataprinter.h" />
+    <QtMoc Include="roitool.h">
+    </QtMoc>
+    <QtMoc Include="rotate3dtool.h">
+    </QtMoc>
+    <QtMoc Include="rundiagnosistest.h">
+    </QtMoc>
+    <ClInclude Include="screen.h" />
+    <ClInclude Include="screenlayout.h" />
+    <ClInclude Include="screenmanager.h" />
+    <QtMoc Include="screenshottool.h">
+    </QtMoc>
+    <ClInclude Include="secondaryvolumedisplayunit.h" />
+    <QtMoc Include="seedtool.h">
+    </QtMoc>
+    <QtMoc Include="seedtooldata.h">
+    </QtMoc>
+    <QtMoc Include="series.h">
+    </QtMoc>
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="settingsaccesslevelfilereader.h" />
+    <ClInclude Include="settingsinterface.h" />
+    <ClInclude Include="settingsparser.h" />
+    <ClInclude Include="settingsregistry.h" />
+    <QtMoc Include="shadewidget.h">
+    </QtMoc>
+    <ClInclude Include="shortcutmanager.h" />
+    <ClInclude Include="shortcuts.h" />
+    <QtMoc Include="signaltosyncactionmapper.h">
+    </QtMoc>
+    <ClInclude Include="signaltosyncactionmapperfactory.h" />
+    <ClInclude Include="signaltosyncactionmapperfactoryregister.h" />
+    <ClInclude Include="singlesliceorvolumetricsynccriterion.h" />
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="singlevolumedisplayunithandler.h" />
+    <QtMoc Include="slicehandler.h">
+    </QtMoc>
+    <ClInclude Include="slicelocator.h" />
+    <QtMoc Include="slicingkeyboardtool.h">
+    </QtMoc>
+    <QtMoc Include="slicingtool.h">
+    </QtMoc>
+    <QtMoc Include="slicingwheeltool.h">
+    </QtMoc>
+    <ClInclude Include="sphereuniformpointcloudgenerator.h" />
+    <ClInclude Include="standardizeduptakevaluebodysurfaceareaformulacalculator.h" />
+    <ClInclude Include="standardizeduptakevaluebodyweightformulacalculator.h" />
+    <ClInclude Include="standardizeduptakevalueformula.h" />
+    <ClInclude Include="standardizeduptakevalueformulacalculator.h" />
+    <ClInclude Include="standardizeduptakevalueleanbodymassformulacalculator.h" />
+    <ClInclude Include="standarduptakevaluemeasurehandler.h" />
+    <ClInclude Include="starviewerapplication.h" />
+    <QtMoc Include="statswatcher.h">
+    </QtMoc>
+    <ClInclude Include="strokesegmentationmethod.h" />
+    <QtMoc Include="study.h">
+    </QtMoc>
+    <ClInclude Include="studylayoutconfig.h" />
+    <ClInclude Include="studylayoutconfigsettingsconverter.h" />
+    <ClInclude Include="studylayoutconfigsettingsmanager.h" />
+    <ClInclude Include="studylayoutconfigsloader.h" />
+    <ClInclude Include="studylayoutmapper.h" />
+    <ClInclude Include="syncaction.h" />
+    <QtMoc Include="syncactionmanager.h">
+    </QtMoc>
+    <ClInclude Include="syncactionmetadata.h" />
+    <ClInclude Include="syncactionsconfiguration.h" />
+    <ClInclude Include="syncactionsconfigurationhandler.h" />
+    <QtMoc Include="syncactionsconfigurationmenu.h">
+    </QtMoc>
+    <ClInclude Include="synccriterion.h" />
+    <QtMoc Include="synchronizetool.h">
+    </QtMoc>
+    <QtMoc Include="synchronizetooldata.h">
+    </QtMoc>
+    <ClInclude Include="systeminformation.h" />
+    <ClInclude Include="systemrequeriments.h" />
+    <QtMoc Include="systemrequerimentstest.h">
+    </QtMoc>
+    <ClInclude Include="temporaldimensionfillerstep.h" />
+    <ClInclude Include="thickslabfilter.h" />
+    <QtMoc Include="thickslabsignaltosyncactionmapper.h">
+    </QtMoc>
+    <ClInclude Include="thickslabsyncaction.h" />
+    <ClInclude Include="thumbnailcreator.h" />
+    <QtMoc Include="tool.h">
+    </QtMoc>
+    <QtMoc Include="toolconfiguration.h">
+    </QtMoc>
+    <QtMoc Include="tooldata.h">
+    </QtMoc>
+    <QtMoc Include="toolmanager.h">
+    </QtMoc>
+    <QtMoc Include="toolproxy.h">
+    </QtMoc>
+    <QtMoc Include="toolregistry.h">
+    </QtMoc>
+    <QtMoc Include="toolrepresentation.h">
+    </QtMoc>
+    <QtMoc Include="transdifferencetool.h">
+    </QtMoc>
+    <QtMoc Include="transdifferencetooldata.h">
+    </QtMoc>
+    <ClInclude Include="transferfunction.h" />
+    <QtMoc Include="transferfunctioneditor.h">
+    </QtMoc>
+    <ClInclude Include="transferfunctioneditorcommands.h" />
+    <ClInclude Include="transferfunctionio.h" />
+    <QtMoc Include="transferfunctionmodel.h">
+    </QtMoc>
+    <ClInclude Include="transferfunctionmodelfiller.h" />
+    <ClInclude Include="transferfunctiontemplate.h" />
+    <QtMoc Include="translatetool.h">
+    </QtMoc>
+    <ClInclude Include="trilinearinterpolator.h" />
+    <ClInclude Include="vector3.h" />
+    <QtMoc Include="viewerslayout.h">
+    </QtMoc>
+    <QtMoc Include="viewerslayouttosyncactionmanageradapter.h">
+    </QtMoc>
+    <ClInclude Include="viewpointgenerator.h" />
+    <ClInclude Include="voilut.h" />
+    <ClInclude Include="voiluthelper.h" />
+    <QtMoc Include="voilutpresetstool.h">
+    </QtMoc>
+    <QtMoc Include="voilutpresetstooldata.h">
+    </QtMoc>
+    <QtMoc Include="voilutsignaltosyncactionmapper.h">
+    </QtMoc>
+    <ClInclude Include="voilutsyncaction.h" />
+    <QtMoc Include="volume.h">
+    </QtMoc>
+    <ClInclude Include="volumebuilder.h" />
+    <ClInclude Include="volumebuilderfromcaptures.h" />
+    <ClInclude Include="volumedisplayunit.h" />
+    <ClInclude Include="volumedisplayunithandlerfactory.h" />
+    <ClInclude Include="volumehelper.h" />
+    <QtMoc Include="volumepixeldata.h">
+    </QtMoc>
+    <ClInclude Include="volumepixeldataiterator.h" />
+    <QtMoc Include="volumepixeldatareader.h">
+    </QtMoc>
+    <ClInclude Include="volumepixeldatareaderfactory.h" />
+    <QtMoc Include="volumepixeldatareaderitkdcmtk.h">
+    </QtMoc>
+    <QtMoc Include="volumepixeldatareaderitkgdcm.h">
+    </QtMoc>
+    <ClInclude Include="volumepixeldatareaderselector.h" />
+    <QtMoc Include="volumepixeldatareadervtkdcmtk.h">
+    </QtMoc>
+    <QtMoc Include="volumepixeldatareadervtkgdcm.h">
+    </QtMoc>
+    <QtMoc Include="volumereader.h">
+    </QtMoc>
+    <QtMoc Include="volumereaderjob.h">
+    </QtMoc>
+    <QtMoc Include="volumereaderjobfactory.h">
+    </QtMoc>
+    <QtMoc Include="volumereadermanager.h">
+    </QtMoc>
+    <QtMoc Include="volumerepository.h">
+    </QtMoc>
+    <ClInclude Include="voxel.h" />
+    <QtMoc Include="voxelinformationtool.h">
+    </QtMoc>
+    <ClInclude Include="voxelshader.h" />
+    <ClInclude Include="vtk4dlinearregressiongradientestimator.h" />
+    <ClInclude Include="vtkImageMapToWindowLevelColors3.h" />
+    <ClInclude Include="vtkProjectionImageFilter.h" />
+    <ClInclude Include="vtkRunThroughFilter.h" />
+    <ClInclude Include="vtkVolumeRayCastSingleVoxelShaderCompositeFunction.h" />
+    <ClInclude Include="vtkVolumeRayCastVoxelShaderCompositeFunction.h" />
+    <ClInclude Include="vtkcorrectimageblend.h" />
+    <ClInclude Include="vtkdcmtkbydefaultvolumepixeldatareaderselector.h" />
+    <ClInclude Include="vtkdcmtkimagereader.h" />
+    <ClInclude Include="vtkimagedatacreator.h" />
+    <ClInclude Include="vtktextactorwithbackground.h" />
+    <ClInclude Include="windowlevel.h" />
+    <ClInclude Include="windowlevelfilter.h" />
+    <QtMoc Include="windowleveltool.h">
+    </QtMoc>
+    <ClInclude Include="windowsfirewallaccess.h" />
+    <ClInclude Include="windowssysteminformation.h" />
+    <QtMoc Include="zoomfactorsignaltosyncactionmapper.h">
+    </QtMoc>
+    <ClInclude Include="zoomfactorsyncaction.h" />
+    <QtMoc Include="zoomtool.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\tmp\moc\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus /MP -O2 -MD -EHsc -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;..\..\tmp\moc\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\tmp\moc\moc_predefs.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus /MP -Zi -MD -EHsc -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;..\..\tmp\moc\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\tmp\moc\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="core_ca_ES.ts" />
+    <None Include="core_en_GB.ts" />
+    <None Include="core_es_ES.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="q2dviewerconfigurationscreenbase.ui">
+    </QtUic>
+    <QtUic Include="q2dviewerlayoutconfigurationscreenbase.ui">
+    </QtUic>
+    <QtUic Include="q2dviewerwidgetbase.ui">
+    </QtUic>
+    <QtUic Include="qcinecontrollerbase.ui">
+    </QtUic>
+    <QtUic Include="qcustomwindowleveldialogbase.ui">
+    </QtUic>
+    <QtUic Include="qcustomwindowleveleditwidgetbase.ui">
+    </QtUic>
+    <QtUic Include="qdiagnosistestbase.ui">
+    </QtUic>
+    <QtUic Include="qdicomdumpbrowserbase.ui">
+    </QtUic>
+    <QtUic Include="qexternalapplicationconfigurationscreenbase.ui">
+    </QtUic>
+    <QtUic Include="qfusionlayoutwidgetbase.ui">
+    </QtUic>
+    <QtUic Include="qlayoutoptionswidgetbase.ui">
+    </QtUic>
+    <QtUic Include="qlogviewerbase.ui">
+    </QtUic>
+    <QtUic Include="qmodalitiesselectorgroupboxbase.ui">
+    </QtUic>
+    <QtUic Include="qnotificationpopupbase.ui">
+    </QtUic>
+    <QtUic Include="qreleasenotesbase.ui">
+    </QtUic>
+    <QtUic Include="qthickslabwidgetbase.ui">
+    </QtUic>
+    <QtUic Include="qtransferfunctioneditor2base.ui">
+    </QtUic>
+    <QtUic Include="qtransferfunctioneditorbyvaluesbase.ui">
+    </QtUic>
+    <QtUic Include="qtransferfunctiongraphicalviewbase.ui">
+    </QtUic>
+    <QtUic Include="qtransferfunctionintervaleditorbase.ui">
+    </QtUic>
+    <QtUic Include="qviewerworkinprogresswidget.ui">
+    </QtUic>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

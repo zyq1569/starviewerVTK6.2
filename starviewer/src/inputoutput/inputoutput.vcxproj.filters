@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cachetest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="convertdicomtolittleendian.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="converttodicomdir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="createdicomdir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="databaseconnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="databaseinstallation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomanonymizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomdirburningapplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomdirburningapplicationtest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomdirimporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicomdirreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicommask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicommasktodcmdataset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dimsecservice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="echotopacs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="echotopacstest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gdcmanonymizerstarviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="incomingdicomconnectionsportinusetest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inputoutputsettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="isoimagefilecreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="listenrisrequests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabasebasedal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabasedisplayshutterdal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabaseimagedal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabasemanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabasepacsretrievedimagesdal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabasepatientdal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabaseseriesdal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabasestudydal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabaseutildal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localdatabasevoilutdal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pacsconnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pacsdevicemanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pacsjob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pacsmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parsexmlrispierrequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="portinuse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="portinusebyanotherapplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="portinusetest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qadvancedsearchwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qbasicsearchwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qconfigurationscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcreatedicomdir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qdeleteoldstudiesthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qdicomdirconfigurationscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qexportertool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qinputoutputdicomdirwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qinputoutputlocaldatabasewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qinputoutputpacswidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlistenrisrequestsconfigurationscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlocaldatabaseconfigurationscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qoperationstatescreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qpacslist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qpopuprisrequestsscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qrelatedstudieswidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qseriesthumbnailpreviewwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qstudytreewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qthumbnailspreviewwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="querypacs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="querypacsjob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="queryscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qwidgetselectpacstostoredicomimage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="relatedstudiesmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="retrievedicomfilesfrompacs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="retrievedicomfilesfrompacsjob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="risrequestmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="risrequestsportinusetest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="risrequestwrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="senddicomfilestopacs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="senddicomfilestopacsjob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlite3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="status.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradedatabaserevisioncommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradedatabasexmlparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="usermessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowsportinusebyanotherapplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="cachetest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="convertdicomtolittleendian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="converttodicomdir.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="createdicomdir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="databaseconnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="databaseinstallation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="dicomanonymizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicomdirburningapplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="dicomdirburningapplicationtest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dicomdirimporter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="dicomdirreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicommask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicommasktodcmdataset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dimsecservice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="echotopacs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="echotopacstest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="gdcmanonymizerstarviewer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="incomingdicomconnectionsportinusetest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="inputoutputsettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="isoimagefilecreator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="listenrisrequests.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="localdatabasebasedal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="localdatabasedisplayshutterdal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="localdatabaseimagedal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="localdatabasemanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="localdatabasepacsretrievedimagesdal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="localdatabasepatientdal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="localdatabaseseriesdal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="localdatabasestudydal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="localdatabaseutildal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="localdatabasevoilutdal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pacsconnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pacsdevicemanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="pacsjob.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pacsmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="pacsrequeststatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="parsexmlrispierrequest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="portinuse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="portinusebyanotherapplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="portinusetest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qadvancedsearchwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qbasicsearchwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qconfigurationscreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qcreatedicomdir.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qdeleteoldstudiesthread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qdicomdirconfigurationscreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qexportertool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qinputoutputdicomdirwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qinputoutputlocaldatabasewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qinputoutputpacswidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qlistenrisrequestsconfigurationscreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qlocaldatabaseconfigurationscreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qoperationstatescreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qpacslist.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qpopuprisrequestsscreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qrelatedstudieswidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qseriesthumbnailpreviewwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qstudytreewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qthumbnailspreviewwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="querypacs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="querypacsjob.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="queryscreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qwidgetselectpacstostoredicomimage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="relatedstudiesmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="retrievedicomfilesfrompacs.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="retrievedicomfilesfrompacsjob.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="risrequestmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="risrequestsportinusetest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="risrequestwrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="senddicomfilestopacs.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="senddicomfilestopacsjob.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradedatabaserevisioncommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradedatabasexmlparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usermessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windowsportinusebyanotherapplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <CustomBuild Include="..\..\tmp\moc\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="inputoutput_ca_ES.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="inputoutput_en_GB.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="inputoutput_es_ES.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="qadvancedsearchwidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qbasicsearchwidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qconfigurationscreenbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qcreatedicomdirbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qdicomdirconfigurationscreenbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qexporterbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qinputoutputdicomdirwidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qinputoutputlocaldatabasewidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qinputoutputpacswidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qlistenrisrequestsconfigurationscreenbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qlocaldatabaseconfigurationscreenbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qoperationstatescreenbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qpacslistbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qseriesthumbnailpreviewwidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qstudytreewidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qthumbnailsspreviewwidgetbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="queryscreenbase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qwidgetselectpacstostoredicomimagebase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>
