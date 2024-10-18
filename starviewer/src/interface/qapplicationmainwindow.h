@@ -41,6 +41,10 @@ class StatsWatcher;
 class ApplicationVersionChecker;
 class ExternalApplication;
 
+class ImageThumbnailDockWidget;
+class QScreenDistribution;
+class Volume;
+
 class QApplicationMainWindow : public QMainWindow {
 Q_OBJECT
 public:
@@ -197,6 +201,16 @@ private slots:
     /// If no external applications are defined, the menu is not created.
     void createExternalApplicationsMenu();
 
+	//add slot
+	void closeCurrentPatient();
+
+	void showhideDockImage();
+	//20240816
+public slots:
+	void updateActiveFromStaticViewerMenu(const QList<Volume*> &volumes);
+	//20240820
+	void openCommandDirDcm(QString dir);
+
 private:
     /// L'àrea de mini-aplicacions
     ExtensionWorkspace *m_extensionWorkspace;
@@ -256,13 +270,34 @@ private:
     bool m_isBetaVersion;
 
     /// Progress dialog per mostrar el progrés de càrrega dels volums
-    QProgressDialog *m_progressDialog;
+    //QProgressDialog *m_progressDialog;
 
     /// Estadístiques d'usabilitat
     StatsWatcher *m_statsWatcher;
 
     /// Les Release Notes o les notes de la nova versió
     ApplicationVersionChecker *m_applicationVersionChecker;
+private:
+    //-----------------------------------------------------//
+    //-------QDockWidget-----------------------------------||
+    ImageThumbnailDockWidget* m_DockImageThumbnail;////////||
+
+    //-----------------------------------------------------||
+    //-----------------------------------------------------//
+	QWidgetAction *m_moveDesktopAction;
+	QAction *m_actionMultiScreens;
+	QScreenDistribution *m_screen;
+	QToolBar *m_mainToolbar;
+public:
+    void addPatientsThumbnail(QList<Patient*> patientsList);
+    //20240715
+    void closePatient();
+    //20240820
+    QStringList generateFilenames(const QString &dirPath);
+
+public:
+    void clearImageThumbnailDockWidget();
+    QWidget *currentWidgetOfExtensionWorkspace();
 };
 
 }; // fi namespace udg

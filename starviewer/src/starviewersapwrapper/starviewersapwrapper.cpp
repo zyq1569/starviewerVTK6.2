@@ -24,7 +24,7 @@ void configureLogging()
     {
         configurationFile = QCoreApplication::applicationDirPath() + "/log.conf";
     }
-    LOGGER_INIT(configurationFile.toStdString());
+    //LOGGER_INIT(configurationFile.toStdString());
     DEBUG_LOG("Arxiu de configuració del log: " + configurationFile);
 }
 

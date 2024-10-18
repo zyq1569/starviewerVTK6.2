@@ -24,7 +24,7 @@
 #include <QToolBar>
 #include <QMessageBox>
 #include <QFileDialog>
-
+#include <QButtonGroup>
 // VTK
 #include <vtkRenderer.h>
 #include <vtkImageMask.h>

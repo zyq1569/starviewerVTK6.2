@@ -100,6 +100,13 @@ DiagnosisTestResult SystemRequerimentsTest::run()
         problem.setSolution(tr("Update your graphics card driver"));
         result.addError(problem);
     }
+	else
+	{
+		DiagnosisTestProblem problem;
+		problem.setState(DiagnosisTestProblem::Ok);
+		problem.setDescription(tr("Current OpenGL version is %1, and the minimum required is %2").arg(openGLVersion).arg(MinimumGPUOpenGLVersion));
+		result.addWarning(problem);
+	}
 
     // Tenir en una llista les compatibilitats openGL que starviewer utilitza i anar-les buscant una a una al retorn del mètode
     QStringList openGLExtensions = getGPUOpenGLCompatibilities(system);

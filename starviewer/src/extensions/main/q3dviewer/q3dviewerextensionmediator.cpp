@@ -44,7 +44,10 @@ bool Q3DViewerExtensionMediator::initializeExtension(QWidget *extension, const E
         return false;
     }
 
-    Volume *input = extensionContext.getDefaultVolume();
+    //Volume *input = extensionContext.getDefaultVolume();
+    //zyq20240408
+	Volume * selVolume = QViewer::selectVolume();
+	Volume *input = selVolume ? selVolume : extensionContext.getDefaultVolumeNoLocalizer();
     if (!input)
     {
         QMessageBox::information(0, tr("Starviewer"), tr("The selected item is not an image"));
@@ -55,6 +58,20 @@ bool Q3DViewerExtensionMediator::initializeExtension(QWidget *extension, const E
     }
 
     return true;
+}
+
+//---20200919---add-----------------------------------------------------------------------------------------------
+void Q3DViewerExtensionMediator::executionCommand(QWidget *extension, Volume* volume, void *extensionHandler, int command)
+{
+	Q3DViewerExtension *q3dviewerExtension;
+	if (!(q3dviewerExtension = qobject_cast<Q3DViewerExtension*>(extension)))
+	{
+		return;
+	}
+	if (volume)
+	{
+		q3dviewerExtension->updateInput(volume);
+	}
 }
 
 }

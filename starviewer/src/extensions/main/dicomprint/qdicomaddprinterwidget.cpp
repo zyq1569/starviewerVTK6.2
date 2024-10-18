@@ -17,7 +17,7 @@
 #include "starviewerapplication.h"
 #include "dicomprinter.h"
 #include "dicomprintermanager.h"
-
+#include <QIntValidator>
 namespace udg {
 
 // Public Methods

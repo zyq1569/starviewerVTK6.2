@@ -61,6 +61,7 @@
 #include <QListView>
 
 #include "layoutmanager.h"
+#include"../../../interface/extensionhandler.h"
 
 namespace udg {
 
@@ -185,6 +186,33 @@ Q2DViewerExtension::Q2DViewerExtension(QWidget *parent)
     m_voiLutComboBox->view()->setMinimumWidth(MinimumComboBoxViewWidth);
     m_transferFunctionComboBox->view()->setTextElideMode(Qt::ElideRight);
     m_transferFunctionComboBox->view()->setMinimumWidth(MinimumComboBoxViewWidth);
+
+    //-------------------------------------------------------------------------------------
+    m_MPRL->setIcon(QIcon(":/images/MPRL.svg"));
+    m_MPRL->setToolTip("MPRL");
+    m_MPRR->setIcon(QIcon(":/images/MPRR.svg"));
+    m_MPRR->setToolTip("MPRR");
+    m_SA->setIcon(QIcon(":/images/SA.svg"));
+    m_SA->setToolTip("SA+AX");
+    connect(m_MPRL, &QToolButton::clicked, [=] {m_hangingProtocolsMenu->mprSelected(9); });
+    connect(m_MPRR, &QToolButton::clicked, [=] {m_hangingProtocolsMenu->mprSelected(10); });
+    connect(m_SA,   &QToolButton::clicked, [=] {m_hangingProtocolsMenu->mprSelected(12); });
+}
+
+void Q2DViewerExtension::start3DViewer()
+{
+	//20240707
+	if (m_extensionHandler)
+	{
+		m_extensionHandler->request("Q3DViewerExtension");
+	}
+}
+void Q2DViewerExtension::startMPR2DViewer()
+{
+	if (m_extensionHandler)
+	{
+		m_extensionHandler->request("MPRExtension");
+	}
 }
 
 Q2DViewerExtension::~Q2DViewerExtension()
@@ -200,6 +228,17 @@ Q2DViewerExtension::~Q2DViewerExtension()
     delete m_hangingProtocolsMenu;
     delete m_viewersLayoutGrid;
     delete m_dicomDumpCurrentDisplayedImage;
+
+	//2024 07 15
+	if (m_extensionHandler)
+	{
+		m_extensionHandler->closeCurrentPatient();
+	}
+	//2024 07 16
+	delete m_emptyTransferFunctionModel;
+	delete m_statsWatcher;
+	delete m_layoutToSyncActionManagerAdapter;
+	delete m_syncActionManager;
 }
 
 void Q2DViewerExtension::createConnections()
@@ -1217,5 +1256,37 @@ void Q2DViewerExtension::setFusionLayout3x3(const QList<Volume*> &volumes)
         m_syncActionManager->enable(true);
     }
 }
+
+//---20200919 add-----------------------------------------------------------------------
+void  Q2DViewerExtension::updateQ2DViewer(Volume* volume)
+{
+	bool bfalg = true;
+	if (m_layoutManager)
+	{
+		if (!m_layoutManager->m_layoutGrid && m_layoutManager->getLayoutIdentifier() > 8)
+		{
+			if (volume)
+			{
+				QViewer::selectVolume(volume);
+			}
+			//20240808 for MPR Protocol
+			if (m_layoutManager)
+			{
+				m_layoutManager->thumbnailUpateImages();
+			}
+			bfalg = false;
+		}
+	}
+	if (bfalg)
+	{
+		return m_lastSelectedViewer->changeInputAsynchronously(volume);
+	}
+}
+
+void  Q2DViewerExtension::mprSelected(int index)
+{
+	m_hangingProtocolsMenu->mprSelected(index);
+}
+
 
 }

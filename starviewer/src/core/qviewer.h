@@ -359,6 +359,11 @@ private:
 
     /// Layout que ens permet crear widgets diferents per els estats diferents del visor.
     QStackedLayout *m_stackedLayout;
+
+	//zyq20240408
+public:
+	static  Volume* selectVolume(Volume* volume = NULL);
+	static PatientBrowserMenu *getStaticBrowserMenu();
 };
 
 };  // End namespace udg

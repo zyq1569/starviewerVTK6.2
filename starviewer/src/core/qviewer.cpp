@@ -51,7 +51,7 @@
 #include <vtkCamera.h>
 
 namespace udg {
-
+	static Volume *m_selectVolume = NULL;
 QViewer::QViewer(QWidget *parent)
  : QWidget(parent), m_mainVolume(0), m_contextMenuActive(true), m_mouseHasMoved(false), m_voiLutData(0),
    m_isRenderingEnabled(true), m_isActive(false)
@@ -210,6 +210,12 @@ void QViewer::eventHandler(vtkObject *object, unsigned long vtkEvent, void *clie
     {
         case QVTKWidget::ContextMenuEvent:
         case vtkCommand::LeftButtonPressEvent:
+		{
+			if (Volume* volume = getMainInput())
+			{
+				m_selectVolume = volume;
+			}
+		}
         case vtkCommand::RightButtonPressEvent:
         case vtkCommand::MiddleButtonPressEvent:
         case vtkCommand::MouseWheelForwardEvent:
@@ -770,24 +776,24 @@ QString QViewer::getInputIdentifier() const
 
 void QViewer::contextMenuEvent(QContextMenuEvent *menuEvent)
 {
-    if (m_contextMenuActive)
-    {
-        // És possible que en alguns moments (quan es carrega el pacient i surten altres diàlegs)
-        // no hi hagi window activa o que aquesta ni sigui una QApplicationMainWindow i ho sigui un diàleg,
-        // per tant, ens pot tornar NULL i en algunes ocasions ens feia petar l'aplicació. Així ens curem en salut
-        // TODO Estaria bé comprovar
-        QApplicationMainWindow *mainWindow = QApplicationMainWindow::getActiveApplicationMainWindow();
-        if (!mainWindow)
-        {
-            return;
-        }
-
-        // Li actualitzem l'input perquè mostri els estudis actuals
-        m_patientBrowserMenu->setPatient(mainWindow->getCurrentPatient());
-
-        QString selectedItem = getInputIdentifier();
-        m_patientBrowserMenu->popup(menuEvent->globalPos(), selectedItem); //->globalPos() ?
-    }
+    //if (m_contextMenuActive)
+    //{
+    //    // És possible que en alguns moments (quan es carrega el pacient i surten altres diàlegs)
+    //    // no hi hagi window activa o que aquesta ni sigui una QApplicationMainWindow i ho sigui un diàleg,
+    //    // per tant, ens pot tornar NULL i en algunes ocasions ens feia petar l'aplicació. Així ens curem en salut
+    //    // TODO Estaria bé comprovar
+    //    QApplicationMainWindow *mainWindow = QApplicationMainWindow::getActiveApplicationMainWindow();
+    //    if (!mainWindow)
+    //    {
+    //        return;
+    //    }
+	//
+    //    // Li actualitzem l'input perquè mostri els estudis actuals
+    //    m_patientBrowserMenu->setPatient(mainWindow->getCurrentPatient());
+	//
+    //    QString selectedItem = getInputIdentifier();
+    //    m_patientBrowserMenu->popup(menuEvent->globalPos(), selectedItem); //->globalPos() ?
+    //}
 }
 
 void QViewer::enableRendering(bool enable)
@@ -802,14 +808,14 @@ PatientBrowserMenu* QViewer::getPatientBrowserMenu() const
 
 void QViewer::setAutomaticallyLoadPatientBrowserMenuSelectedInput(bool load)
 {
-    if (load)
-    {
-        connect(m_patientBrowserMenu, SIGNAL(selectedVolume(Volume*)), this, SLOT(setInputAndRender(Volume*)));
-    }
-    else
-    {
-        disconnect(m_patientBrowserMenu, SIGNAL(selectedVolume(Volume*)), this, SLOT(setInputAndRender(Volume*)));
-    }
+    //if (load)
+    //{
+    //    connect(m_patientBrowserMenu, SIGNAL(selectedVolume(Volume*)), this, SLOT(setInputAndRender(Volume*)));
+    //}
+    //else
+    //{
+    //    disconnect(m_patientBrowserMenu, SIGNAL(selectedVolume(Volume*)), this, SLOT(setInputAndRender(Volume*)));
+    //}
 }
 
 QViewer::ViewerStatus QViewer::getViewerStatus() const
@@ -931,6 +937,23 @@ void QViewer::setupRenderWindow()
 
     m_vtkWidget->SetRenderWindow(renderWindow);
     m_windowToImageFilter->SetInput(renderWindow);
+}
+
+Volume* QViewer::selectVolume(Volume* volume)
+{
+	/// The volume to select
+	//static Volume *m_selectVolume = NULL;
+	if (volume && m_selectVolume != volume)
+	{
+		m_selectVolume = volume;
+	}
+	return m_selectVolume;
+}
+
+PatientBrowserMenu * QViewer::getStaticBrowserMenu()
+{
+	static PatientBrowserMenu BrowserMenu(NULL);
+	return &BrowserMenu;
 }
 
 };  // End namespace udg

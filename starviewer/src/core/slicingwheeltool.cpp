@@ -57,19 +57,19 @@ void SlicingWheelTool::handleEvent(unsigned long eventID)
         case vtkCommand::MouseWheelForwardEvent:
             m_mouseMovement = false;
             m_viewer->setCursor(QCursor(QPixmap(":/images/slicing.png")));
-            SlicingTool::updateIncrement(1);
+            SlicingTool::updateIncrement(-1);
             m_viewer->unsetCursor();
             // Estadístiques
-            m_wheelSteps += QString::number(1) + " ";
+            m_wheelSteps += QString::number(-1) + " ";
             break;
 
         case vtkCommand::MouseWheelBackwardEvent:
             m_mouseMovement = false;
             m_viewer->setCursor(QCursor(QPixmap(":/images/slicing.png")));
-            SlicingTool::updateIncrement(-1);
+            SlicingTool::updateIncrement(1);
             m_viewer->unsetCursor();
             // Estadístiques
-            m_wheelSteps += QString::number(-1) + " ";
+            m_wheelSteps += QString::number(1) + " ";
             break;
 
         //Per tenir constancia de les estadístiques

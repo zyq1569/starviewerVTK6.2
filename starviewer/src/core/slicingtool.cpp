@@ -130,7 +130,7 @@ void SlicingTool::doSlicing()
         m_currentPosition.setY(m_2DViewer->getEventPosition().y());
 
         // Increment normalitzat segons la mida de la finestra i el nombre de llesques
-        double increase = (1.75 * (m_currentPosition.y() - m_startPosition.y()) / (double)m_screenSize.height()) * m_numberOfImages;
+        double increase = - (1.75 * (m_currentPosition.y() - m_startPosition.y()) / (double)m_screenSize.height()) * m_numberOfImages;
         m_startPosition.setY(m_currentPosition.y());
 
         // Canviem un nombre de llesques segons el desplaçament del mouse

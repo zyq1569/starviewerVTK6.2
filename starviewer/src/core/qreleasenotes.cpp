@@ -19,7 +19,6 @@
 #include <QCloseEvent>
 #include <QUrl>
 #include <QNetworkReply>
-#include <QWebHistory>
 
 namespace udg {
 
@@ -34,8 +33,8 @@ QReleaseNotes::QReleaseNotes(QWidget *parent)
     // Fer que la finestra sempre quedi davant i no es pugui fer res fins que no es tanqui
     setWindowModality(Qt::ApplicationModal);
 
-    m_viewWebView->setContextMenuPolicy(Qt::NoContextMenu);
-    m_viewWebView->history()->setMaximumItemCount(0);
+    //m_viewWebView->setContextMenuPolicy(Qt::NoContextMenu);
+    //m_viewWebView->history()->setMaximumItemCount(0);
 }
 
 QReleaseNotes::~QReleaseNotes()
@@ -54,8 +53,8 @@ void QReleaseNotes::setDontShowVisible(bool visible)
 
 void QReleaseNotes::showIfUrlLoadsSuccessfully(const QUrl &url)
 {
-    connect(m_viewWebView->page()->networkAccessManager(), SIGNAL(finished(QNetworkReply*)), this, SLOT(loadFinished(QNetworkReply*)));
-    m_viewWebView->setUrl(url);
+    //connect(m_viewWebView->page()->networkAccessManager(), SIGNAL(finished(QNetworkReply*)), this, SLOT(loadFinished(QNetworkReply*)));
+    //m_viewWebView->setUrl(url);
 }
 
 void QReleaseNotes::closeEvent(QCloseEvent *event)
@@ -74,7 +73,7 @@ void QReleaseNotes::closeEvent(QCloseEvent *event)
 void QReleaseNotes::loadFinished(QNetworkReply *reply)
 {
     // Desconectar el manager
-    disconnect(m_viewWebView->page()->networkAccessManager(), SIGNAL(finished(QNetworkReply*)), this, SLOT(loadFinished(QNetworkReply*)));
+    //disconnect(m_viewWebView->page()->networkAccessManager(), SIGNAL(finished(QNetworkReply*)), this, SLOT(loadFinished(QNetworkReply*)));
 
     if (reply->error() == QNetworkReply::NoError)
     {

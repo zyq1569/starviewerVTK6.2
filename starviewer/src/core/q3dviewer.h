@@ -43,7 +43,6 @@ class ObscuranceVoxelShader;
 class Vtk4DLinearRegressionGradientEstimator;
 class Obscurance;
 class ContourVoxelShader;
-
 /**
     Classe base per als visualitzadors 3D
   */
@@ -274,6 +273,7 @@ private:
 
     /// Plans de tall
     vtkPlanes *m_clippingPlanes;
+
 };
 
 };  // End namespace udg

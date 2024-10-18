@@ -119,6 +119,9 @@ public:
     /// sèrie del primer estudi
     void setSelectedSeries(const QString &selectedSeriesUID);
 
+    //clear
+    void clearAllStudy();
+
 signals:
     /// Emitted when a study has been added
     void studyAdded(Study*);

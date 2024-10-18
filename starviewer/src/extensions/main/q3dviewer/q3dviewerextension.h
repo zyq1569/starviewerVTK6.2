@@ -44,6 +44,8 @@ public:
     /// Li donem l'input a processar
     void setInput(Volume *input);
 
+	//20240802
+	void updateInput(Volume *input);
 public slots:
     /// Aplica una funció de transferència predefinida a la visualització.
     void applyPresetClut(const QString &clutName);
@@ -126,6 +128,9 @@ private:
 
     /// Temporitzador que serveix per fer renderings amb qualitat després d'un rendering ràpid.
     QTimer *m_timer;
+
+	//20240802
+	Volume *m_lastInput;
 };
 
 } // end namespace udg

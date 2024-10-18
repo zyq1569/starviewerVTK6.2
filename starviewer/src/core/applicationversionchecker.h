@@ -17,7 +17,7 @@
 
 #include "qreleasenotes.h"
 #include <QObject>
-class QUrl;
+#include <QUrl>
 
 namespace udg {
     class ApplicationUpdateChecker;

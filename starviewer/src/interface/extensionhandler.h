@@ -41,7 +41,7 @@ public:
 public slots:
     /// Rep la petició d'un servei/mini-aplicació i fa el que calgui
     void request(int who);
-    bool request(const QString &who);
+    bool request(const QString &who, QString tableText = "");
 
     /// Obrirà l'extensió per defecte. Si no hi ha dades de pacient vàlides, no farà res.
     void openDefaultExtension();
@@ -53,6 +53,10 @@ public slots:
     /// Obtenim el contexte de l'extensió
     /// @return El contexte de l'extensió, es pot modificar
     ExtensionContext& getContext();
+
+    ///20201205
+    void setPatientsThumbnail(QList<Patient*> patientsList, bool loadOnly = false);
+    ///20201207
 
 private slots:
     /// Processa un conjunt d'arxius d'input i els processa per decidir què fer amb aquests, com per exemple
@@ -104,6 +108,9 @@ private:
     /// Mutex to avoid concurrent access to the patient comparer singleton.
     QMutex m_patientComparerMutex;
 
+public:
+	void closeCurrentPatient();
+	void processCommandInput(const QStringList &inputFiles);
 };
 
 };  // end namespace udg

@@ -32,7 +32,7 @@
 #include "interfacesettings.h"
 #include "screenmanager.h"
 #include "patientcomparer.h"
-
+#include "qviewer.h"
 // PACS --------------------------------------------
 #include "queryscreen.h"
 #include "patientfiller.h"
@@ -126,7 +126,7 @@ void ExtensionHandler::request(int who)
     }
 }
 
-bool ExtensionHandler::request(const QString &who)
+bool ExtensionHandler::request(const QString &who, QString tableText)
 {
     bool ok = true;
     ExtensionMediator *mediator = ExtensionMediatorFactory::instance()->create(who);
@@ -138,6 +138,7 @@ bool ExtensionHandler::request(const QString &who)
         return ok;
     }
 
+	bool bQ3DViewerExtension = ("Q3DViewerExtension" == who);
     bool createExtension = true;
     int extensionIndex = 0;
     QString requestedExtensionLabel = mediator->getExtensionID().getLabel();
@@ -149,7 +150,8 @@ bool ExtensionHandler::request(const QString &who)
         bool found = false;
         while (extensionIndex < count && !found)
         {
-            if (m_mainApp->getExtensionWorkspace()->tabText(extensionIndex) == requestedExtensionLabel)
+			QString title = m_mainApp->getExtensionWorkspace()->tabText(extensionIndex);
+            if (m_mainApp->getExtensionWorkspace()->tabText(extensionIndex).contains(requestedExtensionLabel))
             {
                 found = true;
             }
@@ -172,6 +174,17 @@ bool ExtensionHandler::request(const QString &who)
         if (extension)
         {
             INFO_LOG("Activem extensió: " + who);
+			if ("Q2DViewerExtension" == who)
+			{
+				//(Q2DViewerExtension*)extension->m_extensionHandler = this;
+				mediator->executionCommand(extension, NULL, this, 0);
+			}
+			else if (bQ3DViewerExtension)
+			{
+				Volume * selVolume = QViewer::selectVolume();
+				Volume *volume = selVolume ? selVolume : m_extensionContext.getDefaultVolumeNoLocalizer();
+				requestedExtensionLabel = "3D Viewer#Series:" + volume->getSeries()->getSeriesNumber();
+			}
             mediator->initializeExtension(extension, m_extensionContext);
             m_mainApp->getExtensionWorkspace()->addApplication(extension, requestedExtensionLabel, who);
         }
@@ -185,11 +198,31 @@ bool ExtensionHandler::request(const QString &who)
     {
         // Sinó mostrem l'extensió ja existent
         m_mainApp->getExtensionWorkspace()->setCurrentIndex(extensionIndex);
+		if (bQ3DViewerExtension)
+		{
+			Volume * selVolume = QViewer::selectVolume();
+			Volume *volume = selVolume ? selVolume : m_extensionContext.getDefaultVolumeNoLocalizer();
+			if (volume && volume->is3Dimage())
+			{
+				m_mainApp->getExtensionWorkspace()->setTabText(extensionIndex, "3D Viewer#Series:" + volume->getSeries()->getSeriesNumber());
+				QWidget* widget = m_mainApp->currentWidgetOfExtensionWorkspace();
+				if (widget)
+				{
+					mediator->executionCommand(widget, volume);
+				}
+			}
+		}
     }
 
     delete mediator;
 
     return ok;
+}
+
+///20201205
+void ExtensionHandler::setPatientsThumbnail(QList<Patient*> patientsList, bool loadOnly)
+{
+    m_mainApp->addPatientsThumbnail(patientsList);
 }
 
 void ExtensionHandler::setContext(const ExtensionContext &context)
@@ -296,6 +329,9 @@ void ExtensionHandler::processInput(const QStringList &inputFiles)
     {
         // No hi ha cap error, els carreguem tots
         processInput(patientsList);
+        ///----------add patientsList--------------------
+        setPatientsThumbnail(patientsList);
+        ///----------------------------------------------
     }
     else
     {
@@ -306,6 +342,9 @@ void ExtensionHandler::processInput(const QStringList &inputFiles)
             rightPatients << patientsList.at(index);
         }
         processInput(rightPatients);
+        ///----------add patientsList--------------------
+        setPatientsThumbnail(rightPatients);
+        ///----------------------------------------------
     }
 }
 
@@ -513,6 +552,16 @@ void ExtensionHandler::openDefaultExtension()
     {
         Settings settings;
         QString defaultExtension = settings.getValue(InterfaceSettings::DefaultExtension).toString();
+		if (defaultExtension == "Q3DViewerExtension")
+		{
+			Volume * selVolume = QViewer::selectVolume();
+			Volume *volume = selVolume ? selVolume : m_extensionContext.getDefaultVolumeNoLocalizer();
+			if (!request(defaultExtension, volume->getSeries()->getSeriesNumber()))
+			{
+
+				return;
+			}
+		}
         if (!request(defaultExtension))
         {
             WARN_LOG("Ha fallat la petició per la default extension anomenada: " + defaultExtension + ". Engeguem extensió 2D per defecte(hardcoded)");
@@ -524,6 +573,20 @@ void ExtensionHandler::openDefaultExtension()
     {
         DEBUG_LOG("No hi ha dades de pacient!");
     }
+}
+
+void  ExtensionHandler::closeCurrentPatient()
+{
+	if (m_mainApp)
+	{
+		m_mainApp->closePatient();
+	}
+
+}
+
+void ExtensionHandler::processCommandInput(const QStringList &inputFiles)
+{
+	processInput(inputFiles);
 }
 
 };  // end namespace udg

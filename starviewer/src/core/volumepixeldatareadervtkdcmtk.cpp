@@ -59,7 +59,7 @@ int VolumePixelDataReaderVTKDCMTK::read(const QStringList &filenames)
         
         for (int i = 0; i < filenames.size(); i++)
         {
-            stringArray->InsertNextValue(filenames.at(i).toStdString());
+            stringArray->InsertNextValue(filenames.at(i).toUtf8());
         }
 
         DEBUG_LOG("Reading multiple files with VTK-DCMTK");
@@ -69,7 +69,7 @@ int VolumePixelDataReaderVTKDCMTK::read(const QStringList &filenames)
     else
     {
         DEBUG_LOG("Reading a single file with VTK-DCMTK");
-        m_reader->SetFileName(qPrintable(filenames.first()));
+        m_reader->SetFileName(filenames.first().toUtf8());
     }
 
     // Set frame numbers to the reader (needed for multiframe files)

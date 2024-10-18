@@ -21,6 +21,7 @@
 #include "itkgdcmbydefaultvolumepixeldatareaderselector.h"
 #include "logging.h"
 #include "series.h"
+#include "patient.h"
 #include "volume.h"
 #include "volumepixeldatareaderitkdcmtk.h"
 #include "volumepixeldatareaderitkgdcm.h"
@@ -96,20 +97,37 @@ VolumePixelDataReaderFactory::PixelDataReaderType VolumePixelDataReaderFactory::
     // This is intended as a kind of backdoor to be able to provide a workaround in case there is a bug with the usually chosen reader
     if (!mustForceReaderLibraryBackdoor(volume, readerType))
     {
+		QString ID = volume->getPatient()->getID();
+		if (ID.startsWith("Non-DICOM") || ID.startsWith("MHD Patient"))
+		{
+
+			return VolumePixelDataReaderFactory::VTKPixelDataReader;
+		}
+		//else if (hasJPEG2000TransferSyntax(volume) || hasSegmentedPalette(volume))
+		//{
+			// DCMTK doesn't support JPEG2000 for free, and doesn't support segmented palettes either
+			//return VolumePixelDataReaderFactory::VTKGDCMPixelDataReader;
+		//}
+		else
+		{
+			// Read with VTK-DCMTK by default
+			return VolumePixelDataReaderFactory::VTKDCMTKPixelDataReader;
+		}
+
         // If the reader type is not forced by settings, use the selector
-        VolumePixelDataReaderSelector *selector;
-
-        if (settings->getValue(CoreSettings::UseItkGdcmImageReaderByDefault).toBool())
-        {
-            selector = new ItkGdcmByDefaultVolumePixelDataReaderSelector();
-        }
-        else
-        {
-            selector = new VtkDcmtkByDefaultVolumePixelDataReaderSelector();
-        }
-
-        readerType = selector->selectVolumePixelDataReader(volume);
-        delete selector;
+        //VolumePixelDataReaderSelector *selector;
+		//
+        //if (settings->getValue(CoreSettings::UseItkGdcmImageReaderByDefault).toBool())
+        //{
+        //    selector = new ItkGdcmByDefaultVolumePixelDataReaderSelector();
+        //}
+        //else
+        //{
+        //    selector = new VtkDcmtkByDefaultVolumePixelDataReaderSelector();
+        //}
+		//
+        //readerType = selector->selectVolumePixelDataReader(volume);
+        //delete selector;
     }
 
     return readerType;

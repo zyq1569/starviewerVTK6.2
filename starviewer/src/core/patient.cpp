@@ -98,6 +98,11 @@ Patient::Patient(const Patient &patient, QObject *parent)
     m_studiesList = patient.m_studiesList;
 }
 
+void Patient::clearAllStudy()
+{
+    m_studiesList.clear();
+}
+
 Patient::~Patient()
 {
     m_studiesList.clear();
@@ -493,6 +498,7 @@ void Patient::setSelectedSeries(const QString &selectedSeriesUID)
         }
     }
 }
+
 void Patient::copyPatientInformation(const Patient *patient)
 {
     this->m_fullName = patient->m_fullName;

@@ -14,7 +14,7 @@
 
 #include "databaseconnection.h"
 
-#include <sqlite3.h>
+#include "sqlite3.h"
 // Per les traduccions: tr()
 #include <QObject>
 #include <QSemaphore>

@@ -107,6 +107,11 @@ private:
 
     /// Objecte utilitzat per descarregar estudis relacionats. No es fa servir QueryScreen per problemes de dependències entre carpetes.
     RelatedStudiesManager *m_relatedStudiesManager;
+public:
+	//20240801 HangingProtocol Identifier
+	int m_Identifier;
+	QList<HangingProtocolDisplaySet*> m_lastHangingProtocolDisplaySet;
+	void thumbnailUpateImages(ViewersLayout *layout, Patient *patient, const QRectF &geometry);
 };
 
 }

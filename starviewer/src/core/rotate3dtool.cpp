@@ -41,23 +41,39 @@ Rotate3DTool::~Rotate3DTool()
 
 void Rotate3DTool::handleEvent(unsigned long eventID)
 {
-    switch (eventID)
-    {
-        case vtkCommand::RightButtonPressEvent:
-            this->startRotate3D();
-            break;
+    //switch (eventID)
+    //{
+    //    case vtkCommand::RightButtonPressEvent:
+    //        this->startRotate3D();
+    //        break;
+	//
+    //    case vtkCommand::MouseMoveEvent:
+    //        this->doRotate3D();
+    //        break;
+	//
+    //    case vtkCommand::RightButtonReleaseEvent:
+    //        this->endRotate3D();
+    //        break;
+	//
+    //    default:
+    //        break;
+    //}
+	switch (eventID)
+	{
+	case vtkCommand::LeftButtonPressEvent:
+		this->startRotate3D();
+		break;
 
-        case vtkCommand::MouseMoveEvent:
-            this->doRotate3D();
-            break;
+	case vtkCommand::MouseMoveEvent:
+		this->doRotate3D();
+		break;
+	case vtkCommand::LeftButtonReleaseEvent:
+		this->endRotate3D();
+		break;
 
-        case vtkCommand::RightButtonReleaseEvent:
-            this->endRotate3D();
-            break;
-
-        default:
-            break;
-    }
+	default:
+		break;
+	}
 }
 
 void Rotate3DTool::startRotate3D()

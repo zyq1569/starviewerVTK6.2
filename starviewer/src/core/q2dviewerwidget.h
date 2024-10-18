@@ -157,6 +157,9 @@ private:
     /// Widget to select and apply a fusion layout. Will be shown as the menu of the fusion layout tool button.
     QFusionLayoutWidget *m_fusionLayoutWidget;
 
+	//20240808
+public:
+	void changeInputAsynchronously(Volume *input, QViewerCommand *command = 0);
 };
 
 };

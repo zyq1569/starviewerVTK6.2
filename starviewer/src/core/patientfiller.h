@@ -14,7 +14,7 @@
 
 #ifndef UDGPATIENTFILLER_H
 #define UDGPATIENTFILLER_H
-
+#include <QObject>
 #include <QStringList>
 
 #include "dicomsource.h"

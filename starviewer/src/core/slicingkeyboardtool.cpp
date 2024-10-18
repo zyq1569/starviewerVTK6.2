@@ -56,11 +56,11 @@ void SlicingKeyboardTool::handleEvent(unsigned long eventID)
             }
             else if (keySymbol == "Up")
             {
-                m_2DViewer->setSlice(m_2DViewer->getCurrentSlice() + 1);
+                m_2DViewer->setSlice(m_2DViewer->getCurrentSlice() - 1);
             }
             else if (keySymbol == "Down")
             {
-                m_2DViewer->setSlice(m_2DViewer->getCurrentSlice() - 1);
+                m_2DViewer->setSlice(m_2DViewer->getCurrentSlice() + 1);
             }
             else if (keySymbol == "Left")
             {

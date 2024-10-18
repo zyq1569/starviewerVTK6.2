@@ -30,7 +30,7 @@ ExtensionWorkspace::ExtensionWorkspace(QWidget *parent)
     // QTabWidget takes much less time to be painted when DocumentMode is enabled
     setDocumentMode(true);
 
-    this->setTabPosition(QTabWidget::South);
+    //this->setTabPosition(QTabWidget::South);
     this->setDarkBackgroundColorEnabled(true);
 
     createConnections();
@@ -49,14 +49,15 @@ void ExtensionWorkspace::setDarkBackgroundColorEnabled(bool enabled)
 {
     if (enabled)
     {
-        QFile file(":css/mainwindowbackground.css");
-
-        if (file.open(QFile::ReadOnly | QFile::Text))
-        {
-            QTextStream textStream(&file);
-            this->setStyleSheet(textStream.readAll());
-            file.close();
-        }
+        //QFile file(":css/mainwindowbackground.css");
+		//
+        //if (file.open(QFile::ReadOnly | QFile::Text))
+        //{
+        //    QTextStream textStream(&file);
+        //    this->setStyleSheet(textStream.readAll());
+        //    file.close();
+        //}
+		this->setStyleSheet("background-color:rgb(30,30,30)}");
     }
     else
     {
@@ -115,7 +116,10 @@ QMap<QWidget *, QString> ExtensionWorkspace::getActiveExtensions() const
 void ExtensionWorkspace::closeCurrentApplication()
 {
     QWidget *w = this->currentWidget();
-    removeApplication(w);
+	if (w)
+	{
+		removeApplication(w);
+	}
 }
 
 void ExtensionWorkspace::closeApplicationByTabIndex(int index)

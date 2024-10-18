@@ -45,6 +45,8 @@ HangingProtocolManager::HangingProtocolManager(QObject *parent)
     copyHangingProtocolRepository();
 
     connect(m_relatedStudiesManager, SIGNAL(errorDownloadingStudy(QString)), SLOT(errorDownloadingPreviousStudies(QString)));
+
+	m_Identifier = -1;
 }
 
 HangingProtocolManager::~HangingProtocolManager()
@@ -194,6 +196,9 @@ void HangingProtocolManager::applyHangingProtocol(HangingProtocol *hangingProtoc
     }
 
     QList<HangingProtocolDisplaySet*> displaySets = hangingProtocol->getDisplaySets();
+	//20240808
+	m_lastHangingProtocolDisplaySet = displaySets;
+	//-----
     for(int i = 0; i < displaySets.size(); ++i)
     {
         HangingProtocolDisplaySet *displaySet = displaySets[i];
@@ -227,6 +232,7 @@ void HangingProtocolManager::applyHangingProtocol(HangingProtocol *hangingProtoc
         }
         else
         {
+			m_Identifier = displaySet->getHangingProtocol()->getIdentifier();
             setInputToViewer(viewerWidget, displaySet);
         }
     }
@@ -408,11 +414,31 @@ void HangingProtocolManager::setInputToViewer(Q2DViewerWidget *viewerWidget, Han
             {
                 inputVolume = series->getFirstVolume();
             }
-
+			///-------------------------------------------------------
+			if (m_Identifier > 8)
+			{
+				Volume *vol = QViewer::selectVolume();
+				if (vol)
+				{
+					inputVolume = vol;
+				}
+			}
             ApplyHangingProtocolQViewerCommand *command = new ApplyHangingProtocolQViewerCommand(viewerWidget, displaySet);
             viewerWidget->setInputAsynchronously(inputVolume, command);
         }
     }
+}
+
+void HangingProtocolManager::thumbnailUpateImages(ViewersLayout *layout, Patient *patient, const QRectF &geometry)
+{
+	QList<HangingProtocolDisplaySet*> displaySets = m_lastHangingProtocolDisplaySet;
+	for (int i = 0; i < displaySets.size(); ++i)
+	{
+		HangingProtocolDisplaySet *displaySet = displaySets[i];
+		Q2DViewerWidget *viewerWidget = layout->getViewerWidget(i);
+		setInputToViewer(viewerWidget, displaySet);
+	}
+
 }
 
 }

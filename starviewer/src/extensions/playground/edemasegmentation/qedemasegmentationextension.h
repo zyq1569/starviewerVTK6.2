@@ -14,7 +14,7 @@ class QAction;
 class vtkImageMask;
 class vtkImageThreshold;
 class vtkActor;
-
+class QActionGroup;
 namespace udg {
 
 // FWD declarations

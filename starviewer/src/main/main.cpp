@@ -11,10 +11,11 @@
   may be copied, modified, propagated, or distributed except according to the
   terms contained in the LICENSE file.
  *************************************************************************************/
-
+#include "logging.h"
+#include "easylogging++.h"
+INITIALIZE_EASYLOGGINGPP
 #include "qapplicationmainwindow.h"
 
-#include "logging.h"
 #include "statswatcher.h"
 #include "extensions.h"
 #include "extensionmediatorfactory.h"
@@ -25,6 +26,15 @@
 // Necessaris per suportar la decodificació de jpeg i RLE
 #include <djdecode.h>
 #include <dcrledrg.h>
+#include "../fmjpeg2k/fmjpeg2k/djdecode.h"
+#include "../fmjpeg2k/fmjpeg2k/djencode.h"
+#include <djlsutil.h>   /* for dcmjpls typedefs */
+
+#include <dcmjpls/djencode.h>   /* for class DJLSEncoderRegistration */
+#include <dcmjpls/djdecode.h>
+
+#include <djrparam.h>   /* for class DJLSRepresentationParameter */
+
 #include "applicationtranslationsloader.h"
 
 #include "coresettings.h"
@@ -54,6 +64,7 @@
 #include <vtkOverrideInformation.h>
 #include <vtkOverrideInformationCollection.h>
 
+
 typedef udg::SingletonPointer<udg::StarviewerApplicationCommandLine> StarviewerSingleApplicationCommandLineSingleton;
 
 void configureLogging()
@@ -78,7 +89,7 @@ void configureLogging()
         configurationFile = qApp->applicationDirPath() + "/../../../log.conf";
     }
 
-    LOGGER_INIT(configurationFile.toStdString());
+    //LOGGER_INIT(configurationFile.toStdString());
     DEBUG_LOG("Arxiu de configuració del log: " + configurationFile);
 
     // Redirigim els missatges de VTK cap al log.
@@ -215,6 +226,12 @@ int main(int argc, char *argv[])
     // registrem els codecs decompressors JPEG i RLE
     DJDecoderRegistration::registerCodecs();
     DcmRLEDecoderRegistration::registerCodecs();
+
+	// register JPEG-LS codecs
+	//DJLSEncoderRegistration::registerCodecs();
+	DJLSDecoderRegistration::registerCodecs();
+    //jp2k
+    FMJPEG2KDecoderRegistration::registerCodecs();
 
     // Seguint les recomanacions de la documentació de Qt, guardem la llista d'arguments en una variable, ja que aquesta operació és costosa
     // http://doc.trolltech.com/4.7/qcoreapplication.html#arguments

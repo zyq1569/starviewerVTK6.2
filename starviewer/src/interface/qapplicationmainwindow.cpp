@@ -70,9 +70,15 @@
 #include <QPair>
 #include <QWidgetAction>
 #include <QShortcut>
+#include <QToolBar>
 // Shortucts
 #include "shortcuts.h"
 #include "shortcutmanager.h"
+
+//------------------------------------
+#include "imagethumbnaildockwidget.h"
+#include "patientbrowsermenu.h"
+//------------------------------------
 
 namespace udg {
 
@@ -106,6 +112,11 @@ QApplicationMainWindow::QApplicationMainWindow(QWidget *parent)
     m_extensionWorkspace = new ExtensionWorkspace(this);
     this->setCentralWidget(m_extensionWorkspace);
 
+    m_DockImageThumbnail = new ImageThumbnailDockWidget("",this);//("Thumbnail");
+    addDockWidget(Qt::LeftDockWidgetArea,m_DockImageThumbnail);
+    //m_DockImageThumbnail->setFeatures(QDockWidget::DockWidgetMovable);
+    m_DockImageThumbnail->setObjectName("ImageThumbnail");
+
     DatabaseInstallation databaseInstallation;
     if (!databaseInstallation.checkStarviewerDatabase())
     {
@@ -118,8 +129,89 @@ QApplicationMainWindow::QApplicationMainWindow(QWidget *parent)
 
     m_logViewer = new QLogViewer(this);
 
-    createActions();
-    createMenus();
+    //createActions();
+    //createMenus();
+
+	//----------------------------------
+	//add m_mainToolbar
+	m_mainToolbar = new QToolBar(this);
+	this->addToolBar(Qt::TopToolBarArea, m_mainToolbar);
+	m_mainToolbar->setIconSize(QSize(30, 30));
+	m_mainToolbar->layout()->setSpacing(10);
+	m_mainToolbar->setFloatable(false);
+	m_mainToolbar->setMovable(false);
+	m_mainToolbar->setToolButtonStyle(Qt::ToolButtonIconOnly);
+	//m_mainToolbar->setStyleSheet("background-color:rgb(150,150,150)}");
+	//m_mainToolbar->setStyleSheet("background-color:lightgray;");
+	//m_mainToolbar->setStyleSheet("background-color:rgb(128,128,128);");
+	//m_mainToolbar->setStyleSheet("QToolButton:!hover {background-color:lightgray} QToolBar {background: rgb(150,150,150)}");
+	m_mainToolbar->setStyleSheet("QToolButton:!hover {background-color:lightgray} QToolBar {background:lightgray}");
+	//this->setStyleSheet("background-color:lightgray}");
+	//QAction *actionHide = new QAction(QIcon(":/images/showhide.png"), "show or hide Thumbnail ...", this);
+	//m_mainToolbar->addAction(actionHide);
+	//connect(actionHide, SIGNAL(triggered()), SLOT(showhideDockImage()));//Open an existing DICOM folder
+
+	QAction *actionFile = new QAction(QIcon(":/images/folderopen.png"), "Open Files from a Directory...", this);
+	m_mainToolbar->addAction(actionFile);
+	connect(actionFile, &QAction::triggered, [this] { m_extensionHandler->request(6); });//Open an existing DICOM folder
+	m_mainToolbar->insertSeparator(actionFile);
+
+    QAction *action3D = new QAction(QIcon(":/images/3D.svg"), "3D Viewer", this);
+	m_mainToolbar->addAction(action3D);
+	connect(action3D, &QAction::triggered, [this] { m_extensionHandler->request("Q3DViewerExtension"); });
+
+	//QAction *actionMultScreens = new QAction(QIcon(":/images/icons/Monitor.svg"), "MultiScreens", this);
+	//m_mainToolbar->addAction(actionMultScreens);
+	//connect(actionMultScreens, SIGNAL(triggered(bool)), this, SLOT(maximizeMultipleScreens()));
+
+	//QAction *actionNextScreens = new QAction(QIcon(":/images/icons/MonitorNext.svg"), "Next Desktop", this);
+	//m_mainToolbar->addAction(actionNextScreens);
+	//actionNextScreens->setShortcuts(ShortcutManager::getShortcuts(Shortcuts::MoveToNextDesktop));
+	//actionNextScreens->setToolTip("Next Desktop|Ctrl + Shift + Right");
+	//connect(actionNextScreens, SIGNAL(triggered(bool)), this, SLOT(moveToNextDesktop()));
+
+	QMenu* menu = new QMenu("windows", this);
+	QAction* nextScreens = menu->addAction("NextScreens");
+	QMenu* menuSub = new QMenu("...", this); //创建第二个menu对象
+	nextScreens->setMenu(menuSub);
+    nextScreens->setIcon(QIcon(":/images/MonitorNext.svg"));
+	nextScreens->setToolTip("Next Desktop | Ctrl + Shift + Right");
+	nextScreens->setShortcuts(ShortcutManager::getShortcuts(Shortcuts::MoveToNextDesktop));
+	connect(nextScreens, SIGNAL(triggered(bool)), this, SLOT(moveToNextDesktop()));
+	QScreenDistribution *screen = new QScreenDistribution(this);
+	QWidgetAction* subDesk = new QWidgetAction(this);
+	subDesk->setDefaultWidget(screen);
+	menuSub->addAction(subDesk);
+	connect(screen, SIGNAL(screenClicked(int)), this, SLOT(moveToDesktop(int)));
+	m_mainToolbar->addAction(nextScreens);
+
+	//QAction *actionMPR = new QAction(QIcon(":/images/icons/MPR-2D.svg"), "MPR-2D Viewer", this);
+	//m_mainToolbar->addAction(actionMPR);
+	//connect(actionMPR, &QAction::triggered, [this] { m_extensionHandler->request("MPRExtension"); });
+
+	QAction *actionPACS = new QAction(QIcon(":/images/pacsNodes"), "PACS Images", this);
+	m_mainToolbar->addAction(actionPACS);
+	connect(actionPACS, &QAction::triggered, [this] { m_extensionHandler->request(7); });
+
+	QAction *actionConfig = new QAction(QIcon(":/images/preferences.png"), "&Configuration...", this);
+	actionConfig->setShortcuts(ShortcutManager::getShortcuts(Shortcuts::Preferences));
+	m_mainToolbar->addAction(actionConfig);
+	connect(actionConfig, SIGNAL(triggered()), SLOT(showConfigurationDialog()));
+
+	QMenu* menuhelp = new QMenu("AppHelp", this);
+	QAction* aboutAction = menuhelp->addAction("&About");
+	QMenu* menuhelpSub = new QMenu("...", this); //创建第二个menu对象
+	aboutAction->setMenu(menuhelpSub);
+	aboutAction->setIcon(QIcon(":/images/help.ico"));
+	aboutAction->setToolTip("Show the application's About box");
+	connect(aboutAction, SIGNAL(triggered()), this, SLOT(about()));
+
+	QAction *sysInfoTest = new QAction(QIcon(":/images/help.ico"), "SysTest", this);
+	menuhelpSub->addAction(sysInfoTest);
+	connect(sysInfoTest, SIGNAL(triggered()), this, SLOT(showDiagnosisTestDialog()));
+	m_mainToolbar->addAction(aboutAction);
+	//---------------------------------------------------------------------------------------------------
+	//----------------------------------
 
     m_applicationVersionChecker = new ApplicationVersionChecker(this);
     m_applicationVersionChecker->checkReleaseNotes();
@@ -151,13 +243,13 @@ QApplicationMainWindow::QApplicationMainWindow(QWidget *parent)
 #endif
 
     // Creem el progress dialog que notificarà la càrrega de volums
-    m_progressDialog = new QProgressDialog(this);
-    m_progressDialog->setModal(true);
-    m_progressDialog->setRange(0, 100);
-    m_progressDialog->setMinimumDuration(0);
-    m_progressDialog->setWindowTitle(tr("Loading"));
-    m_progressDialog->setLabelText(tr("Loading data, please wait..."));
-    m_progressDialog->setCancelButton(0);
+    //m_progressDialog = new QProgressDialog(this);
+    //m_progressDialog->setModal(true);
+    //m_progressDialog->setRange(0, 100);
+    //m_progressDialog->setMinimumDuration(0);
+    //m_progressDialog->setWindowTitle(tr("Loading"));
+    //m_progressDialog->setLabelText(tr("Loading data, please wait..."));
+    //m_progressDialog->setCancelButton(0);
 
 #ifdef BETA_VERSION
     markAsBetaVersion();
@@ -594,7 +686,9 @@ QApplicationMainWindow* QApplicationMainWindow::setPatientInNewWindow(Patient *p
 {
     QApplicationMainWindow *newMainWindow = openBlankWindow();
     newMainWindow->setPatient(patient);
-
+    QList<Patient*> patientsList;
+    patientsList << patient;
+    newMainWindow->addPatientsThumbnail(patientsList);
     return newMainWindow;
 }
 
@@ -855,7 +949,7 @@ void QApplicationMainWindow::sendRequestRetrieveStudyWithAccessionNumberToLocalS
 
 void QApplicationMainWindow::updateVolumeLoadProgressNotification(int progress)
 {
-    m_progressDialog->setValue(progress);
+    //m_progressDialog->setValue(progress);
 }
 
 void QApplicationMainWindow::openUserGuide()
@@ -899,5 +993,164 @@ void QApplicationMainWindow::openReleaseNotes()
 void QApplicationMainWindow::computeDefaultToolTextSize()
 {
     ApplicationStyleHelper().recomputeStyleToScreenOfWidget(this);
+}
+
+void QApplicationMainWindow::addPatientsThumbnail(QList<Patient*> patientsList)
+{
+    m_DockImageThumbnail->addPatientsThumbmailList(patientsList);
+#ifdef DOCKRIGHT
+    m_DockImageThumbnailRight->addPatientsThumbmailList(patientsList);
+#endif
+}
+
+void QApplicationMainWindow::closePatient()
+{
+    if (m_DockImageThumbnail)
+    {
+        m_DockImageThumbnail->mainAppclearThumbnail();
+    }
+#ifdef DOCKRIGHT
+    if (m_DockImageThumbnailRight)
+    {
+        m_DockImageThumbnailRight->mainAppclearThumbnail();
+    }
+#endif
+    this->killBill();
+    this->setWindowTitle("NULL");
+    if (m_patient)
+    {
+        m_patient->clearAllStudy();
+        delete m_patient;
+        m_patient = NULL;
+    }
+}
+
+//ExtensionHandler* QApplicationMainWindow::getExtensionHandler()
+//{
+//    return  m_extensionHandler;
+//}
+
+QWidget *QApplicationMainWindow::currentWidgetOfExtensionWorkspace()
+{
+    return m_extensionWorkspace->currentWidget();
+}
+
+void QApplicationMainWindow::closeCurrentPatient()
+{
+    //connect(m_closeAction, SIGNAL(triggered()), m_extensionWorkspace, SLOT(closeCurrentApplication()));
+    //----------20200921---------------------------------------------------------------------------------
+    //connect(m_closeAction, SIGNAL(triggered()), m_DockImageThumbnail, SLOT(mainAppclearThumbnail()));
+    //----------------------------------------------------------------------------------------------------
+    if (m_extensionWorkspace->currentWidget())
+    {
+        m_extensionWorkspace->closeCurrentApplication();
+        m_DockImageThumbnail->mainAppclearThumbnail();
+#ifdef DOCKRIGHT
+        m_DockImageThumbnailRight->mainAppclearThumbnail();
+#endif
+        this->killBill();
+        this->setWindowTitle("NULL");
+        //m_patient->setID("NULL");
+        //m_patient->setFullName("NULL");
+        if (m_patient)
+        {
+            //m_patient->clearAllStudy();
+            delete m_patient;
+            m_patient = NULL;
+        }
+
+    }
+}
+///------------------------------------------------------------------------------------------------------------
+
+void QApplicationMainWindow::showhideDockImage()
+{
+    static bool flag = true;
+    if (flag)
+    {
+        m_DockImageThumbnail->hide();
+        flag = false;
+    }
+    else
+    {
+        m_DockImageThumbnail->show();
+        flag = true;
+    }
+}
+
+void QApplicationMainWindow::updateActiveFromStaticViewerMenu(const QList<Volume*> &volumes)
+{
+    QWidget* widget = currentWidgetOfExtensionWorkspace();
+    QString className = widget->metaObject()->className();
+    QString str = className.section("::", 1, 1);
+    ExtensionMediator *mediator = ExtensionMediatorFactory::instance()->create(str);
+    if (mediator)
+    {
+        if (widget)
+        {
+            Volume *volume = volumes.at(0);
+            ExtensionWorkspace *extensionWorkspace = getExtensionWorkspace();
+            int extensionIndex = extensionWorkspace->currentIndex();
+            if (extensionWorkspace->tabText(extensionIndex).contains("3D Viewer"))
+            {
+                if (!volume)
+                {
+                    QMessageBox::warning(0, "3D-Viewer", ("3D-Viewer: No image is selected!!"));
+                    delete mediator;
+                    return;
+                }
+                //if (!volume->is3Dimage())
+                {
+                    QMessageBox::warning(0, "3D-Viewer", ("The selected item : 3D-Viewer fail!!! images < 5 or SliceThickness = 0.0"));
+                    delete mediator;
+                    return;
+                }
+                extensionWorkspace->setTabText(extensionIndex, "3D Viewer#Series:" + volume->getSeries()->getSeriesNumber());
+            }
+            //mediator->executionCommand(widget, volume);
+        }
+        delete mediator;
+    }
+}
+
+void QApplicationMainWindow::openCommandDirDcm(QString rootPath)
+{
+    QStringList dirsList, filenames;
+    QDir rootDir(rootPath);
+    if (rootDir.exists())
+    {
+        // We add the current directory to the list
+        dirsList << rootPath;
+        foreach(const QString &dirName, dirsList)
+        {
+            filenames << generateFilenames(dirName);
+        }
+    }
+    if (!filenames.isEmpty())
+    {
+        m_extensionHandler->closeCurrentPatient();
+        m_extensionHandler->processCommandInput(filenames);
+    }
+}
+
+QStringList QApplicationMainWindow::generateFilenames(const QString &dirPath)
+{
+    QStringList list;
+    //We check that the directory has files
+    QDir dir(dirPath);
+    QFileInfoList fileInfoList = dir.entryInfoList(QDir::Files);
+
+    QString suffix;
+    //We add to the list each of the absolute paths of the files contained in the directory
+    foreach(const QFileInfo &fileInfo, fileInfoList)
+    {
+        suffix = fileInfo.suffix();
+        if ((suffix.length() > 0 && suffix.toLower() == "dcm") || suffix.length() == 0)
+        {
+            list << fileInfo.absoluteFilePath();
+        }
+    }
+
+    return list;
 }
 }; // end namespace udg

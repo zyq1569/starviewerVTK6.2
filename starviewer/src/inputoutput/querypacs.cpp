@@ -151,9 +151,18 @@ PACSRequestStatus::QueryRequestStatus QueryPacs::query()
     DcmDataset *dcmDatasetToQuery = DicomMaskToDcmDataset().getDicomMaskAsDcmDataset(m_dicomMask);
 
     // Finally conduct transmission of data
+    //OFCondition condition = DIMSE_findUser(m_pacsConnection->getConnection(), m_presId, &findRequest, dcmDatasetToQuery, foundMatchCallback, this, DIMSE_NONBLOCKING,
+    //                                       Settings().getValue(InputOutputSettings::PACSConnectionTimeout).toInt(), &findResponse, &statusDetail);
+#ifdef  PACKAGE_VERSION_NUMBER
+#if PACKAGE_VERSION_NUMBER < 365
     OFCondition condition = DIMSE_findUser(m_pacsConnection->getConnection(), m_presId, &findRequest, dcmDatasetToQuery, foundMatchCallback, this, DIMSE_NONBLOCKING,
                                            Settings().getValue(InputOutputSettings::PACSConnectionTimeout).toInt(), &findResponse, &statusDetail);
-
+#else //if  PACKAGE_VERSION_NUMBER == 365
+    int responseCount = 0;
+    OFCondition condition = DIMSE_findUser(m_pacsConnection->getConnection(), m_presId, &findRequest, dcmDatasetToQuery,responseCount, foundMatchCallback,
+                                           this,DIMSE_NONBLOCKING,Settings().getValue(InputOutputSettings::PACSConnectionTimeout).toInt(), &findResponse, &statusDetail);
+#endif
+#endif
     m_pacsConnection->disconnect();
 
     if (!condition.good())

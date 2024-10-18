@@ -72,4 +72,9 @@ void QHangingProtocolsWidget::setActivePriorHangingProtocol(HangingProtocol *han
     m_priorGroupWidget->setActiveItem(hangingProtocol);
 }
 
+void QHangingProtocolsWidget::mprSelected(int index)
+{
+	m_currentGroupWidget->mprSelected(index);
+}
+
 }

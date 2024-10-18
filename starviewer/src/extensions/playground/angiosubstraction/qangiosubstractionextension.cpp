@@ -25,6 +25,8 @@
 #include <itkNormalizeImageFilter.h>
 #include <itkDiscreteGaussianImageFilter.h>
 
+//QT
+#include<QAction>
 namespace udg {
 
 QAngioSubstractionExtension::QAngioSubstractionExtension(QWidget *parent)

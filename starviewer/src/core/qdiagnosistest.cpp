@@ -20,8 +20,6 @@
 #include <QMovie>
 #include <QFileDialog>
 #include <QScrollBar>
-#include <QWebFrame>
-#include <QWebHistory>
 
 #include "diagnosistestfactory.h"
 #include "diagnosistest.h"
@@ -51,8 +49,8 @@ QDiagnosisTest::QDiagnosisTest(QWidget *parent)
     //Treiem icona amb ? que apareix al costat del botó de tancar
     this->setWindowFlags(this->windowFlags() & ~Qt::WindowContextHelpButtonHint);
     
-    m_diagnosisTestsResults->setContextMenuPolicy(Qt::NoContextMenu);
-    m_diagnosisTestsResults->history()->setMaximumItemCount(0);
+    //m_diagnosisTestsResults->setContextMenuPolicy(Qt::NoContextMenu);
+    //m_diagnosisTestsResults->history()->setMaximumItemCount(0);
 }
 
 QDiagnosisTest::~QDiagnosisTest()
@@ -124,7 +122,7 @@ void QDiagnosisTest::finishedRunningDiagnosisTest()
 
 void QDiagnosisTest::viewTestsLabelClicked()
 {
-    m_diagnosisTestsResults->page()->mainFrame()->evaluateJavaScript("showAllTests(); null");
+    //m_diagnosisTestsResults->page()->mainFrame()->evaluateJavaScript("showAllTests(); null");
     m_diagnosisTestsResults->setVisible(true);
     m_viewTestsLabel->setVisible(false);
     this->adjustSize();
@@ -133,7 +131,8 @@ void QDiagnosisTest::viewTestsLabelClicked()
 void QDiagnosisTest::fillDiagnosisTestsResultTable()
 {
     QString html = m_diagnosisTestResultWriter.getAsQString();
-    m_diagnosisTestsResults->page()->mainFrame()->setHtml(html);
+    //m_diagnosisTestsResults->page()->mainFrame()->setHtml(html);
+	m_diagnosisTestsResults->setText(html);
 }
 
 void QDiagnosisTest::updateWidgetToRunDiagnosisTest()

@@ -1062,7 +1062,8 @@ void LocalDatabaseManager::createSeriesThumbnail(Series *seriesToGenerateThumbna
 
     // Només crearem el thumbnail si aquest no s'ha creat encara
     thumbnailFilePath = getSeriesThumbnailPath(seriesToGenerateThumbnail->getParentStudy()->getInstanceUID(), seriesToGenerateThumbnail);
-    if (!QFileInfo(thumbnailFilePath).exists())
+    //if (!QFileInfo(thumbnailFilePath).exists())
+	if (!QFileInfo::exists(thumbnailFilePath))
     {
         thumbnailCreator.getThumbnail(seriesToGenerateThumbnail).save(thumbnailFilePath, "PNG");
     }

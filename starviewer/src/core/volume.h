@@ -217,6 +217,9 @@ public:
     /// Returns true if all the images in this volume are in the same anatomical plane.
     bool areAllImagesInTheSameAnatomicalPlane() const;
     
+	//zyq20240412
+	bool is3Dimage() const;
+	bool isMHDImage() const;
 signals:
     /// Emet l'estat del progrés en el que es troba la càrrega de dades del volum
     /// @param progress progrés de la càrrega en una escala de 1 a 100

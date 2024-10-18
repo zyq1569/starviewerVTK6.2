@@ -41,6 +41,7 @@ class TableMenu;
 class QDICOMDumpBrowser;
 class StatsWatcher;
 class LayoutManager;
+class ExtensionHandler;
 
 #ifndef STARVIEWER_LITE
 class QRelatedStudiesWidget;
@@ -287,6 +288,16 @@ private:
     /// Study Instance UID of current study.
     QString m_currentStudyUID;
 
+	//----------------------add 2020-09-18-------------------------------------------------------------------
+public:
+	void  updateQ2DViewer(Volume* volume);
+
+	ExtensionHandler *m_extensionHandler;
+private slots:
+	void start3DViewer();
+	void startMPR2DViewer();
+	//20240808
+	void mprSelected(int index);
 };
 
 } // end namespace udg

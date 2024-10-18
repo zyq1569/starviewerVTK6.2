@@ -149,7 +149,13 @@ bool SendDICOMFilesToPACS::storeSCU(T_ASC_Association *association, QString file
         return false;
     }
     // Figure out which SOP class and SOP instance is encapsulated in the file
+#ifdef  PACKAGE_VERSION_NUMBER
+#if PACKAGE_VERSION_NUMBER  < 365
     if (!DU_findSOPClassAndInstanceInDataSet(dcmff.getDataset(), sopClass, sopInstance, OFFalse))
+#else if  PACKAGE_VERSION_NUMBER == 365
+    if (!DU_findSOPClassAndInstanceInDataSet(dcmff.getDataset(), sopClass,sizeof(sopClass), sopInstance, sizeof(sopInstance), OFFalse))
+#endif
+#endif
     {
         ERROR_LOG("No s'ha pogut obtenir el SOPClass i SOPInstance del fitxer " + filepathToStore);
         return false;
@@ -253,7 +259,13 @@ void SendDICOMFilesToPACS::processResponseFromStoreSCP(unsigned int dimseStatusC
         
         // Coersió entre tipus, s'ha convertit un tipus a un altre tipus i es pot haver perdut dades, per exemple passar de decimal a enter, tot i així
         // els fitxers s'han enviat i guardat
-        case STATUS_STORE_Warning_CoersionOfDataElements:
+#ifdef  PACKAGE_VERSION_NUMBER
+#if PACKAGE_VERSION_NUMBER == 361
+    case STATUS_STORE_Warning_CoersionOfDataElements:
+#else if  PACKAGE_VERSION_NUMBER  >= 363
+    case STATUS_STORE_Warning_CoercionOfDataElements:
+#endif
+#endif
             // 0xB000
         case STATUS_STORE_Warning_DataSetDoesNotMatchSOPClass:
             // 0xB007

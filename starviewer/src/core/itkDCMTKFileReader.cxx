@@ -1465,7 +1465,13 @@ DCMTKFileReader
 {
   DcmDataDictionary &dict = dcmDataDict.wrlock();
   dict.addEntry(entry);
-  dcmDataDict.unlock();
+#ifdef  PACKAGE_VERSION_NUMBER
+#if PACKAGE_VERSION_NUMBER < 365
+    dcmDataDict.unlock();
+#else if  PACKAGE_VERSION_NUMBER == 365
+    dcmDataDict.wrunlock();
+#endif
+#endif
 }
 
 bool CompareDCMTKFileReaders(DCMTKFileReader *a, DCMTKFileReader *b)

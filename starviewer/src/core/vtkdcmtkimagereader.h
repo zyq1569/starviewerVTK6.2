@@ -26,7 +26,10 @@ class DicomImage;
 namespace udg {
 
 class DICOMTagReader;
-
+#ifndef  CIF_UseFloatingInternalRepresentation
+/// use floating point for the internal representation
+const unsigned long CIF_UseFloatingInternalRepresentation = 0x0002000;
+#endif
 /**
     VTK image reader that uses DCMTK to read DICOM files.
  */

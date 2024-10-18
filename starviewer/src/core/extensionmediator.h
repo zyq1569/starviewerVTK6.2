@@ -22,7 +22,7 @@
 namespace udg {
 
 class ExtensionContext;
-
+class Volume;
 /**
     Classe abstracta que fa de pont entre l'starviewer i una extensió. D'aquesta classe hauran d'heredar tots
     els mediators de les diferents extensions. Hi ha d'haver un mediator per cada extensió.
@@ -56,7 +56,8 @@ public:
 
     /// Orders the extension to view newly loaded studies from the current patient.
     virtual void viewNewStudiesFromSamePatient(QWidget *extension, const QString &newStudyUID);
-
+	//---20200919---add
+	virtual void executionCommand(QWidget *extension, Volume* volume, void *data = NULL, int command = 0) = 0;
 };
 
 }

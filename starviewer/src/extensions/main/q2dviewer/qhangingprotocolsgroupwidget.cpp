@@ -138,4 +138,9 @@ void QHangingProtocolsGroupWidget::emitSelected(ItemMenu *selectedItem)
     emit selected(selectedItem->getData().toInt());
 }
 
+void QHangingProtocolsGroupWidget::mprSelected(int index)
+{
+	emit selected(index);
+}
+
 } // namespace udg

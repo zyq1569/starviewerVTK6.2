@@ -832,4 +832,31 @@ bool Volume::areAllImagesInTheSameAnatomicalPlane() const
     return m_allImagesAreInTheSameAnatomicalPlane;
 }
 
+//zyq20240412
+bool Volume::is3Dimage() const
+{
+	if (isMHDImage())
+	{
+		return true;
+	}
+	if (getImages().size() < 10)
+	{
+		return false;
+	}
+	return true;
+}
+
+bool Volume::isMHDImage() const
+{
+	if (getImages().size() > 0)
+	{
+		QString SOPInstanceUID = getImages().at(0)->getSOPInstanceUID();
+		if (SOPInstanceUID.contains("MHDImage"))
+		{
+			return true;
+		}
+	}
+	return false;
+
+}
 };

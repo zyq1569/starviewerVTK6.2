@@ -22,6 +22,7 @@
 #include "screenshottool.h"
 #include "toolproxy.h"
 #include "qexportertool.h"
+#include "series.h"
 // Qt
 #include <QAction>
 #include <QFileDialog>
@@ -31,6 +32,7 @@
 #include <vtkImageData.h>
 // Actualització ràpida
 #include <vtkRenderWindow.h>
+#include <vtkRenderer.h>
 // Actualització ràpida
 #include <vtkRenderWindowInteractor.h>
 
@@ -90,7 +92,7 @@ void Q3DViewerExtension::initializeTools()
 
     // Activem les tools que volem tenir per defecte, això és com si clickéssim a cadascun dels ToolButton
     QStringList defaultTools;
-    defaultTools << "ZoomTool" << "TranslateTool" << "Rotate3DTool" << "ScreenShotTool";
+    defaultTools << "WindowLevelTool" << "TranslateTool" << "Rotate3DTool" << "ScreenShotTool";
     m_toolManager->triggerTools(defaultTools);
 
     // Registrem al manager les tools que van amb el viewer principal
@@ -598,16 +600,17 @@ void Q3DViewerExtension::applyRenderingStyle(const QModelIndex &index)
     QStandardItem *item = m_renderingStyleModel->itemFromIndex(index);
     RenderingStyle renderingStyle = RenderingStyle::fromVariant(item->data());
 
-    switch (renderingStyle.getMethod())
+    RenderingStyle::Method method = renderingStyle.getMethod();
+    switch (method)
     {
         case RenderingStyle::RayCasting:
         case RenderingStyle::Texture3D:
         case RenderingStyle::Texture2D:
-            if (renderingStyle.getMethod() == RenderingStyle::RayCasting)
+            if (method == RenderingStyle::RayCasting)
             {
                 m_renderingMethodComboBox->setCurrentIndex(renderingStyle.getObscurance() ? 1 : 0);
             }
-            else if (renderingStyle.getMethod() == RenderingStyle::Texture3D)
+            else if (method == RenderingStyle::Texture3D)
             {
                 m_renderingMethodComboBox->setCurrentIndex(3);
             }
@@ -627,7 +630,7 @@ void Q3DViewerExtension::applyRenderingStyle(const QModelIndex &index)
                 m_specularPowerDoubleSpinBox->setValue(renderingStyle.getSpecularPower());
             }
 
-            if (renderingStyle.getMethod() == RenderingStyle::RayCasting)
+            if (method == RenderingStyle::RayCasting)
             {
                 m_contourCheckBox->setChecked(renderingStyle.getContour());
                 if (renderingStyle.getContour())
@@ -857,6 +860,21 @@ void Q3DViewerExtension::disableAutoUpdate()
 
     // Isosuperfícies
     disconnect(m_isoValueSpinBox, SIGNAL(valueChanged(int)), this, SLOT(updateView()));
+}
+
+void Q3DViewerExtension::updateInput(Volume *input)
+{
+	if (m_lastInput != input)
+	{
+		m_input = input;
+		m_3DView->setInput(m_input);
+		m_lastInput = input;
+		//m_3DView->getRenderer()->ResetCamera();
+		m_3DView->getRenderWindow()->Render();
+		Series* ser = input->getSeries();
+		QString title = ser->getSeriesNumber();
+		setWindowTitle(title);
+	}
 }
 
 }

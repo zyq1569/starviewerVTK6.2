@@ -16,7 +16,16 @@
      <property name="spacing">
       <number>14</number>
      </property>
-     <property name="margin">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
       <number>0</number>
      </property>
      <item>
@@ -24,7 +33,16 @@
        <property name="spacing">
         <number>6</number>
        </property>
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item>
@@ -33,7 +51,7 @@
           <string>Axial</string>
          </property>
          <property name="icon">
-          <iconset resource="../../../main/main.qrc">
+          <iconset>
            <normaloff>:/images/axial.png</normaloff>:/images/axial.png</iconset>
          </property>
          <property name="iconSize">
@@ -62,7 +80,7 @@
           <string>Sagital</string>
          </property>
          <property name="icon">
-          <iconset resource="../../../main/main.qrc">
+          <iconset>
            <normaloff>:/images/sagital.png</normaloff>:/images/sagital.png</iconset>
          </property>
          <property name="iconSize">
@@ -91,7 +109,7 @@
           <string>Coronal</string>
          </property>
          <property name="icon">
-          <iconset resource="../../../main/main.qrc">
+          <iconset>
            <normaloff>:/images/coronal.png</normaloff>:/images/coronal.png</iconset>
          </property>
          <property name="iconSize">
@@ -117,22 +135,6 @@
       </layout>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Orientation</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
       <spacer>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
@@ -155,7 +157,16 @@
      <property name="spacing">
       <number>14</number>
      </property>
-     <property name="margin">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
       <number>0</number>
      </property>
      <item>
@@ -163,7 +174,16 @@
        <property name="spacing">
         <number>6</number>
        </property>
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item>
@@ -172,7 +192,7 @@
           <string>Zoom</string>
          </property>
          <property name="icon">
-          <iconset resource="../../../main/main.qrc">
+          <iconset>
            <normaloff>:/images/zoom.png</normaloff>:/images/zoom.png</iconset>
          </property>
          <property name="iconSize">
@@ -201,7 +221,7 @@
           <string>Rotate</string>
          </property>
          <property name="icon">
-          <iconset resource="../../../main/main.qrc">
+          <iconset>
            <normaloff>:/images/rotate3d.png</normaloff>:/images/rotate3d.png</iconset>
          </property>
          <property name="iconSize">
@@ -230,7 +250,7 @@
           <string>W/L</string>
          </property>
          <property name="icon">
-          <iconset resource="../../../main/main.qrc">
+          <iconset>
            <normaloff>:/images/windowLevel.png</normaloff>:/images/windowLevel.png</iconset>
          </property>
          <property name="iconSize">
@@ -251,22 +271,6 @@
         </widget>
        </item>
       </layout>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_5">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Mouse Function</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
      </item>
      <item>
       <spacer>
@@ -297,7 +301,7 @@
         <string>Clip Planes</string>
        </property>
        <property name="icon">
-        <iconset resource="../../../main/main.qrc">
+        <iconset>
          <normaloff>:/images/clippingBox.png</normaloff>:/images/clippingBox.png</iconset>
        </property>
        <property name="iconSize">
@@ -314,22 +318,6 @@
        </property>
        <property name="autoRaise">
         <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Widgets</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
@@ -356,7 +344,16 @@
      <property name="spacing">
       <number>6</number>
      </property>
-     <property name="margin">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
       <number>0</number>
      </property>
      <item>
@@ -364,7 +361,16 @@
        <property name="spacing">
         <number>6</number>
        </property>
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item>
@@ -422,7 +428,7 @@
         <string>Custom style</string>
        </property>
        <property name="icon">
-        <iconset resource="../../../main/main.qrc">
+        <iconset>
          <normaloff>:/images/clutEdit.png</normaloff>:/images/clutEdit.png</iconset>
        </property>
        <property name="iconSize">
@@ -471,7 +477,16 @@
        <property name="spacing">
         <number>6</number>
        </property>
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item>
@@ -479,7 +494,16 @@
          <property name="spacing">
           <number>6</number>
          </property>
-         <property name="margin">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
           <number>0</number>
          </property>
          <item>
@@ -487,7 +511,16 @@
            <property name="spacing">
             <number>6</number>
            </property>
-           <property name="margin">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
             <number>0</number>
            </property>
            <item>
@@ -647,7 +680,16 @@
             <property name="spacing">
              <number>6</number>
             </property>
-            <property name="margin">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
              <number>0</number>
             </property>
             <item>
@@ -692,7 +734,16 @@
             <property name="spacing">
              <number>6</number>
             </property>
-            <property name="margin">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
              <number>0</number>
             </property>
             <item>
@@ -700,7 +751,16 @@
               <property name="spacing">
                <number>6</number>
               </property>
-              <property name="margin">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
                <number>0</number>
               </property>
               <item>
@@ -759,7 +819,16 @@
               <property name="spacing">
                <number>6</number>
               </property>
-              <property name="margin">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
                <number>0</number>
               </property>
               <item>
@@ -812,7 +881,16 @@
             <property name="spacing">
              <number>6</number>
             </property>
-            <property name="margin">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
              <number>0</number>
             </property>
             <item>
@@ -861,7 +939,16 @@
          <property name="spacing">
           <number>6</number>
          </property>
-         <property name="margin">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
           <number>0</number>
          </property>
          <item>
@@ -913,7 +1000,16 @@
          <property name="spacing">
           <number>6</number>
          </property>
-         <property name="margin">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
           <number>0</number>
          </property>
          <item>
@@ -947,7 +1043,16 @@
      <property name="spacing">
       <number>14</number>
      </property>
-     <property name="margin">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
       <number>0</number>
      </property>
      <item>
@@ -958,7 +1063,7 @@
           <string>Screen Shot</string>
          </property>
          <property name="icon">
-          <iconset resource="../../../main/main.qrc">
+          <iconset>
            <normaloff>:/images/photo.png</normaloff>:/images/photo.png</iconset>
          </property>
          <property name="iconSize">
@@ -981,7 +1086,7 @@
           <string>Exporter</string>
          </property>
          <property name="icon">
-          <iconset resource="../../../main/main.qrc">
+          <iconset>
            <normaloff>:/images/store.png</normaloff>:/images/store.png</iconset>
          </property>
          <property name="iconSize">
@@ -999,16 +1104,6 @@
         </widget>
        </item>
       </layout>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Tools</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
      </item>
      <item>
       <spacer name="verticalSpacer">
@@ -1044,10 +1139,6 @@
    <header>q3dviewer.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="../../../main/main.qrc"/>
-  <include location="q3dviewer.qrc"/>
-  <include location="../../../main/main.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

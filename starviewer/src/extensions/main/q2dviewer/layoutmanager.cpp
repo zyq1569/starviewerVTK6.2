@@ -724,4 +724,27 @@ QRectF LayoutManager::prepareToChangeLayoutOfStudy(Study *study)
     }
 }
 
+int LayoutManager::getLayoutIdentifier()
+{
+	if (m_hangingProtocolManager)
+		return m_hangingProtocolManager->m_Identifier;
+	else
+		return 1;
+}
+
+void LayoutManager::thumbnailUpateImages()
+{
+	if (m_layoutGrid || getLayoutIdentifier() < 9)
+	{
+		return;
+	}
+
+	if (m_hangingProtocolManager)
+	{
+		QRectF geometry = (!m_priorStudy) ? WholeGeometry : LeftHalfGeometry;
+		m_hangingProtocolManager->thumbnailUpateImages(m_layout, m_patient, geometry);
+	}
+}
+
+
 } // end namespace udg

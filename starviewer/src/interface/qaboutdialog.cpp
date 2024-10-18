@@ -40,8 +40,15 @@ QAboutDialog::QAboutDialog(QWidget *parent)
     int index = m_stackedWidget->addWidget(new QCeAboutContent());
     m_stackedWidget->setCurrentIndex(index);
 #else
-    m_aboutTextLabel->setText(m_aboutTextLabel->text().arg(ApplicationNameString).arg(2019).arg(StarviewerVersionString).arg(OrganizationEmailString)
-                                                      .arg(OrganizationWebURL));
+	QString aboutMessage = tr("<p>Down Web: <a href=\"%1\">%1</a></p>").arg("https://zyq1569.github.io/down.html");
+	aboutMessage += tr("<p>Build: %1 version:1.0.1</p>").arg(StarviewerBuildID);
+	//aboutMessage += tr("<p>Version: %1 </p>").arg(StarviewerVersionString);
+	aboutMessage += tr("<p>starviewer.udg.edu email: <a href=\"mailto:%1\">%1</a></p>").arg(OrganizationEmailString);
+	aboutMessage += tr("<p>Web: <a href=\"%1\">%1</a></p>").arg(OrganizationWebURL);
+
+    //m_aboutTextLabel->setText(m_aboutTextLabel->text().arg(ApplicationNameString).arg(2019).arg(StarviewerVersionString).arg(OrganizationEmailString)
+    //                                                  .arg(OrganizationWebURL));
+	m_aboutTextLabel->setText(aboutMessage);
     m_aboutTextLabel->setOpenExternalLinks(true);
     m_stackedWidget->setCurrentIndex(0);
 #endif

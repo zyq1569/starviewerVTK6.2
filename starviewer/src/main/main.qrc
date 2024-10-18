@@ -167,5 +167,11 @@
         <file>../../NOTICE</file>
         <file>images/system-run-big.svg</file>
         <file>images/system-run.svg</file>
+        <file>images/3D.svg</file>
+        <file>images/MonitorNext.svg</file>
+        <file>images/help.ico</file>
+        <file>images/MPRL.svg</file>
+        <file>images/MPRR.svg</file>
+        <file>images/SA.svg</file>
     </qresource>
 </RCC>

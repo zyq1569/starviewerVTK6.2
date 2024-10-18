@@ -174,6 +174,12 @@ private:
     /// Combined hanging protocol applied. Don't change its value directly, use setCombinedHangingProtocolApplied() instead.
     HangingProtocol *m_combinedHangingProtocolApplied;
 
+	//20240808
+public:
+	bool m_layoutGrid;
+	void thumbnailUpateImages();
+	//20240918
+	int getLayoutIdentifier();
 };
 
 } // end namespace udg

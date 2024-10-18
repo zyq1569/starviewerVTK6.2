@@ -27,6 +27,11 @@
 #include <dcmimage.h>
 #include <ofbmanip.h>
 #include <dcdatset.h>
+#include "dcmtk/dcmdata/dctk.h"
+#include "dcmtk/dcmdata/cmdlnarg.h"
+#include "dcmtk/ofstd/ofconapp.h"
+#include "dcmtk/dcmdata/dcuid.h"       /* for dcmtk version name */
+#include "dcmtk/dcmjpeg/djdecode.h"    /* for dcmjpeg decoders */
 // Necessari per suportar imatges de color
 #include <diregist.h>
 
@@ -107,14 +112,39 @@ QImage ThumbnailCreator::createThumbnail(DICOMTagReader *reader, int resolution)
         {
             // Carreguem el fitxer dicom a escalar
             // Fem que en el cas que sigui una imatge multiframe, només carregui la primera imatge i prou, estalviant allotjar memòria innecessàriament
-            DicomImage *dicomImage = new DicomImage(reader->getDcmDataset(), reader->getDcmDataset()->getOriginalXfer(), CIF_UsePartialAccessToPixelData, 0, 1);
-            thumbnail = createThumbnail(dicomImage, resolution);
-
-            // Cal esborrar la DicomImage per no tenir fugues de memòria
-            if (dicomImage)
-            {
-                delete dicomImage;
-            }
+            //DicomImage *dicomImage = new DicomImage(reader->getDcmDataset(), reader->getDcmDataset()->getOriginalXfer(), CIF_UsePartialAccessToPixelData, 0, 1);
+            //thumbnail = createThumbnail(dicomImage, resolution);
+			//
+            //// Cal esborrar la DicomImage per no tenir fugues de memòria
+            //if (dicomImage)
+            //{
+            //    delete dicomImage;
+            //}
+			DicomImage *dicomImage = NULL;
+			dicomImage = new DicomImage(qPrintable(reader->getFileName()));
+			if (dicomImage)
+			{
+				OFString value;
+				reader->getDcmDataset()->findAndGetOFString(DCM_SeriesDescription, value);
+				QString vl = value.c_str();
+				dicomImage->hideAllOverlays();
+				if (vl.length() > 1 && vl.toLower().contains("report"))
+				{
+					dicomImage->setWindow(-2, 1);
+					thumbnail = createThumbnail(dicomImage, 512);
+				}
+				else
+				{
+					dicomImage->setMinMaxWindow(1);
+					thumbnail = createThumbnail(dicomImage, resolution);
+				}
+			}
+			// DicomImage must be deleted to avoid memory leaks
+			if (dicomImage)
+			{
+				delete dicomImage;
+				dicomImage = NULL;
+			}
         }
         catch (std::bad_alloc &e)
         {

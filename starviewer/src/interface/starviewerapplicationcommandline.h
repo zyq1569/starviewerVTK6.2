@@ -16,6 +16,8 @@
 #define UDGSTARVIEWERAPPLICATIONCOMMANDLINE_H
 
 #include <QObject>
+#include <QPair>
+#include <QMutex>
 
 #include <QCommandLineParser>
 

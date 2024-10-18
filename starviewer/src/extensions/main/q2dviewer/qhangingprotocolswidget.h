@@ -58,6 +58,9 @@ signals:
     /// Emet que s'ha escollit un grid
     void selectedGrid(int);
 
+	//20240808
+public:
+	void mprSelected(int index);
 };
 
 }

@@ -25,6 +25,7 @@
 #include "logging.h"
 
 #include <QRegularExpression>
+#include <QCoreApplication>
 
 #include <vtkCornerAnnotation.h>
 #include <vtkTextActor.h>
@@ -410,8 +411,9 @@ QString Q2DViewerAnnotationHandler::getVoiLutString() const
 
         thresholdPart = "\n" + QObject::tr("Threshold: %1%").arg(percent, 0, 'f', 2);
     }
-
-    return lutPart + windowLevelPart + thresholdPart;
+	Series *series = m_2DViewer->getMainInput()->getSeries();
+	QString sliceLocation = "\nSeries:" + series->getSeriesNumber().trimmed() + " \n";
+    return lutPart + windowLevelPart + sliceLocation;
 }
 
 QString Q2DViewerAnnotationHandler::getSliceLocationString() const
@@ -512,9 +514,22 @@ void Q2DViewerAnnotationHandler::setCornerAnnotation(AnnotationFlag annotation, 
 void Q2DViewerAnnotationHandler::createAnnotations()
 {
     m_cornerAnnotations = vtkCornerAnnotation::New();
-    m_cornerAnnotations->GetTextProperty()->SetFontFamilyToArial();
-    m_cornerAnnotations->GetTextProperty()->ShadowOn();
-
+    //m_cornerAnnotations->GetTextProperty()->SetFontFamilyToArial();
+    //m_cornerAnnotations->GetTextProperty()->ShadowOn();
+	//-------------------china
+	//const static QString forntFile = QCoreApplication::applicationDirPath() + "\\Fonts\\msyh.ttf";
+	//QFile file(forntFile);
+	//if (file.exists())
+	//{
+	//	m_cornerAnnotations->GetTextProperty()->SetFontFamily(VTK_FONT_FILE);
+	//	m_cornerAnnotations->GetTextProperty()->SetFontFile(qPrintable(forntFile));
+	//}
+	//else
+	//{
+		m_cornerAnnotations->GetTextProperty()->SetFontFamilyToArial();
+	//}
+	m_cornerAnnotations->GetTextProperty()->ShadowOn();
+	//------------------------------------------------------------------------
     createOrientationAnnotations();
 }
 
