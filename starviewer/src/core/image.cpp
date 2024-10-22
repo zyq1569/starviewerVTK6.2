@@ -633,44 +633,47 @@ QString Image::getPath() const
 QPixmap Image::getThumbnail(bool getFromCache, int resolution)
 {
     ThumbnailCreator thumbnailCreator;
-    bool createThumbnail = true;
+	m_thumbnail = QPixmap::fromImage(thumbnailCreator.getThumbnail(this, resolution));
+	return m_thumbnail;
 
-    if (m_thumbnail.isNull())
-    {
-        if (getFromCache)
-        {
-            // Primer provem de trobar el thumbnail amb número de volum i després sense número de volum
-            // Si no trobem cap fitxer, l'haurem de crear de nou
-
-            // Obtenim el directori base on es pot trobar el thumbnail
-            QString thumbnailPath = QFileInfo(getPath()).absolutePath();
-            // Path absolut de l'arxiu de thumbnail
-            QString thumbnailFilePath = QString("%1/thumbnail%2.png").arg(thumbnailPath).arg(getVolumeNumberInSeries());
-
-            QFileInfo thumbnailFile(thumbnailFilePath);
-            if (thumbnailFile.exists())
-            {
-                m_thumbnail = QPixmap(thumbnailFilePath);
-                createThumbnail = false;
-            }
-            else
-            {
-                thumbnailFilePath = QString("%1/thumbnail.png").arg(thumbnailPath);
-                thumbnailFile.setFile(thumbnailFilePath);
-                if (thumbnailFile.exists())
-                {
-                    m_thumbnail = QPixmap(thumbnailFilePath);
-                    createThumbnail = false;
-                }
-            }
-        }
-
-        if (createThumbnail)
-        {
-            m_thumbnail = QPixmap::fromImage(thumbnailCreator.getThumbnail(this, resolution));
-        }
-    }
-    return m_thumbnail;
+    //bool createThumbnail = true;
+	//
+    //if (m_thumbnail.isNull())
+    //{
+    //    if (getFromCache)
+    //    {
+    //        // Primer provem de trobar el thumbnail amb número de volum i després sense número de volum
+    //        // Si no trobem cap fitxer, l'haurem de crear de nou
+	//
+    //        // Obtenim el directori base on es pot trobar el thumbnail
+    //        QString thumbnailPath = QFileInfo(getPath()).absolutePath();
+    //        // Path absolut de l'arxiu de thumbnail
+    //        QString thumbnailFilePath = QString("%1/thumbnail%2.png").arg(thumbnailPath).arg(getVolumeNumberInSeries());
+	//
+    //        QFileInfo thumbnailFile(thumbnailFilePath);
+    //        if (thumbnailFile.exists())
+    //        {
+    //            m_thumbnail = QPixmap(thumbnailFilePath);
+    //            createThumbnail = false;
+    //        }
+    //        else
+    //        {
+    //            thumbnailFilePath = QString("%1/thumbnail.png").arg(thumbnailPath);
+    //            thumbnailFile.setFile(thumbnailFilePath);
+    //            if (thumbnailFile.exists())
+    //            {
+    //                m_thumbnail = QPixmap(thumbnailFilePath);
+    //                createThumbnail = false;
+    //            }
+    //        }
+    //    }
+	//
+    //    if (createThumbnail)
+    //    {
+    //        m_thumbnail = QPixmap::fromImage(thumbnailCreator.getThumbnail(this, resolution));
+    //    }
+    //}
+    //return m_thumbnail;
 }
 
 QStringList Image::getSupportedModalities()
