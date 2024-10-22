@@ -42,7 +42,7 @@
 
 // JPEG-2000 library (OpenJPEG) includes
 //#include "openjpeg.h"
-#include "gdcm_openjpeg.h"
+#include "openjpeg_mangle.h"
 
 #include "fmjpeg2k/memory_file.h"
 
