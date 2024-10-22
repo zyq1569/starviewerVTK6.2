@@ -23,6 +23,7 @@
 #include "toolproxy.h"
 #include "qexportertool.h"
 #include "series.h"
+#include "voilut.h"
 // Qt
 #include <QAction>
 #include <QFileDialog>
@@ -35,7 +36,9 @@
 #include <vtkRenderer.h>
 // Actualització ràpida
 #include <vtkRenderWindowInteractor.h>
-
+#include <vtkCornerAnnotation.h>
+#include <vtkTextActor.h>
+#include <vtkTextProperty.h>
 namespace udg {
 
 Q3DViewerExtension::Q3DViewerExtension(QWidget *parent)
@@ -64,6 +67,37 @@ Q3DViewerExtension::Q3DViewerExtension(QWidget *parent)
     hideClutEditor();
     m_screenshotsExporterToolButton->setToolTip(tr("Export viewer image to DICOM and send it to a PACS server"));
     m_customStyleToolButton->setToolTip(tr("Show/Hide advanced colour options"));
+
+	///
+	///-20241022--------------
+	m_cornerAnnotations = vtkCornerAnnotation::New();
+	m_cornerAnnotations->GetTextProperty()->SetFontFamilyToArial();
+	m_cornerAnnotations->GetTextProperty()->ShadowOn();
+	for (int i = 0; i < 4; i++)
+	{
+		m_patientOrientationTextActor[i] = vtkTextActor::New();
+		m_patientOrientationTextActor[i]->SetTextScaleModeToNone();
+		m_patientOrientationTextActor[i]->GetTextProperty()->SetFontSize(18);
+		m_patientOrientationTextActor[i]->GetTextProperty()->BoldOn();
+		m_patientOrientationTextActor[i]->GetTextProperty()->SetFontFamilyToArial();
+		m_patientOrientationTextActor[i]->GetTextProperty()->ShadowOn();
+
+		m_patientOrientationTextActor[i]->GetPositionCoordinate()->SetCoordinateSystemToNormalizedViewport();
+		m_patientOrientationTextActor[i]->GetPosition2Coordinate()->SetCoordinateSystemToNormalizedViewport();
+	}
+	// Place each actor on its corresponding place. 0-3, counter-clockwise direction, starting at 0 = left of the viewer
+	m_patientOrientationTextActor[0]->GetTextProperty()->SetJustificationToLeft();
+	m_patientOrientationTextActor[0]->SetPosition(0.01, 0.5);
+
+	m_patientOrientationTextActor[1]->GetTextProperty()->SetJustificationToCentered();
+	m_patientOrientationTextActor[1]->SetPosition(0.5, 0.01);
+
+	m_patientOrientationTextActor[2]->GetTextProperty()->SetJustificationToRight();
+	m_patientOrientationTextActor[2]->SetPosition(0.99, 0.5);
+
+	m_patientOrientationTextActor[3]->GetTextProperty()->SetJustificationToCentered();
+	m_patientOrientationTextActor[3]->GetTextProperty()->SetVerticalJustificationToTop();
+	m_patientOrientationTextActor[3]->SetPosition(0.5, 0.99);
 }
 
 Q3DViewerExtension::~Q3DViewerExtension()
@@ -362,6 +396,13 @@ void Q3DViewerExtension::setInput(Volume *input)
     m_input = input;
     m_3DView->setInput(m_input);
 
+	m_lastInput = input;
+	m_3DView->getRenderer()->AddViewProp(m_cornerAnnotations);
+	m_3DView->getRenderer()->AddViewProp(m_patientOrientationTextActor[0]);
+	m_3DView->getRenderer()->AddViewProp(m_patientOrientationTextActor[1]);
+	m_3DView->getRenderer()->AddViewProp(m_patientOrientationTextActor[2]);
+	m_3DView->getRenderer()->AddViewProp(m_patientOrientationTextActor[3]);
+
     applyClut(m_currentClut);
     this->render();
 }
@@ -414,8 +455,16 @@ void Q3DViewerExtension::applyClut(const TransferFunction &clut, bool preset)
     m_gradientEditor->setTransferFunction(m_currentClut);
     m_editorByValues->setTransferFunction(m_currentClut);
     m_3DView->setTransferFunction(m_currentClut);
+	//
+	//VoiLut voiLut(clut);
+	//double w = lut.getWindowLevel().getWidth();
+	//double c = lut.getWindowLevel().getCenter();
+	//VoiLut voiLut = WindowLevel(6263, 4326);
+	//voiLut.setWindowLevel(WindowLevel(6263, 4326, clut.name()));
+	//m_3DView->setTransferFunction(voiLut.getLut());
     emit newTransferFunction();
 //     this->render();
+	updateAnnotations();
 }
 
 void Q3DViewerExtension::changeViewerTransferFunction()
@@ -423,6 +472,7 @@ void Q3DViewerExtension::changeViewerTransferFunction()
     // Actualitzem l'editor de cluts quan es canvia per la funció pel w/l del visor
     m_gradientEditor->setTransferFunction(m_3DView->getTransferFunction());
     m_editorByValues->setTransferFunction(m_3DView->getTransferFunction());
+	updateAnnotations();
 }
 
 void Q3DViewerExtension::computeOrCancelObscurance()
@@ -565,6 +615,7 @@ void Q3DViewerExtension::applyEditorClut()
     QTransferFunctionEditor *currentEditor = qobject_cast<QTransferFunctionEditor*>(m_editorsStackedWidget->currentWidget());
     applyClut(currentEditor->getTransferFunction());
     this->render();
+	updateAnnotations();
 }
 
 void Q3DViewerExtension::toggleClutEditor()
@@ -874,7 +925,35 @@ void Q3DViewerExtension::updateInput(Volume *input)
 		Series* ser = input->getSeries();
 		QString title = ser->getSeriesNumber();
 		setWindowTitle(title);
+		updateAnnotations();
 	}
+}
+
+void  Q3DViewerExtension::updateAnnotations()
+{
+	VoiLut voiLut = m_3DView->getCurrentVoiLut();
+	WindowLevel windowLevel = voiLut.getWindowLevel();
+	auto printWindowLevel = [](double x)
+	{
+		if (std::abs(x) >= 100)     // for |x| >= 100 -> 0 decimals
+		{
+			return QString::number(MathTools::roundToNearestInteger(x));
+		}
+		else if (std::abs(x) >= 10) // for 10 <= |x| < 100 -> at most 2 decimals
+		{
+			return QString::number(x, 'g', 4);
+		}
+		else if (std::abs(x) >= 1)  // for 1 <= |x| < 10 -> at most 2 decimals
+		{
+			return QString::number(x, 'g', 3);
+		}
+		else                        // for |x| < 1 -> 5 decimals
+		{
+			return QString::number(x, 'f', 5);
+		}
+	};
+	QString windowLevelPart = QObject::tr("Ser: %1 WW: %2 WL: %3").arg(m_lastInput->getSeries()->getSeriesNumber()).arg(printWindowLevel(windowLevel.getWidth())).arg(printWindowLevel(windowLevel.getCenter()));
+	m_cornerAnnotations->SetText(0, windowLevelPart.toLatin1().constData());
 }
 
 }
